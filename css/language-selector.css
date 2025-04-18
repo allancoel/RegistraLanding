@@ -1,0 +1,132 @@
+/* Language Selector Styles */
+.lang-selector {
+    display: flex;
+    align-items: center;
+    margin-left: 1.5rem;
+    position: relative;
+}
+
+/* Desktop Language Selector */
+.desktop-lang-selector {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.lang-button {
+    background: transparent;
+    border: 1px solid #3b82f6;
+    color: #3b82f6;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.lang-button:hover {
+    background-color: rgba(59, 130, 246, 0.1);
+}
+
+/* Make English the default highlighted language */
+.lang-button[data-lang="en"] {
+    background-color: #3b82f6;
+    color: white;
+}
+
+/* For other languages when they are active */
+.lang-button.active {
+    background-color: #3b82f6;
+    color: white;
+}
+
+/* Mobile Language Selector */
+.mobile-lang-selector {
+    display: none;
+    position: relative;
+}
+
+.lang-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    background: transparent;
+    border: 1px solid #3b82f6;
+    color: #3b82f6;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.lang-toggle svg {
+    width: 1rem;
+    height: 1rem;
+    transition: transform 0.2s ease;
+}
+
+.lang-toggle.active svg {
+    transform: rotate(180deg);
+}
+
+.lang-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    width: 120px;
+    z-index: 10;
+    display: none;
+    margin-top: 0.25rem;
+}
+
+.mobile-lang-selector.active .lang-dropdown {
+    display: block;
+}
+
+.mobile-lang-button {
+    width: 100%;
+    text-align: left;
+    background: transparent;
+    border: none;
+    padding: 0.5rem 0.75rem;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: background-color 0.2s ease;
+}
+
+.mobile-lang-button:hover {
+    background-color: #f3f4f6;
+}
+
+/* Make English the default highlighted language in mobile */
+.mobile-lang-button[data-lang="en"] {
+    color: #3b82f6;
+    font-weight: 500;
+}
+
+/* For other languages when they are active */
+.mobile-lang-button.active {
+    color: #3b82f6;
+    font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .desktop-lang-selector {
+        display: none;
+    }
+    
+    .mobile-lang-selector {
+        display: block;
+    }
+    
+    .lang-selector {
+        margin-left: auto;
+        margin-right: 1rem;
+    }
+} 
