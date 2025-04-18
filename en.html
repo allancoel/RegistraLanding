@@ -93,72 +93,48 @@
     </style>
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <div class="header-content">
+    <header>
+        <nav>
+            <div class="container">
                 <div class="logo">
-                    <a href="index.html">
-                        <img src="images/logo.svg" alt="Registra Logo">
-                    </a>
+                    <h1>Registra</h1>
                 </div>
-                <nav class="nav">
-                    <ul class="nav-list">
-                        <li><a href="#features">Features</a></li>
-                        <li><a href="#how-it-works">How it Works</a></li>
-                        <li><a href="#testimonials">Testimonials</a></li>
-                        <li><a href="#download">Download</a></li>
-                    </ul>
-                </nav>
-                
-                <!-- Language Selector -->
-                <div class="lang-selector">
-                    <!-- Desktop version -->
-                    <div class="desktop-lang-selector">
-                        <button class="lang-button" data-lang="en">EN</button>
-                        <button class="lang-button" data-lang="pt">PT</button>
-                        <button class="lang-button" data-lang="fr">FR</button>
-                    </div>
-                    
-                    <!-- Mobile version -->
-                    <div class="mobile-lang-selector">
-                        <button class="lang-toggle">
-                            <span class="current-lang">EN</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
-                        </button>
-                        <div class="lang-dropdown">
-                            <button class="mobile-lang-button" data-lang="en">English</button>
-                            <button class="mobile-lang-button" data-lang="pt">Português</button>
-                            <button class="mobile-lang-button" data-lang="fr">Français</button>
-                        </div>
+                <ul class="nav-links">
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#download" class="cta-button"><i class="fas fa-download"></i> Download</a></li>
+                    <li class="language-links">
+                        <a href="index.html" class="lang-link"><i class="fas fa-globe-americas"></i> PT</a>
+                        <a href="en.html" class="lang-link active"><i class="fas fa-globe-americas"></i> EN</a>
+                        <a href="fr.html" class="lang-link"><i class="fas fa-globe-europe"></i> FR</a>
+                        <a href="es.html" class="lang-link"><i class="fas fa-globe-americas"></i> ES</a>
+                        <a href="it.html" class="lang-link"><i class="fas fa-globe-europe"></i> IT</a>
+                        <a href="zh.html" class="lang-link"><i class="fas fa-globe-asia"></i> ZH</a>
+                    </li>
+                </ul>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Never lose a customer service protocol again</h1>
+                    <p>Registra is the app that organizes all your service protocols, records calls, and generates reports to help you resolve issues with service providers efficiently.</p>
+                    <div class="cta-buttons">
+                        <a href="#download" class="primary-button"><i class="fas fa-download"></i> Download Now</a>
+                        <a href="#demo" class="secondary-button"><i class="fas fa-play-circle"></i> Watch Demo</a>
                     </div>
                 </div>
-                
-                <button class="mobile-menu-toggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+                <div class="hero-image">
+                    <img src="images/app-preview.png" alt="Registra App Preview">
+                </div>
             </div>
         </div>
     </header>
-
-    <div class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Never lose a customer service protocol again</h1>
-                <p>Registra is the app that organizes all your service protocols, records calls, and generates reports to help you resolve issues with service providers efficiently.</p>
-                <div class="cta-buttons">
-                    <a href="#download" class="primary-button"><i class="fas fa-download"></i> Download Now</a>
-                    <a href="#demo" class="secondary-button"><i class="fas fa-play-circle"></i> Watch Demo</a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <img src="images/app-preview.png" alt="Registra App Preview">
-            </div>
-        </div>
-    </div>
 
     <section id="problem" class="problema">
         <div class="container">
@@ -382,5 +358,7 @@
 
     <script src="js/main.js"></script>
     <script src="js/language-fix.js"></script>
+    <script src="js/language-selector.js"></script>
+    <script src="js/steps-fix.js"></script>
 </body>
 </html> 

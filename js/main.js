@@ -103,11 +103,13 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', animateOnScroll);
     animateOnScroll(); // Run once on initial load
     
-    // Add current year to copyright
-    const yearSpan = document.querySelector('.current-year');
-    if (yearSpan) {
-        yearSpan.textContent = new Date().getFullYear();
-    }
+    // Set current year in footer
+    const currentYearElements = document.querySelectorAll('.current-year');
+    const currentYear = new Date().getFullYear();
+    
+    currentYearElements.forEach(function(element) {
+        element.textContent = currentYear;
+    });
 });
 
 // Language switcher functionality
@@ -234,21 +236,24 @@ function initMobileMenu() {
 // Smooth scrolling for anchor links
 function initSmoothScrolling() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            const href = this.getAttribute('href');
-            
-            // Skip if it's the language toggle or doesn't point to an element
-            if (href === '#' || this.closest('.language-switcher')) {
-                return;
-            }
-            
+        anchor.addEventListener('click', function(e) {
             e.preventDefault();
             
-            const targetElement = document.querySelector(href);
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
             if (targetElement) {
-                targetElement.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
+                // Close mobile menu if it's open
+                if (navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                    menuToggle.classList.remove('active');
+                }
+                
+                // Smooth scroll to target
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
                 });
             }
         });
