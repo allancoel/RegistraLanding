@@ -1,0 +1,52 @@
+/* Dropdown fix styles */
+.language-switcher {
+    position: relative !important;
+    z-index: 9999 !important;
+}
+
+.language-switcher .dropdown-menu {
+    position: absolute !important;
+    top: 100% !important;
+    right: 0 !important;
+    z-index: 9999 !important;
+    min-width: 160px !important;
+    background-color: white !important;
+    border-radius: 8px !important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2) !important;
+    padding: 10px 0 !important;
+    display: none !important;
+}
+
+.language-switcher.active .dropdown-menu {
+    display: block !important;
+}
+
+.hero-image {
+    z-index: 1 !important;
+}
+
+nav {
+    position: relative !important;
+    z-index: 9999 !important;
+}
+
+header {
+    position: relative !important;
+    z-index: 100 !important;
+}
+
+body .language-switcher .dropdown-menu a {
+    display: block !important;
+    padding: 8px 15px !important;
+    color: #333 !important;
+    text-decoration: none !important;
+}
+
+body .language-switcher .dropdown-menu a:hover {
+    background-color: #f5f5f5 !important;
+}
+
+body .language-switcher .dropdown-menu a.active {
+    background-color: #f0f0f0 !important;
+    font-weight: 600 !important;
+} 

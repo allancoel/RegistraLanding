@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Registra - 高效组织您的客户服务记录">
+    <meta name="theme-color" content="#3b82f6">
+    <title>Registra - 组织您的客户服务记录</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/modern.css">
+    <link rel="stylesheet" href="css/dropdown-fix.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        /* Modern enhancements */
+        :root {
+            --primary-color: #3b82f6;
+            --primary-dark: #1d4ed8;
+            --bg-gradient: linear-gradient(135deg, #3b82f6, #6366f1);
+        }
+        
+        body {
+            font-family: 'Noto Sans SC', 'Poppins', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .logo h1 {
+            font-weight: 800;
+            letter-spacing: -0.03em;
+        }
+        
+        header {
+            background: var(--bg-gradient);
+        }
+        
+        .hero-content h1 {
+            font-weight: 800;
+            line-height: 1.2;
+            letter-spacing: -0.01em;
+            background: linear-gradient(to right, #fff, rgba(255, 255, 255, 0.85));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .hero-image img {
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .problem-card, .feature, .step, .testimonial-content {
+            border-radius: 24px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+        
+        .problem-card:hover, .feature:hover, .step:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+        }
+        
+        .primary-button, .secondary-button, .cta-button {
+            border-radius: 14px;
+            box-shadow: 0 10px 25px rgba(59, 130, 246, 0.25);
+        }
+        
+        .primary-button:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 30px rgba(59, 130, 246, 0.4);
+        }
+        
+        .language-switcher a {
+            border-radius: 50px;
+            padding: 8px 12px;
+            transition: all 0.3s ease;
+        }
+        
+        .language-switcher a.active {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(1deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
+        }
+        
+        .hero-image img {
+            animation: float 8s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <div class="logo">
+                    <h1>Registra</h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#features">功能</a></li>
+                    <li><a href="#how-it-works">使用方法</a></li>
+                    <li><a href="#testimonials">用户评价</a></li>
+                    <li><a href="#download" class="cta-button"><i class="fas fa-download"></i> 下载</a></li>
+                    <li class="language-switcher">
+                        <div class="current-lang">
+                            <i class="fas fa-globe"></i>
+                            <span>ZH</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="dropdown-menu">
+                            <a href="index.html"><i class="fas fa-globe-americas"></i> Português</a>
+                            <a href="en.html"><i class="fas fa-globe-americas"></i> English</a>
+                            <a href="fr.html"><i class="fas fa-globe-europe"></i> Français</a>
+                            <a href="es.html"><i class="fas fa-globe-americas"></i> Español</a>
+                            <a href="it.html"><i class="fas fa-globe-europe"></i> Italiano</a>
+                            <a href="zh.html" class="active"><i class="fas fa-check"></i> 中文</a>
+                        </div>
+                    </li>
+                </ul>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>不再丢失客户服务记录</h1>
+                    <p>Registra是一款组织所有服务记录、录制通话并生成报告的应用程序，帮助您有效解决与服务提供商的问题。</p>
+                    <div class="cta-buttons">
+                        <a href="#download" class="primary-button"><i class="fas fa-download"></i> 立即下载</a>
+                        <a href="#demo" class="secondary-button"><i class="fas fa-play-circle"></i> 观看演示</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="images/app-preview.png" alt="Registra应用预览">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="problem" class="problema">
+        <div class="container">
+            <div class="section-header">
+                <h2>我们解决的问题</h2>
+                <p>我们都经历过这些...</p>
+            </div>
+            <div class="problem-cards">
+                <div class="problem-card">
+                    <div class="icon">
+                        <i class="fas fa-phone-slash"></i>
+                    </div>
+                    <h3>未解决的电话</h3>
+                    <p>与客服通话数小时却无法解决简单问题。每次通话，您都需要重新解释所有事情。</p>
+                </div>
+                <div class="problem-card">
+                    <div class="icon">
+                        <i class="fas fa-receipt"></i>
+                    </div>
+                    <h3>丢失的服务记录</h3>
+                    <p>纸上的笔记丢失，忘记记录号码，没有客服承诺的证据。</p>
+                </div>
+                <div class="problem-card">
+                    <div class="icon">
+                        <i class="fas fa-calendar-times"></i>
+                    </div>
+                    <h3>被遗忘的截止日期</h3>
+                    <p>服务提供商承诺回电和解决方案，但从不遵守期限，您最终忘记跟进。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="recursos">
+        <div class="container">
+            <div class="section-header">
+                <h2>主要功能</h2>
+                <p>满足您记录和解决客户服务问题的所有需求</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                    <h3>通话录音</h3>
+                    <p>记录对话以获取承诺和保证的证据。</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3>记录管理</h3>
+                    <p>按公司、部门和问题类型组织所有服务记录。</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <h3>PDF报告</h3>
+                    <p>生成完整的服务历史文档，用于正式投诉。</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <h3>截止日期提醒</h3>
+                    <p>接收通知以跟进解决方案承诺和回电。</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-paperclip"></i>
+                    </div>
+                    <h3>附件和文档</h3>
+                    <p>为每个案例添加照片、文档和重要证据。</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>高级搜索</h3>
+                    <p>按公司、编号或主题轻松查找任何服务记录。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="como-funciona">
+        <div class="container">
+            <div class="section-header">
+                <h2>使用方法</h2>
+                <p>通过3个简单步骤解决您的问题</p>
+            </div>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>记录服务</h3>
+                    <p>创建新记录，包含公司详情和待解决问题。</p>
+                    <img src="images/step1.png" alt="服务记录">
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>记录通话</h3>
+                    <p>记录和注明每次联系的详情，包括服务编号和承诺。</p>
+                    <img src="images/step2.png" alt="通话记录">
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>跟踪和解决</h3>
+                    <p>接收提醒，导出报告，并获取所有解决案例的证据。</p>
+                    <img src="images/step3.png" alt="跟踪和解决">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="depoimentos">
+        <div class="container">
+            <div class="section-header">
+                <h2>用户评价</h2>
+                <p>使用Registra解决问题的用户的真实体验</p>
+            </div>
+            <div class="testimonials">
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"尝试3个月解决与我的移动运营商的问题后，使用应用程序记录一切，两周内就获得了解决方案。"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="images/user1.jpg" alt="用户1">
+                        <div>
+                            <h4>Nick Adamany</h4>
+                            <p>美国迈阿密</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"通话录音功能对证明客服向我承诺的折扣（后来被拒绝）至关重要。该应用简化了整个投诉流程。"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="images/user2.jpg" alt="用户2">
+                        <div>
+                            <h4>Marie Dubois</h4>
+                            <p>瑞士日内瓦</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"我在应用程序中生成了完整报告并发送给消费者保护机构。由于我整理了所有文档，我的案例在创纪录的时间内得到解决。"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="images/user3.jpg" alt="用户3">
+                        <div>
+                            <h4>Ana Clara Ferreira</h4>
+                            <p>巴西贝洛奥里藏特</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="download" class="download">
+        <div class="container">
+            <div class="download-content">
+                <h2>立即下载并解决您的问题</h2>
+                <p>iOS版已上线。Android版即将推出。</p>
+                <div class="download-buttons">
+                    <a href="#" class="store-button">
+                        <i class="fab fa-apple"></i>
+                        <span>
+                            <small>可在</small>
+                            App Store下载
+                        </span>
+                    </a>
+                    <a href="#" class="store-button disabled">
+                        <i class="fab fa-google-play"></i>
+                        <span>
+                            <small>即将在</small>
+                            Google Play上线
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Registra</h2>
+                    <p>组织客户服务记录的终极解决方案</p>
+                </div>
+                <div class="footer-links">
+                    <h3>快速链接</h3>
+                    <ul>
+                        <li><a href="#features"><i class="fas fa-chevron-right"></i> 功能</a></li>
+                        <li><a href="#how-it-works"><i class="fas fa-chevron-right"></i> 使用方法</a></li>
+                        <li><a href="#testimonials"><i class="fas fa-chevron-right"></i> 用户评价</a></li>
+                        <li><a href="#download"><i class="fas fa-chevron-right"></i> 下载</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>联系我们</h3>
+                    <p><i class="fas fa-envelope"></i> contact@registraa.com</p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span class="current-year">2024</span> Registra. 保留所有权利。</p>
+                <p class="company-info">应用由AMC marketing LTDA开发</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 

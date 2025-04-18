@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Registra - Organize seus protocolos de atendimento de forma eficiente">
+    <meta name="theme-color" content="#3b82f6">
+    <title>Registra - Organize seus protocolos de atendimento</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/modern.css">
+    <link rel="stylesheet" href="css/dropdown-fix.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* Modern enhancements */
+        :root {
+            --primary-color: #3b82f6;
+            --primary-dark: #1d4ed8;
+            --bg-gradient: linear-gradient(135deg, #3b82f6, #6366f1);
+        }
+        
+        body {
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .logo h1 {
+            font-weight: 800;
+            letter-spacing: -0.03em;
+        }
+        
+        header {
+            background: var(--bg-gradient);
+        }
+        
+        .hero-content h1 {
+            font-weight: 800;
+            line-height: 1.2;
+            letter-spacing: -0.01em;
+            background: linear-gradient(to right, #fff, rgba(255, 255, 255, 0.85));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .hero-image img {
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .problem-card, .feature, .step, .testimonial-content {
+            border-radius: 24px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+        
+        .problem-card:hover, .feature:hover, .step:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+        }
+        
+        .primary-button, .secondary-button, .cta-button {
+            border-radius: 14px;
+            box-shadow: 0 10px 25px rgba(59, 130, 246, 0.25);
+        }
+        
+        .primary-button:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 30px rgba(59, 130, 246, 0.4);
+        }
+        
+        .language-switcher a {
+            border-radius: 50px;
+            padding: 8px 12px;
+            transition: all 0.3s ease;
+        }
+        
+        .language-switcher a.active {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(1deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
+        }
+        
+        .hero-image img {
+            animation: float 8s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <div class="logo">
+                    <h1>Registra</h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#recursos">Recursos</a></li>
+                    <li><a href="#como-funciona">Como Funciona</a></li>
+                    <li><a href="#depoimentos">Depoimentos</a></li>
+                    <li><a href="#download" class="cta-button"><i class="fas fa-download"></i> Download</a></li>
+                    <li class="language-switcher">
+                        <div class="current-lang">
+                            <i class="fas fa-globe"></i>
+                            <span>PT</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="dropdown-menu">
+                            <a href="index.html" class="active"><i class="fas fa-check"></i> Português</a>
+                            <a href="en.html"><i class="fas fa-globe-americas"></i> English</a>
+                            <a href="fr.html"><i class="fas fa-globe-europe"></i> Français</a>
+                            <a href="es.html"><i class="fas fa-globe-americas"></i> Español</a>
+                            <a href="it.html"><i class="fas fa-globe-europe"></i> Italiano</a>
+                            <a href="zh.html"><i class="fas fa-globe-asia"></i> 中文</a>
+                        </div>
+                    </li>
+                </ul>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Nunca mais perca um protocolo de atendimento</h1>
+                    <p>O Registra é o aplicativo que organiza todos os seus protocolos, grava ligações e gera relatórios para você resolver problemas com fornecedores de forma eficiente.</p>
+                    <div class="cta-buttons">
+                        <a href="#download" class="primary-button"><i class="fas fa-download"></i> Baixar Agora</a>
+                        <a href="#demo" class="secondary-button"><i class="fas fa-play-circle"></i> Ver Demo</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="images/app-preview.png" alt="Registra App Preview">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="problema" class="problema">
+        <div class="container">
+            <div class="section-header">
+                <h2>O Problema que Resolvemos</h2>
+                <p>Todos nós já passamos por isso...</p>
+            </div>
+            <div class="problem-cards">
+                <div class="problem-card">
+                    <div class="icon">
+                        <i class="fas fa-phone-slash"></i>
+                    </div>
+                    <h3>Ligações Sem Resolução</h3>
+                    <p>Horas ao telefone com SACs sem conseguir resolver problemas simples. A cada ligação, você precisa explicar tudo novamente.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="icon">
+                        <i class="fas fa-receipt"></i>
+                    </div>
+                    <h3>Protocolos Perdidos</h3>
+                    <p>Anotações em pedaços de papel que somem, números de protocolo esquecidos e sem comprovação das promessas feitas pelos atendentes.</p>
+                </div>
+                <div class="problem-card">
+                    <div class="icon">
+                        <i class="fas fa-calendar-times"></i>
+                    </div>
+                    <h3>Prazos Esquecidos</h3>
+                    <p>Fornecedores que prometem retornos e soluções, mas nunca cumprem os prazos e você acaba esquecendo de cobrar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="recursos" class="recursos">
+        <div class="container">
+            <div class="section-header">
+                <h2>Recursos Principais</h2>
+                <p>Tudo o que você precisa para documentar e resolver seus problemas de atendimento</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                    <h3>Gravação de Chamadas</h3>
+                    <p>Registre suas conversas para ter prova das promessas e compromissos assumidos.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3>Gestão de Protocolos</h3>
+                    <p>Organize todos os seus protocolos por empresa, setor e tipo de problema.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <h3>Relatórios em PDF</h3>
+                    <p>Gere documentos completos com histórico de atendimento para reclamações formais.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <h3>Lembretes de Prazos</h3>
+                    <p>Receba notificações para acompanhar promessas de resolução e retornos.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-paperclip"></i>
+                    </div>
+                    <h3>Anexos e Documentos</h3>
+                    <p>Adicione fotos, documentos e comprovantes importantes para cada caso.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Busca Avançada</h3>
+                    <p>Encontre facilmente qualquer protocolo por empresa, número ou assunto.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="como-funciona" class="como-funciona">
+        <div class="container">
+            <div class="section-header">
+                <h2>Como Funciona</h2>
+                <p>Resolva seus problemas em 3 passos simples</p>
+            </div>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Registre o Atendimento</h3>
+                    <p>Crie um novo registro com os dados da empresa e o problema a ser resolvido.</p>
+                    <img src="images/step1.png" alt="Registro de atendimento">
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Documente as Ligações</h3>
+                    <p>Grave e anote os detalhes de cada contato, incluindo protocolos e compromissos.</p>
+                    <img src="images/step2.png" alt="Documentação de ligações">
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Acompanhe e Resolva</h3>
+                    <p>Receba lembretes, exporte relatórios e tenha todas as provas para resolver seu caso.</p>
+                    <img src="images/step3.png" alt="Acompanhamento e resolução">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="depoimentos" class="depoimentos">
+        <div class="container">
+            <div class="section-header">
+                <h2>O Que Nossos Usuários Dizem</h2>
+                <p>Experiências reais de quem resolveu problemas com o Registra</p>
+            </div>
+            <div class="testimonials">
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"Depois de 3 meses tentando resolver um problema com minha operadora de celular, consegui uma resolução em 2 semanas usando o app para documentar tudo."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="images/user1.jpg" alt="Usuário 1">
+                        <div>
+                            <h4>Nick Adamany</h4>
+                            <p>Miami, Flórida</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"A função de gravação de chamadas foi essencial para provar que o atendente havia me prometido um desconto que depois negaram. O aplicativo simplificou todo o processo de reclamação."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="images/user2.jpg" alt="Usuário 2">
+                        <div>
+                            <h4>Marie Dubois</h4>
+                            <p>Genebra, Suíça</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"Gerei um relatório completo no app e enviei para o Procon. Meu caso foi resolvido em tempo recorde porque tinha toda a documentação organizada."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="images/user3.jpg" alt="Usuário 3">
+                        <div>
+                            <h4>Ana Clara Ferreira</h4>
+                            <p>Belo Horizonte, MG</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="download" class="download">
+        <div class="container">
+            <div class="download-content">
+                <h2>Baixe Agora e Resolva seus Problemas</h2>
+                <p>Disponível para iOS. Em breve para Android.</p>
+                <div class="download-buttons">
+                    <a href="#" class="store-button">
+                        <i class="fab fa-apple"></i>
+                        <span>
+                            <small>Disponível na</small>
+                            App Store
+                        </span>
+                    </a>
+                    <a href="#" class="store-button disabled">
+                        <i class="fab fa-google-play"></i>
+                        <span>
+                            <small>Em breve na</small>
+                            Google Play
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Registra</h2>
+                    <p>A solução definitiva para organizar seus protocolos de atendimento</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="#recursos"><i class="fas fa-chevron-right"></i> Recursos</a></li>
+                        <li><a href="#como-funciona"><i class="fas fa-chevron-right"></i> Como Funciona</a></li>
+                        <li><a href="#depoimentos"><i class="fas fa-chevron-right"></i> Depoimentos</a></li>
+                        <li><a href="#download"><i class="fas fa-chevron-right"></i> Download</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contato</h3>
+                    <p><i class="fas fa-envelope"></i> contato@registraa.com</p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span class="current-year">2024</span> Registra. Todos os direitos reservados.</p>
+                <p class="company-info">Aplicativo desenvolvido por AMC marketing LTDA</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html> 
