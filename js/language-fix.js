@@ -1,43 +1,57 @@
-// Fix for language selector in mobile
+// Solução simplificada para o seletor de idiomas
 document.addEventListener('DOMContentLoaded', function() {
-    // Find all language links in dropdown menus
-    const languageLinks = document.querySelectorAll('.language-switcher .dropdown-menu a');
+    // Remover todos os event listeners anteriores que possam estar interferindo
+    const clearEventListeners = function(element) {
+        const newElement = element.cloneNode(true);
+        element.parentNode.replaceChild(newElement, element);
+        return newElement;
+    };
     
-    // Add direct click handlers to all language links
-    languageLinks.forEach(function(link) {
-        // Override with direct link behavior
-        link.onclick = function(e) {
-            // Get the href attribute
-            const href = this.getAttribute('href');
-            if (href && href !== '#') {
-                // Navigate directly to the page
-                window.location.href = href;
-            }
-            return true; // Allow natural link behavior
-        };
-    });
-    
-    // Make the toggle button work
-    const toggleButtons = document.querySelectorAll('.language-toggle');
-    toggleButtons.forEach(function(button) {
-        button.addEventListener('click', function(e) {
+    // 1. Simplificar o toggler do menu de idiomas
+    document.querySelectorAll('.language-toggle').forEach(function(toggle) {
+        const newToggle = clearEventListeners(toggle);
+        newToggle.addEventListener('click', function(e) {
             e.preventDefault();
-            e.stopPropagation();
             
-            // Find the parent language switcher
+            // Encontrar o dropdown mais próximo
             const parent = this.closest('.language-switcher');
-            if (parent) {
-                parent.classList.toggle('active');
+            const dropdown = parent.querySelector('.dropdown-menu');
+            
+            // Mostrar ou esconder o dropdown
+            if (dropdown.style.display === 'block') {
+                dropdown.style.display = 'none';
+            } else {
+                // Fechar todos os outros dropdowns primeiro
+                document.querySelectorAll('.dropdown-menu').forEach(menu => {
+                    menu.style.display = 'none';
+                });
+                dropdown.style.display = 'block';
             }
         });
     });
     
-    // Close all language dropdowns when clicking outside
+    // 2. Fazer com que os links de idioma funcionem diretamente
+    document.querySelectorAll('.dropdown-menu a').forEach(function(link) {
+        const newLink = clearEventListeners(link);
+        newLink.addEventListener('click', function(e) {
+            // Navegar diretamente para o URL
+            window.location.href = this.getAttribute('href');
+        });
+    });
+    
+    // 3. Fechar o dropdown quando clicar fora dele
     document.addEventListener('click', function(e) {
         if (!e.target.closest('.language-switcher')) {
-            document.querySelectorAll('.language-switcher.active').forEach(function(el) {
-                el.classList.remove('active');
+            document.querySelectorAll('.dropdown-menu').forEach(menu => {
+                menu.style.display = 'none';
             });
         }
     });
+    
+    // 4. Adicionar marcação visível para os links
+    document.querySelectorAll('.dropdown-menu a').forEach(link => {
+        link.style.cursor = 'pointer';
+    });
+    
+    console.log('Script de correção de idioma carregado!');
 }); 

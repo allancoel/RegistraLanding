@@ -1,3 +1,124 @@
+/* Reset do dropdown para funcionamento básico */
+.language-switcher {
+    position: relative !important;
+}
+
+/* Botão de toggle - sempre visível */
+.language-toggle {
+    cursor: pointer !important;
+    padding: 5px 10px !important;
+    border-radius: 20px !important;
+    background: rgba(255, 255, 255, 0.2) !important;
+    color: white !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    user-select: none !important;
+}
+
+/* Menu dropdown - escondido por padrão */
+.dropdown-menu {
+    display: none !important;
+    position: absolute !important;
+    z-index: 10000 !important;
+    background: white !important;
+    border-radius: 8px !important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3) !important;
+    min-width: 180px !important;
+    padding: 10px 0 !important;
+}
+
+/* Links dentro do dropdown */
+.dropdown-menu a {
+    display: block !important;
+    padding: 10px 20px !important;
+    color: #333 !important;
+    text-decoration: none !important;
+    transition: background 0.2s !important;
+}
+
+.dropdown-menu a:hover {
+    background: #f5f5f5 !important;
+}
+
+.dropdown-menu a.active {
+    background: #f0f0f0 !important;
+    font-weight: bold !important;
+}
+
+.dropdown-menu a i {
+    margin-right: 8px !important;
+}
+
+/* Posicionamento na navegação normal (desktop) */
+@media (min-width: 769px) {
+    .dropdown-menu {
+        top: 100% !important;
+        right: 0 !important;
+        margin-top: 10px !important;
+    }
+    
+    /* Triângulo acima do dropdown */
+    .dropdown-menu:before {
+        content: '' !important;
+        position: absolute !important;
+        top: -6px !important;
+        right: 20px !important;
+        width: 12px !important;
+        height: 12px !important;
+        background: white !important;
+        transform: rotate(45deg) !important;
+        border-top: 1px solid rgba(0,0,0,0.05) !important;
+        border-left: 1px solid rgba(0,0,0,0.05) !important;
+    }
+}
+
+/* Posicionamento no menu mobile */
+@media (max-width: 768px) {
+    /* Container */
+    .language-switcher {
+        width: auto !important;
+        margin: 20px auto !important;
+        text-align: center !important;
+    }
+    
+    /* Toggle button */
+    .language-toggle {
+        display: inline-flex !important;
+        margin: 0 auto !important;
+    }
+    
+    /* Dropdown posicionado acima do botão no mobile */
+    .dropdown-menu {
+        bottom: 100% !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        margin-bottom: 10px !important;
+        width: 200px !important;
+    }
+    
+    /* Triângulo abaixo do dropdown */
+    .dropdown-menu:after {
+        content: '' !important;
+        position: absolute !important;
+        bottom: -6px !important;
+        left: 50% !important;
+        margin-left: -6px !important;
+        width: 12px !important;
+        height: 12px !important;
+        background: white !important;
+        transform: rotate(45deg) !important;
+        border-bottom: 1px solid rgba(0,0,0,0.05) !important;
+        border-right: 1px solid rgba(0,0,0,0.05) !important;
+    }
+    
+    /* Links mais fáceis de tocar */
+    .dropdown-menu a {
+        padding: 12px 20px !important;
+        font-size: 16px !important;
+    }
+}
+
 /* Dropdown fix styles */
 .language-switcher {
     position: relative !important;
@@ -19,24 +140,6 @@
 
 .language-switcher.active .dropdown-menu {
     display: block !important;
-}
-
-.language-toggle {
-    cursor: pointer !important;
-    display: flex !important;
-    align-items: center !important;
-    padding: 5px 10px !important;
-    border-radius: 20px !important;
-    background-color: rgba(255, 255, 255, 0.1) !important;
-    transition: all 0.3s ease !important;
-}
-
-.language-toggle:hover {
-    background-color: rgba(255, 255, 255, 0.2) !important;
-}
-
-.language-toggle i {
-    margin-right: 5px !important;
 }
 
 .nav-links .language-switcher {
