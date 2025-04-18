@@ -240,6 +240,33 @@ nav .container {
     font-size: 0.9rem;
 }
 
+/* Estilos para os links de idioma */
+.language-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lang-link {
+    padding: 8px 12px;
+    margin: 0 2px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.lang-link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+}
+
+.lang-link.active {
+    background-color: rgba(255, 255, 255, 0.3);
+    font-weight: bold;
+}
+
 /* Hero Section */
 .hero {
     padding: 60px 0 80px;
@@ -1016,6 +1043,21 @@ footer {
     
     section {
         padding: 70px 0;
+    }
+    
+    .language-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 20px;
+        width: 100%;
+    }
+    
+    .lang-link {
+        margin: 5px;
+        font-size: 16px;
+        padding: 10px 15px;
+        min-width: 60px;
+        text-align: center;
     }
 }
 
