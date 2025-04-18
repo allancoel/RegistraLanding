@@ -1,109 +1,37 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Mobile menu toggle
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
-    const body = document.body;
+    // Initialize language switcher
+    initLanguageSwitcher();
     
-    if (menuToggle) {
-        menuToggle.addEventListener('click', function() {
-            navLinks.classList.toggle('active');
-            body.classList.toggle('menu-open');
-            
-            // Toggle between menu and close icon
-            const icon = menuToggle.querySelector('i');
-            if (icon) {
-                if (icon.classList.contains('fa-bars')) {
-                    icon.classList.remove('fa-bars');
-                    icon.classList.add('fa-times');
-                } else {
-                    icon.classList.remove('fa-times');
-                    icon.classList.add('fa-bars');
-                }
-            }
-        });
-    }
+    // Initialize mobile menu
+    initMobileMenu();
     
-    // Close menu when clicking a link
-    const navItems = document.querySelectorAll('.nav-links a');
-    navItems.forEach(item => {
-        item.addEventListener('click', function() {
-            if (navLinks.classList.contains('active')) {
-                navLinks.classList.remove('active');
-                body.classList.remove('menu-open');
-                
-                // Reset icon
-                const icon = menuToggle.querySelector('i');
-                if (icon) {
-                    icon.classList.remove('fa-times');
-                    icon.classList.add('fa-bars');
-                }
-            }
-        });
-    });
+    // Initialize smooth scrolling
+    initSmoothScrolling();
     
-    // Language dropdown functionality
-    const languageSwitcher = document.querySelector('.language-switcher');
-    const currentLang = document.querySelector('.current-lang');
-    
-    if (currentLang) {
-        currentLang.addEventListener('click', function(e) {
-            e.preventDefault();
-            e.stopPropagation();
-            languageSwitcher.classList.toggle('active');
-        });
-        
-        // Close dropdown when clicking outside
-        document.addEventListener('click', function(e) {
-            // Only close if the click is outside the language switcher
-            if (!languageSwitcher.contains(e.target) && languageSwitcher.classList.contains('active')) {
-                languageSwitcher.classList.remove('active');
-            }
-        });
-        
-        // Prevent dropdown from closing when clicking inside it
-        const dropdown = document.querySelector('.dropdown-menu');
-        if (dropdown) {
-            dropdown.addEventListener('click', function(e) {
-                // Only prevent propagation for language selection, not for the links
-                if (!e.target.closest('a')) {
-                    e.stopPropagation();
-                }
-            });
-        }
-    }
-    
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            const targetId = this.getAttribute('href');
-            if (targetId === '#') return;
-            
-            const targetElement = document.querySelector(targetId);
-            if (targetElement) {
-                window.scrollTo({
-                    top: targetElement.offsetTop - 70,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
-    
-    // Fix for fixed positioning on mobile
-    function updateMobileLayout() {
+    // Fix for mobile layout issues
+    function fixMobileLayout() {
         if (window.innerWidth <= 768) {
-            // Fix positioning for mobile
+            // Ensure nav links are hidden by default on mobile
+            if (!navLinks.classList.contains('active')) {
+                navLinks.style.display = 'none';
+            }
+            
+            // Fix position issues
             document.querySelectorAll('section').forEach(section => {
                 section.style.position = 'relative';
                 section.style.zIndex = '1';
             });
+        } else {
+            // On desktop, ensure nav links are visible
+            navLinks.style.display = 'flex';
         }
     }
+
+    // Initialize mobile layout fixes
+    fixMobileLayout();
     
-    // Run on load and resize
-    window.addEventListener('resize', updateMobileLayout);
-    updateMobileLayout();
+    // Run mobile layout fix on window resize
+    window.addEventListener('resize', fixMobileLayout);
     
     // Animate elements on scroll
     const animateOnScroll = function() {
@@ -136,6 +64,38 @@ document.addEventListener('DOMContentLoaded', function() {
         body.menu-open {
             overflow: hidden;
         }
+        
+        /* Fix for mobile navigation appearance */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                background-color: var(--primary-color);
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                z-index: 998;
+                padding: 50px 0;
+            }
+            
+            .nav-links.active {
+                display: flex !important;
+            }
+            
+            .menu-toggle {
+                z-index: 999;
+            }
+            
+            /* Fix for language switcher */
+            .language-switcher {
+                position: relative;
+                margin: 20px 0;
+            }
+        }
     `;
     document.head.appendChild(style);
     
@@ -148,4 +108,91 @@ document.addEventListener('DOMContentLoaded', function() {
     if (yearSpan) {
         yearSpan.textContent = new Date().getFullYear();
     }
-}); 
+});
+
+// Language switcher functionality
+function initLanguageSwitcher() {
+    const languageSwitcher = document.querySelector('.language-switcher');
+    const toggleButton = document.querySelector('.language-toggle');
+    
+    if (toggleButton && languageSwitcher) {
+        toggleButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            languageSwitcher.classList.toggle('active');
+        });
+        
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!languageSwitcher.contains(e.target)) {
+                languageSwitcher.classList.remove('active');
+            }
+        });
+    }
+}
+
+// Mobile menu functionality
+function initMobileMenu() {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    const body = document.body;
+    
+    if (menuToggle && navLinks) {
+        // Make sure links are hidden by default on mobile
+        if (window.innerWidth <= 768) {
+            navLinks.classList.remove('active');
+        }
+        
+        menuToggle.addEventListener('click', function() {
+            navLinks.classList.toggle('active');
+            body.classList.toggle('menu-open');
+            menuToggle.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
+        });
+        
+        // Close menu when a link is clicked
+        const links = navLinks.querySelectorAll('a');
+        links.forEach(link => {
+            link.addEventListener('click', function() {
+                if (window.innerWidth <= 768) {
+                    navLinks.classList.remove('active');
+                    body.classList.remove('menu-open');
+                    menuToggle.textContent = '☰';
+                }
+            });
+        });
+        
+        // Update on resize
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                navLinks.classList.remove('active');
+                body.classList.remove('menu-open');
+                menuToggle.textContent = '☰';
+            } else {
+                // Ensure menu is hidden on mobile when resizing
+                if (!navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                }
+            }
+        });
+    }
+}
+
+// Smooth scrolling for anchor links
+function initSmoothScrolling() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const href = this.getAttribute('href');
+            
+            // Skip if it's the language toggle or doesn't point to an element
+            if (href === '#' || this.classList.contains('language-toggle') || !document.querySelector(href)) {
+                return;
+            }
+            
+            e.preventDefault();
+            
+            document.querySelector(href).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+} 

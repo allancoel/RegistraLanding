@@ -1,0 +1,125 @@
+/* Add these styles at the end of the file */
+
+/* Language Switcher Styles */
+.language-switcher {
+    position: relative;
+    margin: 0 20px;
+    z-index: 10000;
+}
+
+.language-toggle {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.language-toggle:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.language-toggle img {
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+}
+
+.language-switcher .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 8px 0;
+    min-width: 150px;
+    display: none;
+    z-index: 10000;
+}
+
+.language-switcher.active .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu a {
+    display: flex;
+    align-items: center;
+    padding: 8px 15px;
+    color: #333;
+    transition: background 0.3s;
+    text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.dropdown-menu img {
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+}
+
+/* Mobile Menu Styles */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+    padding: 10px;
+    z-index: 10001;
+}
+
+body.menu-open {
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+    
+    .language-switcher {
+        margin: 20px 0;
+        position: static;
+    }
+    
+    .nav-links {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: white;
+        z-index: 9999;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        display: none;
+    }
+    
+    .nav-links.active {
+        display: flex;
+    }
+    
+    .nav-links li {
+        margin: 15px 0;
+    }
+    
+    .nav-links a {
+        font-size: 18px;
+    }
+    
+    header {
+        padding: 15px 20px;
+    }
+    
+    .hero-section {
+        padding-top: 80px;
+    }
+} 

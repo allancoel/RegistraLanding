@@ -65,27 +65,64 @@ body .language-switcher .dropdown-menu a.active {
     .menu-toggle {
         font-size: 24px !important;
         padding: 10px !important;
+        z-index: 999 !important;
+        position: relative !important;
     }
     
     /* Make sure the hero section stays under the nav */
     header .hero {
         padding-top: 70px !important;
+        position: relative !important;
+        z-index: 1 !important;
     }
     
     /* Ensure hero content is above navigation elements */
     header .hero-content {
         position: relative !important;
         z-index: 2 !important;
+        padding-top: 40px !important;
     }
     
     /* Fix the language switcher position */
     .language-switcher {
-        position: fixed !important;
-        top: 20px !important;
-        right: 70px !important;
+        position: static !important;
+        margin: 20px 0 !important;
     }
     
-    /* Make sure menu elements are properly separated */
+    /* Mobile menu specific styles */
+    .nav-links {
+        display: none !important;
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100vh !important;
+        background-color: var(--primary-color) !important;
+        z-index: 998 !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        padding: 60px 0 !important;
+    }
+    
+    .nav-links.active {
+        display: flex !important;
+    }
+    
+    .nav-links li {
+        margin: 15px 0 !important;
+        text-align: center !important;
+        width: 100% !important;
+    }
+    
+    .nav-links a {
+        padding: 12px 0 !important;
+        font-size: 20px !important;
+        display: block !important;
+        width: 100% !important;
+    }
+    
+    /* Make sure section content has proper stacking */
     section#recursos, 
     section#features, 
     section#como-funciona, 
@@ -98,19 +135,13 @@ body .language-switcher .dropdown-menu a.active {
         padding-bottom: 40px !important;
     }
     
-    /* Fix link navigation */
-    header .nav-links.active {
-        display: flex !important;
-    }
-    
-    header .nav-links a {
-        display: block !important;
-        padding: 15px !important;
-        width: 100% !important;
-        text-align: center !important;
-    }
-    
     /* Fix download button */
+    header .hero .cta-buttons {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+    }
+    
     header .hero .cta-buttons a {
         margin: 10px 0 !important;
         width: 100% !important;
