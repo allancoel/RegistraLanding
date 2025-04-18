@@ -132,6 +132,23 @@ function initLanguageSwitcher() {
                 
                 languageSwitcher.classList.toggle('active');
             });
+            
+            // Make language links work correctly
+            dropdownMenu.querySelectorAll('a').forEach(function(link) {
+                link.addEventListener('click', function(e) {
+                    // Allow normal link navigation to work
+                    // We don't prevent default here so links work normally
+                    
+                    // Just to be safe, explicitly navigate to the href
+                    const langHref = this.getAttribute('href');
+                    if (langHref && langHref !== '#') {
+                        // Small delay to allow the click to register
+                        setTimeout(function() {
+                            window.location.href = langHref;
+                        }, 50);
+                    }
+                });
+            });
         }
     });
     
@@ -142,13 +159,6 @@ function initLanguageSwitcher() {
                 el.classList.remove('active');
             });
         }
-    });
-    
-    // Prevent click on language items from closing menu before navigation happens
-    document.querySelectorAll('.language-switcher .dropdown-menu a').forEach(function(link) {
-        link.addEventListener('click', function(e) {
-            e.stopPropagation();
-        });
     });
 }
 
@@ -182,8 +192,13 @@ function initMobileMenu() {
         });
         
         // Close menu when a link is clicked (except language switcher)
-        const links = navLinks.querySelectorAll('a:not(.language-toggle):not(.dropdown-menu a)');
+        const links = navLinks.querySelectorAll('a:not(.language-toggle)');
         links.forEach(link => {
+            // Skip language menu links
+            if (link.closest('.dropdown-menu')) {
+                return;
+            }
+            
             link.addEventListener('click', function() {
                 if (window.innerWidth <= 768) {
                     navLinks.classList.remove('active');

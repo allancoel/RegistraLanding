@@ -62,6 +62,8 @@ body .language-switcher .dropdown-menu a {
     padding: 8px 15px !important;
     color: #333 !important;
     text-decoration: none !important;
+    transition: background-color 0.2s ease !important;
+    cursor: pointer !important;
 }
 
 body .language-switcher .dropdown-menu a:hover {
@@ -131,6 +133,16 @@ body .language-switcher .dropdown-menu a.active {
         margin-bottom: 8px !important;
         max-height: 300px !important;
         overflow-y: auto !important;
+    }
+    
+    /* Make language links more tappable */
+    .nav-links .language-switcher .dropdown-menu a {
+        padding: 15px !important;
+        margin: 5px 0 !important;
+        font-size: 16px !important;
+        text-align: left !important;
+        border-radius: 4px !important;
+        margin: 0 5px !important;
     }
     
     /* Mobile menu specific styles */
