@@ -2,10 +2,24 @@ document.addEventListener('DOMContentLoaded', function() {
     // Mobile menu toggle
     const menuToggle = document.querySelector('.menu-toggle');
     const navLinks = document.querySelector('.nav-links');
+    const body = document.body;
     
     if (menuToggle) {
         menuToggle.addEventListener('click', function() {
             navLinks.classList.toggle('active');
+            body.classList.toggle('menu-open');
+            
+            // Toggle between menu and close icon
+            const icon = menuToggle.querySelector('i');
+            if (icon) {
+                if (icon.classList.contains('fa-bars')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            }
         });
     }
     
@@ -15,6 +29,14 @@ document.addEventListener('DOMContentLoaded', function() {
         item.addEventListener('click', function() {
             if (navLinks.classList.contains('active')) {
                 navLinks.classList.remove('active');
+                body.classList.remove('menu-open');
+                
+                // Reset icon
+                const icon = menuToggle.querySelector('i');
+                if (icon) {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
             }
         });
     });
@@ -28,9 +50,6 @@ document.addEventListener('DOMContentLoaded', function() {
             e.preventDefault();
             e.stopPropagation();
             languageSwitcher.classList.toggle('active');
-            
-            // Add this to debug
-            console.log('Language switcher clicked', languageSwitcher.classList.contains('active'));
         });
         
         // Close dropdown when clicking outside
@@ -71,6 +90,21 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
+    // Fix for fixed positioning on mobile
+    function updateMobileLayout() {
+        if (window.innerWidth <= 768) {
+            // Fix positioning for mobile
+            document.querySelectorAll('section').forEach(section => {
+                section.style.position = 'relative';
+                section.style.zIndex = '1';
+            });
+        }
+    }
+    
+    // Run on load and resize
+    window.addEventListener('resize', updateMobileLayout);
+    updateMobileLayout();
+    
     // Animate elements on scroll
     const animateOnScroll = function() {
         const elements = document.querySelectorAll('.feature, .step, .testimonial, .problem-card');
@@ -97,6 +131,10 @@ document.addEventListener('DOMContentLoaded', function() {
         .animated {
             opacity: 1;
             transform: translateY(0);
+        }
+        
+        body.menu-open {
+            overflow: hidden;
         }
     `;
     document.head.appendChild(style);
