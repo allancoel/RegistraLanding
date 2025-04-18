@@ -112,23 +112,44 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Language switcher functionality
 function initLanguageSwitcher() {
-    const languageSwitcher = document.querySelector('.language-switcher');
-    const toggleButton = document.querySelector('.language-toggle');
+    const languageSwitchers = document.querySelectorAll('.language-switcher');
     
-    if (toggleButton && languageSwitcher) {
-        toggleButton.addEventListener('click', function(e) {
-            e.preventDefault();
-            e.stopPropagation();
-            languageSwitcher.classList.toggle('active');
-        });
+    languageSwitchers.forEach(function(languageSwitcher) {
+        const toggleButton = languageSwitcher.querySelector('.language-toggle');
+        const dropdownMenu = languageSwitcher.querySelector('.dropdown-menu');
         
-        // Close dropdown when clicking outside
-        document.addEventListener('click', function(e) {
-            if (!languageSwitcher.contains(e.target)) {
-                languageSwitcher.classList.remove('active');
-            }
+        if (toggleButton && dropdownMenu) {
+            toggleButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                
+                // Close all other dropdowns first
+                document.querySelectorAll('.language-switcher.active').forEach(function(el) {
+                    if (el !== languageSwitcher) {
+                        el.classList.remove('active');
+                    }
+                });
+                
+                languageSwitcher.classList.toggle('active');
+            });
+        }
+    });
+    
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('.language-switcher')) {
+            document.querySelectorAll('.language-switcher.active').forEach(function(el) {
+                el.classList.remove('active');
+            });
+        }
+    });
+    
+    // Prevent click on language items from closing menu before navigation happens
+    document.querySelectorAll('.language-switcher .dropdown-menu a').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            e.stopPropagation();
         });
-    }
+    });
 }
 
 // Mobile menu functionality
@@ -160,8 +181,8 @@ function initMobileMenu() {
             }
         });
         
-        // Close menu when a link is clicked
-        const links = navLinks.querySelectorAll('a');
+        // Close menu when a link is clicked (except language switcher)
+        const links = navLinks.querySelectorAll('a:not(.language-toggle):not(.dropdown-menu a)');
         links.forEach(link => {
             link.addEventListener('click', function() {
                 if (window.innerWidth <= 768) {

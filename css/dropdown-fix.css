@@ -107,17 +107,30 @@ body .language-switcher .dropdown-menu a.active {
     
     /* Fix the language switcher position in mobile menu */
     .nav-links .language-switcher {
-        margin: 20px 0 !important;
-        position: relative !important;
+        margin: 20px auto !important;
+        position: static !important;
+        width: auto !important;
+        text-align: center !important;
+    }
+    
+    .nav-links .language-toggle {
+        justify-content: center !important;
+        margin: 0 auto !important;
+        width: auto !important;
+        display: inline-flex !important;
     }
     
     .nav-links .language-switcher .dropdown-menu {
         position: absolute !important;
-        top: 100% !important;
+        bottom: 100% !important;
+        top: auto !important;
         left: 50% !important;
         transform: translateX(-50%) !important;
         background-color: white !important;
         width: 200px !important;
+        margin-bottom: 8px !important;
+        max-height: 300px !important;
+        overflow-y: auto !important;
     }
     
     /* Mobile menu specific styles */
@@ -134,6 +147,7 @@ body .language-switcher .dropdown-menu a.active {
         justify-content: center !important;
         align-items: center !important;
         padding: 60px 0 !important;
+        overflow-y: auto !important;
     }
     
     .nav-links.active {
