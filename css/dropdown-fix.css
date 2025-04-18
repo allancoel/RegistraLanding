@@ -21,6 +21,28 @@
     display: block !important;
 }
 
+.language-toggle {
+    cursor: pointer !important;
+    display: flex !important;
+    align-items: center !important;
+    padding: 5px 10px !important;
+    border-radius: 20px !important;
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    transition: all 0.3s ease !important;
+}
+
+.language-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.language-toggle i {
+    margin-right: 5px !important;
+}
+
+.nav-links .language-switcher {
+    margin-top: 10px !important;
+}
+
 .hero-image {
     z-index: 1 !important;
 }
@@ -71,7 +93,7 @@ body .language-switcher .dropdown-menu a.active {
     
     /* Make sure the hero section stays under the nav */
     header .hero {
-        padding-top: 70px !important;
+        padding-top: 30px !important;
         position: relative !important;
         z-index: 1 !important;
     }
@@ -80,13 +102,22 @@ body .language-switcher .dropdown-menu a.active {
     header .hero-content {
         position: relative !important;
         z-index: 2 !important;
-        padding-top: 40px !important;
+        padding-top: 20px !important;
     }
     
-    /* Fix the language switcher position */
-    .language-switcher {
-        position: static !important;
+    /* Fix the language switcher position in mobile menu */
+    .nav-links .language-switcher {
         margin: 20px 0 !important;
+        position: relative !important;
+    }
+    
+    .nav-links .language-switcher .dropdown-menu {
+        position: absolute !important;
+        top: 100% !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        background-color: white !important;
+        width: 200px !important;
     }
     
     /* Mobile menu specific styles */

@@ -146,7 +146,18 @@ function initMobileMenu() {
         menuToggle.addEventListener('click', function() {
             navLinks.classList.toggle('active');
             body.classList.toggle('menu-open');
-            menuToggle.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
+            
+            // Toggle menu icon
+            const icon = menuToggle.querySelector('i');
+            if (icon) {
+                if (icon.classList.contains('fa-bars')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            }
         });
         
         // Close menu when a link is clicked
@@ -156,7 +167,13 @@ function initMobileMenu() {
                 if (window.innerWidth <= 768) {
                     navLinks.classList.remove('active');
                     body.classList.remove('menu-open');
-                    menuToggle.textContent = '☰';
+                    
+                    // Reset icon
+                    const icon = menuToggle.querySelector('i');
+                    if (icon) {
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                    }
                 }
             });
         });
@@ -166,11 +183,12 @@ function initMobileMenu() {
             if (window.innerWidth > 768) {
                 navLinks.classList.remove('active');
                 body.classList.remove('menu-open');
-                menuToggle.textContent = '☰';
-            } else {
-                // Ensure menu is hidden on mobile when resizing
-                if (!navLinks.classList.contains('active')) {
-                    navLinks.classList.remove('active');
+                
+                // Reset icon
+                const icon = menuToggle.querySelector('i');
+                if (icon) {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
                 }
             }
         });
@@ -184,15 +202,19 @@ function initSmoothScrolling() {
             const href = this.getAttribute('href');
             
             // Skip if it's the language toggle or doesn't point to an element
-            if (href === '#' || this.classList.contains('language-toggle') || !document.querySelector(href)) {
+            if (href === '#' || this.closest('.language-switcher')) {
                 return;
             }
             
             e.preventDefault();
             
-            document.querySelector(href).scrollIntoView({
-                behavior: 'smooth'
-            });
+            const targetElement = document.querySelector(href);
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
         });
     });
 } 
