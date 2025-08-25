@@ -1,0 +1,29 @@
+{
+  "name": "registra-landing-page",
+  "version": "1.0.0",
+  "description": "Modern landing page for Registra - Smart Logbook for Calls, Notes, and Follow-ups",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve .",
+    "build": "echo 'No build step required - static HTML/CSS/JS'",
+    "preview": "serve . --port 3000",
+    "lint": "echo 'No linter configured yet'"
+  },
+  "keywords": [
+    "landing-page",
+    "ios-app",
+    "registra",
+    "productivity",
+    "mobile-app"
+  ],
+  "author": "Registra Team",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^14.2.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/registra-landing-page"
+  },
+  "homepage": "https://registra.app"
+}
