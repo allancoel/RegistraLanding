@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+
+# Block access to certain directories if they exist
+Disallow: /node_modules/
+Disallow: /.git/
+Disallow: /assets/css/*.css.map
+
+# Allow important pages
+Allow: /index.html
+Allow: /privacy.html
+Allow: /terms.html
+
+# Sitemap
+Sitemap: https://registra.app/sitemap.xml
+
+# Crawl delay for all bots
+Crawl-delay: 1

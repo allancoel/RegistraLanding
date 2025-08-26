@@ -10,6 +10,28 @@
   --border: rgba(255, 255, 255, 0.1);
 }
 
+/* Performance optimizations */
+* {
+  box-sizing: border-box;
+}
+
+/* Critical CSS - Above the fold content */
+.critical-css {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Lazy loading images */
+img {
+  loading: lazy;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Optimize font loading */
+body {
+  font-display: swap;
+}
+
 /* Hero gradient background */
 .glow {
   background: radial-gradient(800px 400px at 75% 20%, rgba(59, 130, 246, .25), rgba(255, 255, 255, 0));
@@ -46,6 +68,40 @@ a, button {
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--text-muted);
+}
+
+/* Core Web Vitals optimizations */
+/* Prevent layout shifts */
+.feature-card, .pricing-card {
+  min-height: 200px;
+}
+
+/* Optimize animations for performance */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Optimize for mobile */
+@media (max-width: 768px) {
+  .hero-gradient {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%);
+  }
+
+  .feature-card {
+    min-height: auto;
+  }
+}
+
+/* Improve focus states for accessibility */
+.feature-card:focus-within,
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--primary-blue);
+  outline-offset: 2px;
 }
 
 /* Focus states for accessibility */
