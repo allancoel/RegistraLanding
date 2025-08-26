@@ -16,6 +16,7 @@ A modern, SEO-optimized landing page for the Registra iOS app - Smart Logbook fo
 ```
 landing-page/
 ├── index.html              # Main landing page
+├── contact.html            # Contact/Support page with lead form
 ├── privacy.html            # Privacy Policy page
 ├── terms.html              # Terms of Service page
 ├── robots.txt              # Search engine crawling instructions
@@ -29,6 +30,7 @@ landing-page/
         ├── logo-header.png # Header logo
         ├── logo.png        # Main logo
         ├── logo2.png       # Secondary logo
+        ├── app-screenshot.png # App demonstration image
         └── apple-logo.svg   # Apple App Store logo
 ```
 
@@ -63,6 +65,56 @@ landing-page/
 9. **FAQ**: Common questions with expandable answers
 10. **Final CTA**: Bottom conversion section
 11. **Footer**: Links, legal pages, and company information
+
+## 📞 Contact Page & Lead Generation
+
+### Features
+- **Professional Contact Form**: First Name, Last Name, Email, Subject, Message
+- **Newsletter Signup**: Optional newsletter subscription
+- **Form Validation**: Client-side validation for required fields
+- **Loading States**: Visual feedback during form submission
+- **Success/Error Messages**: Clear user feedback
+- **Mobile Optimized**: Responsive design for all devices
+
+### Form Integration Setup
+
+#### Option 1: Formspree (Recommended)
+1. **Create Account**: Go to [formspree.io](https://formspree.io) and create an account
+2. **Get Form ID**: Create a new form and copy the form ID (looks like `xpznwvpq`)
+3. **Update contact.html**: Uncomment and replace `YOUR_FORM_ID` in the JavaScript section:
+   ```javascript
+   const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
+   ```
+4. **Test Form**: Submit a test message to verify it's working
+
+#### Option 2: Netlify Forms
+1. **Deploy to Netlify**: Host your site on Netlify
+2. **Enable Forms**: Forms are enabled by default on Netlify
+3. **Add netlify attribute**: Add `netlify` to the form element
+4. **Access submissions**: View form submissions in your Netlify dashboard
+
+#### Option 3: Custom Backend
+- Set up your own backend endpoint to handle form submissions
+- Update the fetch URL in the JavaScript to point to your endpoint
+- Implement server-side validation and email sending
+
+### Form Fields
+- **First Name** (required)
+- **Last Name** (required)
+- **Email** (required, email validation)
+- **Subject** (required, dropdown with predefined options)
+- **Message** (required, textarea)
+- **Newsletter** (optional, checkbox)
+
+### Subject Options
+- App Installation & Setup
+- Feature Question
+- Account & Billing
+- Technical Issue
+- Bug Report
+- Feature Request
+- General Inquiry
+- Other
 
 ## 🎨 Customization Guide
 
