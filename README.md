@@ -131,7 +131,7 @@ landing-page/
 - Social proof elements - Add client testimonials/logos
 
 ### Links to Update
-- App Store link: Replace `https://apps.apple.com/app/registra/id1234567890`
+- App Store link: https://apps.apple.com/br/app/registra-app/id6747366907
 - Google Analytics: Replace `GA_TRACKING_ID` with actual tracking ID
 - Search Console: Replace `YOUR_GOOGLE_SITE_VERIFICATION_CODE`
 
