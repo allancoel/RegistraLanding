@@ -1,13 +1,28 @@
 # Registra Landing Page
 
-A modern, SEO-optimized landing page for the Registra iOS app - Smart Logbook for Calls, Notes, and Follow-ups.
+A high-converting, modern landing page for the Registra iOS app - Your Customer Service Defense System.
+
+## ✨ Recent Improvements (Oct 2025)
+
+The landing page has been completely redesigned with conversion optimization in mind:
+
+- **🎨 Modern UI/UX**: Gradient effects, smooth animations, and professional design
+- **📝 Conversion-Focused Copy**: Emotional headlines and benefit-driven messaging
+- **🎬 Fixed Video Issues**: Cross-browser compatible video player with controls
+- **📊 Social Proof**: Prominent display of downloads, ratings, and success metrics
+- **🎯 Multiple CTAs**: Strategic placement of 5+ conversion points throughout
+- **💪 Strong Value Props**: Clear problem-solution framework
+
+📄 See [IMPROVEMENTS-SUMMARY.md](./IMPROVEMENTS-SUMMARY.md) for complete details.
 
 ## 🚀 Features
 
-- **Modern Design**: Dark theme with blue/purple gradient accents
-- **Fully Responsive**: Optimized for all device sizes
+- **High-Converting Design**: Optimized for maximum conversions with psychological triggers
+- **Modern Animations**: Smooth scroll effects, hover animations, and micro-interactions
+- **Enhanced Video Player**: Play/pause controls, autoplay, cross-browser compatibility
+- **Fully Responsive**: Perfect on all devices with touch-optimized interactions
 - **SEO Optimized**: Comprehensive meta tags, structured data, and performance optimizations
-- **High Converting**: Strategic CTAs and social proof elements
+- **Conversion-Focused Copy**: Emotional, benefit-driven messaging that converts
 - **Performance Focused**: Core Web Vitals optimized with <1s load time
 - **Accessibility**: WCAG compliant with proper ARIA labels and semantic HTML
 
@@ -15,24 +30,52 @@ A modern, SEO-optimized landing page for the Registra iOS app - Smart Logbook fo
 
 ```
 landing-page/
-├── index.html              # Main landing page
-├── contact.html            # Contact/Support page with lead form
-├── privacy.html            # Privacy Policy page
-├── terms.html              # Terms of Service page
-├── robots.txt              # Search engine crawling instructions
-├── sitemap.xml             # XML sitemap for search engines
-├── site.webmanifest        # PWA manifest file
-├── README.md               # This file
+├── index.html                      # Main landing page (REDESIGNED)
+├── contact.html                    # Contact/Support page with lead form
+├── privacy.html                    # Privacy Policy page
+├── terms.html                      # Terms of Service page
+├── robots.txt                      # Search engine crawling instructions
+├── sitemap.xml                     # XML sitemap for search engines
+├── site.webmanifest                # PWA manifest file
+├── convert-video.sh                # Video conversion script (NEW)
+├── VIDEO-CONVERSION-GUIDE.md       # Video setup instructions (NEW)
+├── IMPROVEMENTS-SUMMARY.md         # Complete list of improvements (NEW)
+├── README.md                       # This file
 └── assets/
     ├── css/
-    │   └── styles.css      # Optimized CSS with performance enhancements
-    └── images/
-        ├── logo-header.png # Header logo
-        ├── logo.png        # Main logo
-        ├── logo2.png       # Secondary logo
-        ├── app-screenshot.png # App demonstration image
-        └── apple-logo.svg   # Apple App Store logo
+    │   └── styles.css              # Enhanced CSS with animations (UPDATED)
+    ├── images/
+    │   ├── logo-header.png         # Header logo
+    │   ├── logo.png                # Main logo
+    │   ├── logo2.png               # Secondary logo
+    │   ├── app-screenshot.png      # App demonstration image
+    │   └── apple-logo.svg          # Apple App Store logo
+    └── videos/
+        └── ScreenRecording_*.mov   # App demo video (convert to MP4)
 ```
+
+## 🎬 Video Setup (IMPORTANT)
+
+The demo video is currently in `.mov` format which has limited browser compatibility, especially on desktop. **You need to convert it to MP4 for best results.**
+
+### Quick Setup
+```bash
+# Option 1: Automated (requires ffmpeg)
+brew install ffmpeg  # macOS
+./convert-video.sh
+
+# Option 2: Online converter (no installation)
+# Upload to https://cloudconvert.com/mov-to-mp4
+# Download as: assets/videos/ScreenRecording_10-27-2025 17-07-27_1.mp4
+```
+
+📄 See [VIDEO-CONVERSION-GUIDE.md](./VIDEO-CONVERSION-GUIDE.md) for detailed instructions.
+
+**Why this matters:**
+- ✅ Desktop browsers will play the video correctly
+- ✅ Faster loading (optimized file size)
+- ✅ Universal compatibility (all browsers)
+- ❌ Without conversion: some users see only a static image
 
 ## 📊 SEO Optimizations Implemented
 

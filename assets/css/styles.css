@@ -10,6 +10,37 @@
   --border: rgba(255, 255, 255, 0.1);
 }
 
+/* Modern animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animate-slide-up {
+  animation: slide-up 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 /* Performance optimizations */
 * {
   box-sizing: border-box;
