@@ -1,7 +1,7 @@
 {
   "name": "Registra - Customer Service Organization",
   "short_name": "Registra",
-  "description": "Transform messy customer service experiences into organized clarity. Track calls, protocols, notes, and attachments.",
+  "description": "Transform messy customer service experiences into organized clarity. Track calls, case numbers, notes, and attachments.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0f172a",

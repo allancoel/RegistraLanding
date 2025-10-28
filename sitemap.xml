@@ -36,4 +36,34 @@
     <priority>0.6</priority>
   </url>
 
+  <!-- Blog Pages -->
+  <url>
+    <loc>https://registra.app/blog.html</loc>
+    <lastmod>2025-10-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blog Posts -->
+  <url>
+    <loc>https://registra.app/blog-post.html?slug=how-to-document-customer-service-calls</loc>
+    <lastmod>2025-10-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://registra.app/blog-post.html?slug=10-consumer-rights-you-need-to-know-2025</loc>
+    <lastmod>2025-10-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://registra.app/blog-post.html?slug=what-to-do-when-companies-lose-case-number</loc>
+    <lastmod>2025-10-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>

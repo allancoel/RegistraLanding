@@ -1,15 +1,21 @@
 User-agent: *
 Allow: /
 
-# Block access to certain directories if they exist
+# Block access to certain directories and files
 Disallow: /node_modules/
 Disallow: /.git/
 Disallow: /assets/css/*.css.map
+Disallow: /admin-blog.html
+Disallow: /*ADMIN*
+Disallow: /*admin*
 
 # Allow important pages
 Allow: /index.html
 Allow: /privacy.html
 Allow: /terms.html
+Allow: /blog.html
+Allow: /blog-post.html
+Allow: /contact.html
 
 # Sitemap
 Sitemap: https://registra.app/sitemap.xml
