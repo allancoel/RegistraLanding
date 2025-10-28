@@ -485,6 +485,152 @@ html {
   outline-offset: 2px;
 }
 
+/* ========================================
+   HERO IMAGE & VIDEO WRAPPER STYLES
+   ======================================== */
+
+/* Hero Image Wrapper */
+.hero-image-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero-image-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transform: scale(1);
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-image-wrapper:hover img {
+  transform: scale(1.02);
+}
+
+/* Demo Video Wrapper */
+.demo-video-wrapper {
+  position: relative;
+  background: #000;
+  width: 100%;
+}
+
+.demo-video-wrapper video {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Responsive Image Containers */
+.feature-image-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.feature-image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s ease, opacity 0.3s ease;
+}
+
+.feature-image-container:hover img {
+  transform: scale(1.05);
+}
+
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+  .hero-image-wrapper {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .hero-image-wrapper img {
+    border-radius: 1.5rem;
+  }
+
+  .demo-video-wrapper {
+    border-radius: 1rem;
+  }
+
+  /* Reduce blur effects on mobile for performance */
+  .absolute.blur-3xl,
+  .absolute.blur-2xl {
+    display: none;
+  }
+
+  /* Optimize image sizes for mobile */
+  .feature-image-container img {
+    object-fit: cover;
+    max-height: 500px;
+  }
+
+  /* Ensure videos don't overflow on small screens */
+  video {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* Extra small devices (phones in portrait) */
+@media (max-width: 480px) {
+  .hero-image-wrapper img {
+    border-radius: 1rem;
+  }
+
+  .demo-video-wrapper {
+    border-radius: 0.75rem;
+  }
+
+  /* Further reduce decorative elements on very small screens */
+  .ring-4,
+  .ring-2 {
+    --tw-ring-width: 2px;
+  }
+}
+
+/* Tablet optimizations */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .hero-image-wrapper {
+    max-width: 450px;
+  }
+
+  .demo-video-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}
+
+/* Large screen optimizations */
+@media (min-width: 1024px) {
+  .hero-image-wrapper {
+    max-width: 500px;
+  }
+
+  .demo-video-wrapper {
+    max-width: 1000px;
+  }
+}
+
+/* Image loading states */
+img[loading="lazy"] {
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+}
+
+img[loading="lazy"].loaded,
+img[loading="eager"] {
+  opacity: 1;
+}
+
+/* Prevent layout shift for images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 /* Blog post metadata styling */
 .blog-meta {
   display: flex;
