@@ -18,7 +18,14 @@ const BlogManager = (function() {
 
   // Initialize with default posts if storage is empty
   function initializeDefaultPosts() {
-    const posts = getAllPosts();
+    let posts = getAllPosts();
+    
+    // Check if old posts are using logo2.png and reset them
+    if (posts.length > 0 && posts[0].image && posts[0].image.includes('logo2.png')) {
+      localStorage.removeItem(STORAGE_KEY); // Clear old posts
+      posts = []; // Force reset to use new images
+    }
+    
     if (posts.length === 0) {
       const defaultPosts = [
         {
@@ -108,7 +115,7 @@ const BlogManager = (function() {
           date: new Date().toISOString(),
           updatedDate: new Date().toISOString(),
           category: 'Guides',
-          image: 'assets/images/logo2.png',
+          image: 'assets/blog/organization.png',
           featured: true,
           seoTitle: 'How to Document Customer Service Calls - Complete Guide 2025',
           seoDescription: 'Master the art of documenting customer service calls. Learn what to record, how to organize it, and how to use it to win disputes. Includes professional PDF export tips.',
@@ -237,7 +244,7 @@ const BlogManager = (function() {
           date: new Date(Date.now() - 86400000).toISOString(),
           updatedDate: new Date(Date.now() - 86400000).toISOString(),
           category: 'Consumer Rights',
-          image: 'assets/images/logo2.png',
+          image: 'assets/blog/10things.png',
           featured: false,
           seoTitle: '10 Essential Consumer Rights Every Customer Should Know in 2025',
           seoDescription: 'Protect yourself with these 10 critical consumer rights. Learn what companies must do, how to enforce your rights, and when to escalate complaints.',
@@ -381,7 +388,7 @@ const BlogManager = (function() {
           date: new Date(Date.now() - 172800000).toISOString(),
           updatedDate: new Date(Date.now() - 172800000).toISOString(),
           category: 'Problem Solving',
-          image: 'assets/images/logo2.png',
+          image: 'assets/blog/companies lose.png',
           featured: false,
           seoTitle: 'What to Do When Companies Lose Your Case Number - Action Plan',
           seoDescription: 'Step-by-step guide to handle situations when companies claim they have no record of your case. Win your disputes with proper documentation.',
