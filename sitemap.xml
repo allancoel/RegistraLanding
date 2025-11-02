@@ -36,6 +36,14 @@
     <priority>0.9</priority>
   </url>
 
+  <!-- Homepage - French (France) -->
+  <url>
+    <loc>https://registra.app/index-fr.html</loc>
+    <lastmod>2025-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
   <!-- Privacy Policy -->
   <url>
     <loc>https://registra.app/privacy.html</loc>
