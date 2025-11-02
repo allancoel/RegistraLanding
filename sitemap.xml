@@ -20,6 +20,14 @@
     <priority>0.9</priority>
   </url>
 
+  <!-- Homepage - Spanish (Spain) -->
+  <url>
+    <loc>https://registra.app/index-es.html</loc>
+    <lastmod>2025-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
   <!-- Privacy Policy -->
   <url>
     <loc>https://registra.app/privacy.html</loc>
