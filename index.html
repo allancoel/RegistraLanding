@@ -66,6 +66,65 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'GA_TRACKING_ID');
+
+    // Geolocation-based language redirect
+    (function() {
+      // Only redirect if user hasn't chosen a language before
+      if (localStorage.getItem('userLanguageSet')) return;
+
+      // Check if we should skip geolocation (e.g., for development)
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.has('skipGeo')) return;
+
+      // Get user's IP-based location
+      fetch('https://ipapi.co/json/')
+        .then(response => response.json())
+        .then(data => {
+          const country = data.country_code;
+          let targetLang = null;
+
+          // Map countries to languages
+          const countryLangMap = {
+            'BR': 'index-pt.html',     // Brazil -> Portuguese
+            'PT': 'index-pt.html',     // Portugal -> Portuguese
+            'ES': 'index-es.html',     // Spain -> Spanish
+            'MX': 'index-es.html',     // Mexico -> Spanish
+            'AR': 'index-es.html',     // Argentina -> Spanish
+            'CO': 'index-es.html',     // Colombia -> Spanish
+            'FR': 'index-fr.html',     // France -> French
+            'CA': 'index-fr.html',     // Canada -> French (Quebec)
+            'BE': 'index-fr.html',     // Belgium -> French
+            'DE': 'index-de.html',     // Germany -> German
+            'AT': 'index-de.html',     // Austria -> German
+            'CH': 'index-de.html',     // Switzerland -> German
+            'IT': 'index-it.html',     // Italy -> Italian
+            'JP': 'index-ja.html',     // Japan -> Japanese
+            'KR': 'index-ko.html',     // South Korea -> Korean
+            'CN': 'index-zh.html',     // China -> Chinese Simplified
+            'TW': 'index-zh.html',     // Taiwan -> Chinese Simplified
+            'RU': 'index-ru.html',     // Russia -> Russian
+            'SA': 'index-ar.html',     // Saudi Arabia -> Arabic
+            'AE': 'index-ar.html',     // UAE -> Arabic
+            'EG': 'index-ar.html',     // Egypt -> Arabic
+          };
+
+          if (countryLangMap[country]) {
+            targetLang = countryLangMap[country];
+          }
+
+          // Only redirect if target language is different from current (English)
+          if (targetLang && targetLang !== 'index.html') {
+            // Add a small delay to ensure page loads first
+            setTimeout(() => {
+              window.location.href = targetLang + '?geo=1';
+            }, 100);
+          }
+        })
+        .catch(() => {
+          // If geolocation fails, do nothing - user stays on English
+          console.log('Geolocation not available, staying on English');
+        });
+    })();
   </script>
 
   <!-- Preconnect to external domains for performance -->
@@ -258,17 +317,29 @@
             </button>
             <div id="language-dropdown" class="absolute right-0 top-full mt-2 w-48 bg-slate-800 border border-white/10 rounded-lg shadow-xl opacity-0 invisible transform scale-95 transition-all duration-200 z-50">
               <div class="py-2">
+                <a href="index-ar.html" class="flex items-center gap-3 px-4 py-2 text-sm text-slate-300 hover:bg-white/10 hover:text-white transition-colors">
+                  <span class="text-lg">🇸🇦</span>
+                  <span>العربية (السعودية)</span>
+                </a>
+                <a href="index-de.html" class="flex items-center gap-3 px-4 py-2 text-sm text-slate-300 hover:bg-white/10 hover:text-white transition-colors">
+                  <span class="text-lg">🇩🇪</span>
+                  <span>Deutsch (Deutschland)</span>
+                </a>
+                <a href="index.html" class="flex items-center gap-3 px-4 py-2 text-sm text-slate-300 hover:bg-white/10 hover:text-white transition-colors bg-white/5">
+                  <span class="text-lg">🇺🇸</span>
+                  <span>English (US)</span>
+                </a>
+                <a href="index-es.html" class="flex items-center gap-3 px-4 py-2 text-sm text-slate-300 hover:bg-white/10 hover:text-white transition-colors">
+                  <span class="text-lg">🇪🇸</span>
+                  <span>Español (España)</span>
+                </a>
+                <a href="index-fr.html" class="flex items-center gap-3 px-4 py-2 text-sm text-slate-300 hover:bg-white/10 hover:text-white transition-colors">
+                  <span class="text-lg">🇫🇷</span>
+                  <span>Français (France)</span>
+                </a>
                 <a href="index-it.html" class="flex items-center gap-3 px-4 py-2 text-sm text-slate-300 hover:bg-white/10 hover:text-white transition-colors">
                   <span class="text-lg">🇮🇹</span>
                   <span>Italiano (Italia)</span>
-                </a>
-                <a href="index-ru.html" class="flex items-center gap-3 px-4 py-2 text-sm text-slate-300 hover:bg-white/10 hover:text-white transition-colors">
-                  <span class="text-lg">🇷🇺</span>
-                  <span>Русский (Россия)</span>
-                </a>
-                <a href="index-zh.html" class="flex items-center gap-3 px-4 py-2 text-sm text-slate-300 hover:bg-white/10 hover:text-white transition-colors">
-                  <span class="text-lg">🇨🇳</span>
-                  <span>中文 (中国大陆)</span>
                 </a>
                 <a href="index-ja.html" class="flex items-center gap-3 px-4 py-2 text-sm text-slate-300 hover:bg-white/10 hover:text-white transition-colors">
                   <span class="text-lg">🇯🇵</span>
@@ -278,29 +349,17 @@
                   <span class="text-lg">🇰🇷</span>
                   <span>한국어 (대한민국)</span>
                 </a>
-                <a href="index-de.html" class="flex items-center gap-3 px-4 py-2 text-sm text-slate-300 hover:bg-white/10 hover:text-white transition-colors">
-                  <span class="text-lg">🇩🇪</span>
-                  <span>Deutsch (Deutschland)</span>
-                </a>
-                <a href="index-fr.html" class="flex items-center gap-3 px-4 py-2 text-sm text-slate-300 hover:bg-white/10 hover:text-white transition-colors">
-                  <span class="text-lg">🇫🇷</span>
-                  <span>Français (France)</span>
-                </a>
-                <a href="index-ar.html" class="flex items-center gap-3 px-4 py-2 text-sm text-slate-300 hover:bg-white/10 hover:text-white transition-colors">
-                  <span class="text-lg">🇸🇦</span>
-                  <span>العربية (السعودية)</span>
-                </a>
-                <a href="index-es.html" class="flex items-center gap-3 px-4 py-2 text-sm text-slate-300 hover:bg-white/10 hover:text-white transition-colors">
-                  <span class="text-lg">🇪🇸</span>
-                  <span>Español (España)</span>
-                </a>
                 <a href="index-pt.html" class="flex items-center gap-3 px-4 py-2 text-sm text-slate-300 hover:bg-white/10 hover:text-white transition-colors">
                   <span class="text-lg">🇧🇷</span>
                   <span>Português (Brasil)</span>
                 </a>
-                <a href="index.html" class="flex items-center gap-3 px-4 py-2 text-sm text-slate-300 hover:bg-white/10 hover:text-white transition-colors bg-white/5">
-                  <span class="text-lg">🇺🇸</span>
-                  <span>English (US)</span>
+                <a href="index-ru.html" class="flex items-center gap-3 px-4 py-2 text-sm text-slate-300 hover:bg-white/10 hover:text-white transition-colors">
+                  <span class="text-lg">🇷🇺</span>
+                  <span>Русский (Россия)</span>
+                </a>
+                <a href="index-zh.html" class="flex items-center gap-3 px-4 py-2 text-sm text-slate-300 hover:bg-white/10 hover:text-white transition-colors">
+                  <span class="text-lg">🇨🇳</span>
+                  <span>中文 (中国大陆)</span>
                 </a>
               </div>
             </div>
