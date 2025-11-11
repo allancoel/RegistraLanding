@@ -1,18 +1,21 @@
 <!doctype html>
-<html lang="en">
+<html lang="ja">
 <head>
   <meta charset="utf-8">
-  <title>Registra — Never lose a case number again | iOS App</title>
+  <title>Registra — ケース番号を二度と失わない | iOSアプリ</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Keep all your customer service calls organized in one place. Case numbers, call recordings, receipts—everything you need when you need to follow up. Free iOS app.">
-  <meta name="keywords" content="customer service app, call logging app, case number tracker, reference number tracker, customer service documentation, service call organizer, PDF report generator, password vault, AES-256 encryption, consumer rights app, iOS productivity, customer service CRM, call recording app, contract tracking, service dispute app">
+  <meta name="description" content="すべての顧客サービス通話を一箇所で整理しましょう。ケース番号、通話記録、領収書—追跡する必要があるすべてのもの。無料のiOSアプリ。">
+  <meta name="keywords" content="顧客サービスアプリ、通話記録アプリ、ケース番号トラッカー、参照番号トラッカー、顧客サービス文書化、サービス通話オーガナイザー、PDFレポートジェネレーター、パスワードボルト、AES-256暗号化、消費者権利アプリ、iOS生産性、顧客サービスCRM、通話記録アプリ、契約追跡、サービス紛争アプリ">
   <meta name="author" content="AMC Marketing LTDA">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-  <meta name="language" content="en-US">
+  <meta name="language" content="ja-JP">
   <meta name="revisit-after" content="7 days">
 
   <!-- Canonical URL -->
-  <link rel="canonical" href="https://registraa.com/">
+  <link rel="canonical" href="https://registraa.com/ja/">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://registraa.com/ja/">
 
   <!-- Hreflang attributes for SEO -->
   <link rel="alternate" hreflang="x-default" href="https://registraa.com/">
@@ -31,35 +34,35 @@
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Registra">
-  <meta property="og:title" content="Registra — Never lose a case number again">
-  <meta property="og:description" content="Keep all your customer service calls organized in one place. Case numbers, call recordings, receipts—everything you need when you need to follow up. Free iOS app.">
+  <meta property="og:title" content="Registra — ケース番号を二度と失わない">
+  <meta property="og:description" content="すべての顧客サービス通話を一箇所で整理しましょう。ケース番号、通話記録、領収書—追跡する必要があるすべてのもの。無料のiOSアプリ。">
   <meta property="og:image" content="https://registraa.com/assets/images/logo2.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Registra iOS App - Customer Service Organization Tool">
-  <meta property="og:url" content="https://registraa.com/">
-  <meta property="og:locale" content="en_US">
+  <meta property="og:image:alt" content="Registra iOSアプリ - 顧客サービス整理ツール">
+  <meta property="og:url" content="https://registraa.com/ja/">
+  <meta property="og:locale" content="ja_JP">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@registraapp">
   <meta name="twitter:creator" content="@registraapp">
-  <meta name="twitter:title" content="Registra — Never lose a case number again">
-  <meta name="twitter:description" content="Keep customer service calls organized. Case numbers, recordings, receipts—all in one place. Free iOS app.">
+  <meta name="twitter:title" content="Registra — ケース番号を二度と失わない">
+  <meta name="twitter:description" content="顧客サービス通話を整理しましょう。ケース番号、記録、領収書—すべて一箇所に。無料のiOSアプリ。">
   <meta name="twitter:image" content="https://registraa.com/assets/images/logo2.png">
-  <meta name="twitter:image:alt" content="Registra iOS App - Customer Service Organization Tool">
+  <meta name="twitter:image:alt" content="Registra iOSアプリ - 顧客サービス整理ツール">
 
   <!-- Favicons -->
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/logo2.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/logo2.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/logo2.png">
-  <link rel="manifest" href="site.webmanifest">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/logo2.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/logo2.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/logo2.png">
+  <link rel="manifest" href="../site.webmanifest">
   <meta name="theme-color" content="#0f172a">
   <meta name="msapplication-TileColor" content="#0f172a">
 
+
   <!-- Smart App Banner (iOS) -->
   <meta name="apple-itunes-app" content="app-id=6747366907">
-
   <!-- Google Search Console Verification -->
   <meta name="google-site-verification" content="YOUR_GOOGLE_SITE_VERIFICATION_CODE">
 
@@ -70,65 +73,6 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'GA_TRACKING_ID');
-
-    // Geolocation-based language redirect
-    (function() {
-      // Only redirect if user hasn't chosen a language before
-      if (localStorage.getItem('userLanguageSet')) return;
-
-      // Check if we should skip geolocation (e.g., for development)
-      const urlParams = new URLSearchParams(window.location.search);
-      if (urlParams.has('skipGeo')) return;
-
-      // Get user's IP-based location
-      fetch('https://ipapi.co/json/')
-        .then(response => response.json())
-        .then(data => {
-          const country = data.country_code;
-          let targetLang = null;
-
-          // Map countries to languages
-          const countryLangMap = {
-            'BR': 'pt-br/',     // Brazil -> Portuguese
-            'PT': 'pt-br/',     // Portugal -> Portuguese
-            'ES': 'es/',     // Spain -> Spanish
-            'MX': 'es/',     // Mexico -> Spanish
-            'AR': 'es/',     // Argentina -> Spanish
-            'CO': 'es/',     // Colombia -> Spanish
-            'FR': 'fr/',     // France -> French
-            'CA': 'fr/',     // Canada -> French (Quebec)
-            'BE': 'fr/',     // Belgium -> French
-            'DE': 'de/',     // Germany -> German
-            'AT': 'de/',     // Austria -> German
-            'CH': 'de/',     // Switzerland -> German
-            'IT': 'it/',     // Italy -> Italian
-            'JP': 'ja/',     // Japan -> Japanese
-            'KR': 'ko/',     // South Korea -> Korean
-            'CN': 'zh-cn/',     // China -> Chinese Simplified
-            'TW': 'zh-cn/',     // Taiwan -> Chinese Simplified
-            'RU': 'ru/',     // Russia -> Russian
-            'SA': 'ar/',     // Saudi Arabia -> Arabic
-            'AE': 'ar/',     // UAE -> Arabic
-            'EG': 'ar/',     // Egypt -> Arabic
-          };
-
-          if (countryLangMap[country]) {
-            targetLang = countryLangMap[country];
-          }
-
-          // Only redirect if target language is different from current (English)
-          if (targetLang && targetLang && targetLang !== '') {
-            // Add a small delay to ensure page loads first
-            setTimeout(() => {
-              window.location.href = targetLang + '?geo=1';
-            }, 100);
-          }
-        })
-        .catch(() => {
-          // If geolocation fails, do nothing - user stays on English
-          console.log('Geolocation not available, staying on English');
-        });
-    })();
   </script>
 
   <!-- Preconnect to external domains for performance -->
@@ -136,7 +80,7 @@
   <link rel="preconnect" href="https://cdn.tailwindcss.com">
   <link rel="preconnect" href="https://www.googletagmanager.com">
   <link rel="dns-prefetch" href="//fonts.gstatic.com">
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
   <script src="https://cdn.tailwindcss.com"></script>
 
   <!-- Structured Data -->
@@ -146,17 +90,17 @@
     "@graph": [
       {
         "@type": "SoftwareApplication",
-        "@id": "https://registraa.com/#softwareapplication",
+        "@id": "https://registraa.com/ja.html#softwareapplication",
         "name": "Registra",
-        "description": "Transform messy customer service experiences into organized clarity. Registra helps you track calls, case numbers, notes, and attachments.",
-        "url": "https://registraa.com/",
+        "description": "混沌とした顧客サービス体験を整理された明確性に変換します。Registraは通話、ケース番号、メモ、添付ファイルを追跡するのに役立ちます。",
+        "url": "https://registraa.com/ja.html",
         "applicationCategory": "BusinessApplication",
         "operatingSystem": "iOS",
         "inLanguage": ["en", "pt-BR", "es", "fr", "de", "it", "ja", "ko", "zh-CN", "ru", "ar"],
         "offers": {
           "@type": "Offer",
           "price": "0",
-          "priceCurrency": "USD",
+          "priceCurrency": "JPY",
           "priceValidUntil": "2025-12-31",
           "availability": "https://schema.org/InStock",
           "url": "https://apps.apple.com/br/app/registra-app/id6747366907",
@@ -166,12 +110,12 @@
           }
         },
         "featureList": [
-          "Detailed Call Logs",
-          "Attachments Made Easy",
-          "Smart Reminders",
-          "Contract Tracking",
-          "Instant PDF Reports",
-          "Cloud Backup & Offline Access"
+          "詳細な通話記録",
+          "添付ファイルが簡単",
+          "インテリジェントなリマインダー",
+          "契約追跡",
+          "即時PDFレポート",
+          "クラウドバックアップとオフラインアクセス"
         ],
         "screenshot": "https://registraa.com/assets/images/logo2.png",
         "downloadUrl": "https://apps.apple.com/br/app/registra-app/id6747366907",
@@ -180,22 +124,22 @@
         "author": {
           "@type": "Organization",
           "name": "AMC Marketing LTDA",
-          "url": "https://registraa.com/"
+          "url": "https://registraa.com/ja/"
         },
         "publisher": {
           "@type": "Organization",
           "name": "AMC Marketing LTDA",
           "url": "https://registraa.com/"
-        }
+        },
       },
       {
         "@type": "WebSite",
-        "@id": "https://registraa.com/#website",
-        "url": "https://registraa.com/",
+        "@id": "https://registraa.com/ja.html#website",
+        "url": "https://registraa.com/ja.html",
         "name": "Registra",
-        "description": "Customer service organization made simple",
+        "description": "顧客サービス整理の簡素化",
         "publisher": {
-          "@id": "https://registraa.com/#organization"
+          "@id": "https://registraa.com/ja.html#organization"
         },
         "potentialAction": {
           "@type": "SearchAction",
@@ -205,13 +149,13 @@
           },
           "query-input": "required name=search_term_string"
         },
-        "inLanguage": "en-US"
+        "inLanguage": "ja"
       },
       {
         "@type": "Organization",
-        "@id": "https://registraa.com/#organization",
+        "@id": "https://registraa.com/ja.html#organization",
         "name": "AMC Marketing LTDA",
-        "url": "https://registraa.com/",
+        "url": "https://registraa.com/ja.html",
         "logo": {
           "@type": "ImageObject",
           "url": "https://registraa.com/assets/images/logo2.png",
@@ -223,9 +167,8 @@
           "telephone": "+55-31-99999-9999",
           "contactType": "customer service",
           "email": "support@registraa.com",
-          "availableLanguage": "en"
-        },
-        "foundingDate": "2024",
+          "availableLanguage": "ja"
+        },        "foundingDate": "2024",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Av Uruguai 1076",
@@ -239,7 +182,7 @@
   }
   </script>
   <style>
-    .glow { 
+    .glow {
       background: radial-gradient(900px 500px at 50% 20%, rgba(59,130,246,.15), rgba(139,92,246,.1), rgba(255,255,255,0));
       animation: glow-pulse 8s ease-in-out infinite;
     }
@@ -295,15 +238,15 @@
   <header class="sticky top-0 z-50 backdrop-blur bg-slate-900/70 border-b border-white/5" role="banner">
     <div class="mx-auto max-w-7xl px-6">
       <div class="flex h-16 items-center justify-between">
-        <a href="/" class="flex items-center gap-3" aria-label="Registra homepage">
-          <img src="assets/images/logo-header.png" alt="Registra logo" class="h-[2.4rem] w-[2.4rem]" loading="eager">
+        <a href="/" class="flex items-center gap-3" aria-label="Registra ホームページ">
+          <img src="../assets/images/logo-header.png" alt="Registra ロゴ" class="h-[2.4rem] w-[2.4rem]" loading="eager">
           <span class="font-black tracking-tight text-xl">Registra</span>
         </a>
-          <nav class="hidden md:flex items-center gap-8 text-sm text-slate-300" role="navigation" aria-label="Main navigation">
-          <a href="#features" class="hover:text-white transition-colors">Features</a>
-          <a href="#how-it-works" class="hover:text-white transition-colors">How it Works</a>
-          <a href="#pricing" class="hover:text-white transition-colors">Pricing</a>
-          <a href="blog.html" class="hover:text-white transition-colors">Blog</a>
+          <nav class="hidden md:flex items-center gap-8 text-sm text-slate-300" role="navigation" aria-label="メインナビゲーション">
+          <a href="#features" class="hover:text-white transition-colors">機能</a>
+          <a href="#how-it-works" class="hover:text-white transition-colors">使い方</a>
+          <a href="#pricing" class="hover:text-white transition-colors">料金</a>
+          <a href="../blog.html" class="hover:text-white transition-colors">ブログ</a>
           <a href="#faq" class="hover:text-white transition-colors">FAQ</a>
         </nav>
         <div class="flex items-center gap-3">
@@ -313,7 +256,7 @@
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
               </svg>
-              EN
+              JA
               <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
               </svg>
@@ -328,7 +271,7 @@
                   <span class="text-lg">🇩🇪</span>
                   <span>Deutsch (Deutschland)</span>
                 </a>
-                <a href="/" class="flex items-center gap-3 px-4 py-2 text-sm text-slate-300 hover:bg-white/10 hover:text-white transition-colors bg-white/5">
+                <a href="/" class="flex items-center gap-3 px-4 py-2 text-sm text-slate-300 hover:bg-white/10 hover:text-white transition-colors">
                   <span class="text-lg">🇺🇸</span>
                   <span>English (US)</span>
                 </a>
@@ -344,7 +287,7 @@
                   <span class="text-lg">🇮🇹</span>
                   <span>Italiano (Italia)</span>
                 </a>
-                <a href="/ja/" class="flex items-center gap-3 px-4 py-2 text-sm text-slate-300 hover:bg-white/10 hover:text-white transition-colors">
+                <a href="/ja/" class="flex items-center gap-3 px-4 py-2 text-sm text-slate-300 hover:bg-white/10 hover:text-white transition-colors bg-white/5">
                   <span class="text-lg">🇯🇵</span>
                   <span>日本語 (日本)</span>
                 </a>
@@ -368,9 +311,9 @@
             </div>
           </div>
 
-          <a href="https://apps.apple.com/br/app/registra-app/id6747366907" class="hidden sm:inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-white text-slate-900 text-sm font-medium hover:bg-gray-100 transition-colors" aria-label="Download Registra on the App Store">
-            <img src="assets/images/apple-logo.svg" alt="" class="w-4 h-4" aria-hidden="true">
-            Download on the App Store
+          <a href="https://apps.apple.com/br/app/registra-app/id6747366907" class="hidden sm:inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-white text-slate-900 text-sm font-medium hover:bg-gray-100 transition-colors" aria-label="App StoreからRegistraをダウンロード">
+            <img src="../assets/images/apple-logo.svg" alt="" class="w-4 h-4" aria-hidden="true">
+            App Storeからダウンロード
           </a>
         </div>
       </div>
@@ -388,66 +331,66 @@
             <svg class="w-4 h-4 text-green-400" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
             </svg>
-            <span class="text-sm text-green-400 font-semibold">Free Download • iOS App</span>
+            <span class="text-sm text-green-400 font-semibold">無料ダウンロード • iOSアプリ</span>
           </div>
-          
+
           <h1 id="hero-heading" class="text-4xl md:text-6xl font-black leading-tight tracking-tight mb-6">
-            Stop Losing<br/>
-            <span class="gradient-text">Customer Service</span><br/>
-            Battles
+            顧客サービス戦争で<br/>
+            <span class="gradient-text">負けない方法</span><br/>
+            を学びましょう
           </h1>
-          
+
           <p class="text-lg md:text-xl text-slate-300 leading-relaxed mb-4">
-            <strong class="text-white">Never lose a case number again.</strong> Keep every call, document, and deadline organized in one secure place.
+            <strong class="text-white">ケース番号を二度と失わない。</strong> すべての通話、文書、マークを安全な一箇所で整理しましょう。
           </p>
-          
+
           <p class="text-base md:text-lg text-slate-400 mb-6 leading-relaxed">
-            Tired of companies saying "we have no record of your call"? Registra gives you the proof you need.
+            企業が「あなたの通話の記録がありません」と言うことにうんざりしていませんか？ Registraはあなたが必要とする証拠を提供します。
           </p>
-          
+
           <!-- CTA Buttons -->
           <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-6">
-            <a href="https://apps.apple.com/br/app/registra-app/id6747366907" 
-               class="group relative px-8 py-4 rounded-xl bg-blue-600 text-white text-base font-bold hover:bg-blue-500 transition-all cta-pulse flex items-center gap-3 shadow-2xl shadow-blue-600/50" 
-               aria-label="Download Registra on the App Store">
-              <img src="assets/images/apple-logo.svg" alt="" class="w-5 h-5" aria-hidden="true">
-              <span>Download Free Now</span>
+            <a href="https://apps.apple.com/br/app/registra-app/id6747366907"
+               class="group relative px-8 py-4 rounded-xl bg-blue-600 text-white text-base font-bold hover:bg-blue-500 transition-all cta-pulse flex items-center gap-3 shadow-2xl shadow-blue-600/50"
+               aria-label="App StoreからRegistraをダウンロード">
+              <img src="../assets/images/apple-logo.svg" alt="" class="w-5 h-5" aria-hidden="true">
+              <span>今すぐ無料でダウンロード</span>
               <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
               </svg>
             </a>
-            <a href="#how-it-works" 
-               class="px-8 py-4 rounded-xl bg-white/10 text-slate-100 text-base font-semibold hover:bg-white/20 transition-all backdrop-blur-sm border border-white/20" 
-               aria-label="Learn how Registra works">
-              Watch 2-min demo
+            <a href="#how-it-works"
+               class="px-8 py-4 rounded-xl bg-white/10 text-slate-100 text-base font-semibold hover:bg-white/20 transition-all backdrop-blur-sm border border-white/20"
+               aria-label="Registraがどのように機能するか学ぶ">
+              2分のデモを見る
             </a>
           </div>
-          
+
           <!-- App Features Highlights -->
           <div class="grid grid-cols-3 gap-6 p-6 rounded-2xl stats-highlight border border-white/10">
             <div>
               <div class="text-3xl font-bold text-white mb-1">100%</div>
-              <div class="text-xs text-slate-400 uppercase tracking-wide">Free Start</div>
+              <div class="text-xs text-slate-400 uppercase tracking-wide">無料</div>
             </div>
             <div>
-              <div class="text-3xl font-bold text-white mb-1">Offline</div>
-              <div class="text-xs text-slate-400 uppercase tracking-wide">Works Fully</div>
+              <div class="text-3xl font-bold text-white mb-1">オフライン</div>
+              <div class="text-xs text-slate-400 uppercase tracking-wide">動作</div>
             </div>
             <div>
               <div class="text-3xl font-bold text-white mb-1">11</div>
-              <div class="text-xs text-slate-400 uppercase tracking-wide">Languages</div>
+              <div class="text-xs text-slate-400 uppercase tracking-wide">言語</div>
             </div>
           </div>
         </div>
-        
+
         <!-- Hero Demo GIF -->
         <div class="relative flex items-center justify-center md:justify-end">
           <div class="absolute -inset-16 blur-3xl bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-blue-600/20 rounded-full animate-pulse" aria-hidden="true"></div>
           <div class="relative">
             <div class="hero-image-wrapper">
-              <img 
-                src="assets/videos/Demo usage Registragif.gif" 
-                alt="Registra App Demo - See the app in action" 
+              <img
+                src="../assets/videos/Demo usage Registragif.gif"
+                alt="Registraアプリデモ - アプリを実際に確認してみてください"
                 class="w-full h-auto object-cover rounded-[2.5rem] shadow-2xl transition-all duration-500"
                 loading="eager">
             </div>
@@ -458,7 +401,7 @@
                     <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                     <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
                   </span>
-                  Live demo • See the app in action
+                  ライブデモ • アプリを実際に確認してみてください
                 </span>
               </p>
             </div>
@@ -473,13 +416,13 @@
       <div class="relative mx-auto max-w-7xl px-6 py-20 md:py-32">
         <div class="text-center mb-16">
           <span class="inline-block px-4 py-2 bg-red-600/10 text-red-400 rounded-full text-sm font-semibold mb-4 border border-red-500/20">
-            THE PROBLEM
+            問題点
           </span>
           <h2 class="text-4xl md:text-5xl font-bold tracking-tight mb-6">
-            Sound Familiar?
+            馴染みのある状況ですか？
           </h2>
           <p class="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
-            40 minutes on hold. They give you a case number. You write it somewhere. Three days later... <strong class="text-white">it's gone.</strong>
+            40分待ち。ケース番号を教えてくれます。どこかに書き留めます。3日後... <strong class="text-white">消えてしまいました。</strong>
           </p>
         </div>
 
@@ -493,8 +436,8 @@
                 </svg>
               </div>
               <div>
-                <h3 class="text-lg font-semibold text-white mb-2">Lost Case Numbers</h3>
-                <p class="text-slate-400">Sticky notes disappear. Phone memos get deleted. When companies ask for proof, you have nothing.</p>
+                <h3 class="text-lg font-semibold text-white mb-2">失われたケース番号</h3>
+                <p class="text-slate-400">付箋紙が消え、電話メモが削除されます。企業が証拠を求めても何もありません。</p>
               </div>
             </div>
           </div>
@@ -507,8 +450,8 @@
                 </svg>
               </div>
               <div>
-                <h3 class="text-lg font-semibold text-white mb-2">Missed Follow-Ups</h3>
-                <p class="text-slate-400">"Call back in 48 hours" they said. But you forgot. Now your case is closed and you start from zero.</p>
+                <h3 class="text-lg font-semibold text-white mb-2">忘れられたフォローアップ</h3>
+                <p class="text-slate-400">"48時間後にまた電話して」と言われました。でも忘れてしまいました。今ケースが閉じられ、最初からやり直さなければなりません。</p>
               </div>
             </div>
           </div>
@@ -521,8 +464,8 @@
                 </svg>
               </div>
               <div>
-                <h3 class="text-lg font-semibold text-white mb-2">Explaining Everything. Again.</h3>
-                <p class="text-slate-400">"I already told someone last week!" No documentation means repeating your story to every new agent.</p>
+                <h3 class="text-lg font-semibold text-white mb-2">すべてをもう一度説明する</h3>
+                <p class="text-slate-400">"先週すでに誰かに説明しました。" 文書化がなければ、毎回新しい担当者に話を繰り返さなければなりません。</p>
               </div>
             </div>
           </div>
@@ -535,8 +478,8 @@
                 </svg>
               </div>
               <div>
-                <h3 class="text-lg font-semibold text-white mb-2">Zero Proof of Anything</h3>
-                <p class="text-slate-400">They promised a refund? Prove it. They said it would be fixed? Show me where. You can't win without evidence.</p>
+                <h3 class="text-lg font-semibold text-white mb-2">何に対しても証拠がない</h3>
+                <p class="text-slate-400">返金を約束しましたか？証明してください。修理されるだろうと言いましたか？どこにそれがあるか教えてください。証拠がなければ勝てません。</p>
               </div>
             </div>
           </div>
@@ -547,11 +490,11 @@
           <div class="relative p-8 md:p-12 rounded-3xl bg-gradient-to-br from-green-600/10 to-emerald-600/10 border-2 border-green-500/30 backdrop-blur-sm">
             <div class="mb-8">
               <span class="inline-block px-4 py-2 bg-green-600/20 text-green-300 rounded-full text-sm font-bold mb-6 border border-green-500/30">
-                ✓ THE SOLUTION
+                ✓ 解決策
               </span>
-              <h3 class="text-3xl md:text-4xl font-bold text-white mb-4 leading-tight">Here's What Changes</h3>
+              <h3 class="text-3xl md:text-4xl font-bold text-white mb-4 leading-tight">ここですべてが変わります</h3>
               <p class="text-lg text-slate-200 leading-relaxed">
-                Everything you need to win your case—organized, accessible, and <strong class="text-white">impossible to lose.</strong>
+                あなたのケースを勝たせるために必要なすべて—整理され、アクセス可能で、<strong class="text-white">失われることがありません。</strong>
               </p>
             </div>
 
@@ -563,8 +506,8 @@
                   </svg>
                 </div>
                 <div>
-                  <p class="text-white font-bold text-lg mb-1">Every case number saved automatically</p>
-                  <p class="text-sm text-slate-300">Never scramble looking for that number again</p>
+                  <p class="text-white font-bold text-lg mb-1">すべてのケース番号を自動保存</p>
+                  <p class="text-sm text-slate-300">その番号を必死で探す必要がなくなりました</p>
                 </div>
               </div>
 
@@ -575,8 +518,8 @@
                   </svg>
                 </div>
                 <div>
-                  <p class="text-white font-bold text-lg mb-1">Smart reminders for follow-ups</p>
-                  <p class="text-sm text-slate-300">Your phone tells you when to call back</p>
+                  <p class="text-white font-bold text-lg mb-1">フォローアップのためのインテリジェントなリマインダー</p>
+                  <p class="text-sm text-slate-300">電話がいつかけ直すべきか知らせてくれます</p>
                 </div>
               </div>
 
@@ -587,8 +530,8 @@
                   </svg>
                 </div>
                 <div>
-                  <p class="text-white font-bold text-lg mb-1">Record calls & attach documents</p>
-                  <p class="text-sm text-slate-300">Keep proof of every promise</p>
+                  <p class="text-white font-bold text-lg mb-1">通話記録と文書添付</p>
+                  <p class="text-sm text-slate-300">すべての約束の証拠を保存しましょう</p>
                 </div>
               </div>
 
@@ -599,19 +542,19 @@
                   </svg>
                 </div>
                 <div>
-                  <p class="text-white font-bold text-lg mb-1">Export professional PDFs</p>
-                  <p class="text-sm text-slate-300">Ready for lawyers or consumer protection agencies</p>
+                  <p class="text-white font-bold text-lg mb-1">プロフェッショナルPDFレポートエクスポート</p>
+                  <p class="text-sm text-slate-300">弁護士や消費者保護機関に最適</p>
                 </div>
               </div>
             </div>
 
             <div class="mt-8 pt-6 border-t border-white/10">
               <p class="text-center text-lg text-white font-semibold mb-4">
-                Stop fighting blind. Start winning cases.
+                暗闇の中で戦うことをやめましょう。ケースに勝つことを始めましょう。
               </p>
-              <a href="https://apps.apple.com/br/app/registra-app/id6747366907" 
+              <a href="https://apps.apple.com/br/app/registra-app/id6747366907"
                  class="block w-full px-6 py-4 rounded-xl bg-blue-600 text-white text-center font-bold hover:bg-blue-500 transition-all shadow-xl shadow-blue-600/30">
-                Get Registra Free Today
+                오늘 Registra를 무료로 받으세요
               </a>
             </div>
           </div>
@@ -623,12 +566,12 @@
     <section id="features" class="mx-auto max-w-7xl px-6 py-20 md:py-32">
       <div class="text-center mb-20">
         <span class="inline-block px-4 py-2 bg-blue-600/10 text-blue-400 rounded-full text-sm font-semibold mb-4 border border-blue-500/20">
-          CORE FEATURES
+          主な機能
         </span>
-        <h2 class="text-4xl md:text-5xl font-bold tracking-tight mb-6">Three things Registra does really well</h2>
-        <p class="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">We focused on solving the actual problems people have with customer service</p>
+        <h2 class="text-4xl md:text-5xl font-bold tracking-tight mb-6">Registraが本当に優れている3つのこと</h2>
+        <p class="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">人々が顧客サービスで抱える真の問題を解決することに焦点を当てました</p>
       </div>
-      
+
       <!-- PILLAR 1: Documentation & Evidence -->
       <div class="mb-24">
         <div class="grid md:grid-cols-2 gap-20 items-center">
@@ -636,9 +579,9 @@
             <div class="inline-block px-4 py-2 bg-blue-600/10 text-blue-400 rounded text-lg font-medium mb-6">
               1
             </div>
-            <h3 class="text-2xl md:text-3xl font-semibold mb-6 leading-tight">Keep everything documented</h3>
-            <p class="text-slate-300 leading-relaxed text-lg mb-8">Log calls with case numbers, agent names, and promises made. Attach receipts, record audio, store everything. When things go wrong months later, you'll have all the proof.</p>
-            
+            <h3 class="text-2xl md:text-3xl font-semibold mb-6 leading-tight">すべてを文書化しましょう</h3>
+            <p class="text-slate-300 leading-relaxed text-lg mb-8">ケース番号、担当者名、約束された事項で通話を記録しましょう。領収書を添付し、オーディオを録音し、すべてを保存しましょう。数ヶ月後問題が発生したとき、すべての証拠があります。</p>
+
             <!-- Features inline -->
             <div class="space-y-4">
               <div class="flex items-start gap-3">
@@ -646,8 +589,8 @@
                   <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                 </svg>
                 <div>
-                  <p class="text-white font-semibold">Call logs & case numbers</p>
-                  <p class="text-sm text-slate-400">All saved automatically</p>
+                  <p class="text-white font-semibold">通話記録とケース番号</p>
+                  <p class="text-sm text-slate-400">すべて自動保存</p>
                 </div>
               </div>
               <div class="flex items-start gap-3">
@@ -655,8 +598,8 @@
                   <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                 </svg>
                 <div>
-                  <p class="text-white font-semibold">Audio recordings</p>
-                  <p class="text-sm text-slate-400">Record calls when they make promises</p>
+                  <p class="text-white font-semibold">オーディオ録音</p>
+                  <p class="text-sm text-slate-400">約束するとき通話を録音</p>
                 </div>
               </div>
               <div class="flex items-start gap-3">
@@ -664,25 +607,25 @@
                   <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                 </svg>
                 <div>
-                  <p class="text-white font-semibold">File attachments</p>
-                  <p class="text-sm text-slate-400">Receipts, contracts, screenshots</p>
+                  <p class="text-white font-semibold">ファイル添付</p>
+                  <p class="text-sm text-slate-400">領収書、契約書、スクリーンショット</p>
                 </div>
               </div>
             </div>
           </div>
-          
+
           <!-- Registro View Image -->
           <div class="flex items-center justify-center md:justify-end">
             <div class="relative app-screenshot-container">
               <div class="absolute -inset-4 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-2xl blur-2xl"></div>
               <div class="relative rounded-[1.75rem] overflow-hidden shadow-2xl ring-2 ring-white/10 hover:ring-blue-500/30 transition-all duration-500">
-                <img 
-                  src="assets/images/registro view.jpg" 
-                  alt="Registro view with call summary in Registra app" 
+                <img
+                  src="../assets/images/registro view.jpg"
+                  alt="Registraアプリの登録ビュー - 通話要約を含む"
                   class="w-full h-auto"
                   loading="lazy">
               </div>
-              <p class="text-xs text-slate-400 text-center mt-4">See all your call details and history in one place</p>
+              <p class="text-xs text-slate-400 text-center mt-4">通話の詳細と完全な履歴を一箇所で確認しましょう</p>
             </div>
           </div>
         </div>
@@ -695,9 +638,9 @@
             <div class="inline-block px-4 py-2 bg-purple-600/10 text-purple-400 rounded text-lg font-medium mb-6">
               2
             </div>
-            <h3 class="text-2xl md:text-3xl font-semibold mb-6 leading-tight">Never forget to follow up</h3>
-            <p class="text-slate-300 leading-relaxed text-lg mb-8">They said they'd call back in 48 hours. They won't. But you'll get a reminder. Set it once, and your phone will nudge you at the right time.</p>
-            
+            <h3 class="text-2xl md:text-3xl font-semibold mb-6 leading-tight">フォローアップを忘れないようにしましょう</h3>
+            <p class="text-slate-300 leading-relaxed text-lg mb-8">48時間後にかけ直すと言われました。でもしません。でもリマインダーが届きます。一度設定すると、電話が適切なタイミングを知らせてくれます。</p>
+
             <!-- Features inline -->
             <div class="space-y-4">
               <div class="flex items-start gap-3">
@@ -705,8 +648,8 @@
                   <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                 </svg>
                 <div>
-                  <p class="text-white font-semibold">Smart reminders</p>
-                  <p class="text-sm text-slate-400">Set it once, get notified at the right time</p>
+                  <p class="text-white font-semibold">インテリジェントなリマインダー</p>
+                  <p class="text-sm text-slate-400">一度設定すると適切なタイミングで通知</p>
                 </div>
               </div>
               <div class="flex items-start gap-3">
@@ -714,8 +657,8 @@
                   <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                 </svg>
                 <div>
-                  <p class="text-white font-semibold">Calendar sync</p>
-                  <p class="text-sm text-slate-400">Deadlines appear in your iPhone calendar</p>
+                  <p class="text-white font-semibold">カレンダー同期</p>
+                  <p class="text-sm text-slate-400">期限がiPhoneカレンダーに表示</p>
                 </div>
               </div>
               <div class="flex items-start gap-3">
@@ -723,25 +666,25 @@
                   <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                 </svg>
                 <div>
-                  <p class="text-white font-semibold">Contract alerts</p>
-                  <p class="text-sm text-slate-400">Notification before subscriptions auto-renew</p>
+                  <p class="text-white font-semibold">契約通知</p>
+                  <p class="text-sm text-slate-400">サブスクリプション自動更新前通知</p>
                 </div>
               </div>
             </div>
           </div>
-          
+
           <!-- Attachments Image -->
           <div class="flex items-center justify-center md:justify-end">
             <div class="relative app-screenshot-container">
               <div class="absolute -inset-4 bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-2xl blur-2xl"></div>
               <div class="relative rounded-[1.75rem] overflow-hidden shadow-2xl ring-2 ring-white/10 hover:ring-purple-500/30 transition-all duration-500">
-                <img 
-                  src="assets/images/attachments.jpg" 
-                  alt="Attachments and files organization in Registra app" 
+                <img
+                  src="../assets/images/attachments.jpg"
+                  alt="Registraアプリの添付ファイルとファイル整理"
                   class="w-full h-auto"
                   loading="lazy">
               </div>
-              <p class="text-xs text-slate-400 text-center mt-4">Keep all your documents, receipts and recordings organized</p>
+              <p class="text-xs text-slate-400 text-center mt-4">文書、領収書、記録をすべて整理しましょう</p>
             </div>
           </div>
         </div>
@@ -754,9 +697,9 @@
             <div class="inline-block px-4 py-2 bg-green-600/10 text-green-400 rounded text-lg font-medium mb-6">
               3
             </div>
-            <h3 class="text-2xl md:text-3xl font-semibold mb-6 leading-tight">Bonus: Secure password vault</h3>
-            <p class="text-slate-300 leading-relaxed text-lg mb-8">Store service account passwords securely. Face ID protection, military-grade encryption, and sync across devices.</p>
-            
+            <h3 class="text-2xl md:text-3xl font-semibold mb-6 leading-tight">ボーナス: 安全なパスワードボルト</h3>
+            <p class="text-slate-300 leading-relaxed text-lg mb-8">サービスアカウントパスワードを安全に保存しましょう。Face ID保護、銀行級暗号化、デバイス間同期。</p>
+
             <!-- Features inline -->
             <div class="space-y-4">
               <div class="flex items-start gap-3">
@@ -764,8 +707,8 @@
                   <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                 </svg>
                 <div>
-                  <p class="text-white font-semibold">Biometric lock</p>
-                  <p class="text-sm text-slate-400">Face ID or Touch ID required to access</p>
+                  <p class="text-white font-semibold">生体認証ロック</p>
+                  <p class="text-sm text-slate-400">アクセスにFace IDまたはTouch IDが必要</p>
                 </div>
               </div>
               <div class="flex items-start gap-3">
@@ -773,8 +716,8 @@
                   <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                 </svg>
                 <div>
-                  <p class="text-white font-semibold">Bank-grade encryption</p>
-                  <p class="text-sm text-slate-400">AES-256 encryption—we can't see your passwords</p>
+                  <p class="text-white font-semibold">銀行級暗号化</p>
+                  <p class="text-sm text-slate-400">AES-256暗号化—あなたのIDを私たちは見ることができません</p>
                 </div>
               </div>
               <div class="flex items-start gap-3">
@@ -782,21 +725,21 @@
                   <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                 </svg>
                 <div>
-                  <p class="text-white font-semibold">Password generator & Cloud sync</p>
-                  <p class="text-sm text-slate-400">Create strong passwords, access on all Apple devices</p>
+                  <p class="text-white font-semibold">パスワードジェネレーターとクラウド同期</p>
+                  <p class="text-sm text-slate-400">強力なパスワードを生成し、すべてのAppleデバイスでアクセス</p>
                 </div>
               </div>
             </div>
           </div>
-          
+
           <!-- Password Vault Image -->
           <div class="flex items-center justify-center md:justify-end">
             <div class="relative app-screenshot-container">
               <div class="absolute -inset-4 bg-gradient-to-r from-green-600/20 to-emerald-600/20 rounded-2xl blur-2xl"></div>
               <div class="relative rounded-[1.75rem] overflow-hidden shadow-2xl ring-2 ring-white/10 hover:ring-green-500/30 transition-all duration-500">
-                <img 
-                  src="assets/images/password vault.jpg" 
-                  alt="Password vault with 4 password records in Registra app" 
+                <img
+                  src="../assets/images/password vault.jpg"
+                  alt="Registraアプリのパスワードボルト - 4つのパスワードエントリ"
                   class="w-full h-auto"
                   loading="lazy">
               </div>
@@ -804,7 +747,7 @@
                 <svg class="w-3 h-3 inline text-green-400 mr-1" fill="currentColor" viewBox="0 0 20 20">
                   <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/>
                 </svg>
-                All your service passwords protected with AES-256 encryption
+                すべてのサービスパスワードがAES-256暗号化で保護
               </p>
             </div>
           </div>
@@ -818,13 +761,13 @@
       <div class="grid md:grid-cols-2 gap-20 items-center">
         <div class="flex flex-col justify-center md:pr-12">
           <span class="inline-block px-4 py-2 bg-blue-600/10 text-blue-400 rounded-full text-sm font-semibold mb-6 border border-blue-500/20 w-fit">
-            PRO FEATURE
+            プロ機能
           </span>
           <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-6 leading-tight">
-            Professional PDF Reports
+            プロフェッショナルPDFレポート
           </h2>
           <p class="text-xl text-slate-300 leading-relaxed mb-8">
-            Export everything as a polished, professional report. Perfect for lawyers, consumer protection agencies, or formal complaints.
+            すべてをきれいでプロフェッショナルなレポートとしてエクスポートしましょう。弁護士、消費者保護機関、公的苦情に完璧です。
           </p>
           <div class="space-y-4">
             <div class="flex items-start gap-3">
@@ -832,8 +775,8 @@
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
               </svg>
               <div>
-                <p class="text-white font-semibold">Complete documentation</p>
-                <p class="text-sm text-slate-400">All calls, notes, and attachments in one file</p>
+                <p class="text-white font-semibold">完全な文書化</p>
+                <p class="text-sm text-slate-400">すべての通話、メモ、添付ファイルが1つのファイルに</p>
               </div>
             </div>
             <div class="flex items-start gap-3">
@@ -841,8 +784,8 @@
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
               </svg>
               <div>
-                <p class="text-white font-semibold">Professional formatting</p>
-                <p class="text-sm text-slate-400">Clean, organized, ready to share</p>
+                <p class="text-white font-semibold">プロフェッショナルフォーマット</p>
+                <p class="text-sm text-slate-400">きれいで整理され、共有準備完了</p>
               </div>
             </div>
             <div class="flex items-start gap-3">
@@ -850,25 +793,25 @@
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
               </svg>
               <div>
-                <p class="text-white font-semibold">One-tap export</p>
-                <p class="text-sm text-slate-400">Share via email, print, or save to files</p>
+                <p class="text-white font-semibold">ワンクリックエクスポート</p>
+                <p class="text-sm text-slate-400">メールで共有、印刷、またはファイルに保存</p>
               </div>
             </div>
           </div>
         </div>
-        
+
         <!-- Export Image -->
         <div class="flex items-center justify-center md:justify-end">
           <div class="relative app-screenshot-container">
             <div class="absolute -inset-4 bg-gradient-to-r from-green-600/20 to-blue-600/20 rounded-2xl blur-2xl"></div>
             <div class="relative rounded-[1.75rem] overflow-hidden shadow-2xl ring-2 ring-white/10 hover:ring-green-500/30 transition-all duration-500">
-              <img 
-                src="assets/images/Image generated exported app Jpeg.JPG" 
-                alt="Exported PDF file created by Registra app" 
+              <img
+                src="../assets/images/Image generated exported app Jpeg.JPG"
+                alt="Registraアプリから生成されたエクスポートされたPDFファイル"
                 class="w-full h-auto"
                 loading="lazy">
             </div>
-            <p class="text-xs text-slate-400 text-center mt-4">Professional exports ready to share with authorities</p>
+            <p class="text-xs text-slate-400 text-center mt-4">機関に共有するための専門エクスポート準備完了</p>
           </div>
         </div>
       </div>
@@ -878,70 +821,70 @@
     <section id="how-it-works" class="mx-auto max-w-7xl px-6 py-16 md:py-24">
       <div class="text-center mb-16">
         <span class="inline-block px-4 py-2 bg-blue-600/10 text-blue-400 rounded-full text-sm font-semibold mb-4">
-          SIMPLE & EFFECTIVE
+          シンプルで効果的
         </span>
-        <h2 class="text-4xl md:text-5xl font-bold tracking-tight mb-6">How it works</h2>
+        <h2 class="text-4xl md:text-5xl font-bold tracking-tight mb-6">使い方</h2>
         <p class="text-xl text-slate-300 max-w-3xl mx-auto">
-          Three simple steps to never lose a customer service battle again
+          顧客サービス戦争で二度と負けないための3つのシンプルなステップ
         </p>
       </div>
-      
+
       <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
         <div class="relative p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-blue-500/30 transition-all group">
           <div class="absolute -top-4 left-8">
             <div class="w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-400 rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-xl group-hover:scale-110 transition-transform">1</div>
           </div>
           <div class="mt-6">
-            <h3 class="text-xl font-bold mb-3 text-white">Log the case</h3>
-            <p class="text-slate-300 leading-relaxed">Record company name, case number, agent name, and what was promised. Everything in one place.</p>
+            <h3 class="text-xl font-bold mb-3 text-white">ケースを記録</h3>
+            <p class="text-slate-300 leading-relaxed">会社名、ケース番号、担当者名、約束された事項を記録しましょう。すべて一箇所に。</p>
           </div>
           <div class="mt-6 flex items-center gap-2 text-sm text-blue-400">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
             </svg>
-            <span>Takes 30 seconds</span>
+            <span>30秒かかる</span>
           </div>
         </div>
-        
+
         <div class="relative p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-purple-500/30 transition-all group">
           <div class="absolute -top-4 left-8">
             <div class="w-12 h-12 bg-gradient-to-br from-purple-600 to-purple-400 rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-xl group-hover:scale-110 transition-transform">2</div>
           </div>
           <div class="mt-6">
-            <h3 class="text-xl font-bold mb-3 text-white">Add proof</h3>
-            <p class="text-slate-300 leading-relaxed">Attach receipts, contracts, screenshots. Record call audio. Everything stays organized and searchable.</p>
+            <h3 class="text-xl font-bold mb-3 text-white">証拠を追加</h3>
+            <p class="text-slate-300 leading-relaxed">領収書、契約書、スクリーンショットを添付しましょう。通話オーディオを録音しましょう。すべて整理され、検索可能です。</p>
           </div>
           <div class="mt-6 flex items-center gap-2 text-sm text-purple-400">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"/>
             </svg>
-            <span>Unlimited attachments (Pro)</span>
+            <span>無制限添付 (プロ)</span>
           </div>
         </div>
-        
+
         <div class="relative p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-green-500/30 transition-all group">
           <div class="absolute -top-4 left-8">
             <div class="w-12 h-12 bg-gradient-to-br from-green-600 to-green-400 rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-xl group-hover:scale-110 transition-transform">3</div>
           </div>
           <div class="mt-6">
-            <h3 class="text-xl font-bold mb-3 text-white">Export when needed</h3>
-            <p class="text-slate-300 leading-relaxed">Generate professional PDF reports with all evidence. Perfect for lawyers or consumer protection agencies.</p>
+            <h3 class="text-xl font-bold mb-3 text-white">必要なときにエクスポート</h3>
+            <p class="text-slate-300 leading-relaxed">すべての証拠を含むプロフェッショナルPDFレポートを生成しましょう。弁護士や消費者保護機関に完璧です。</p>
           </div>
           <div class="mt-6 flex items-center gap-2 text-sm text-green-400">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
             </svg>
-            <span>One-tap PDF export</span>
+            <span>ワンクリックPDFエクスポート</span>
           </div>
         </div>
       </div>
-      
+
       <!-- CTA -->
       <div class="text-center mt-12">
-        <a href="https://apps.apple.com/br/app/registra-app/id6747366907" 
+        <a href="https://apps.apple.com/br/app/registra-app/id6747366907"
            class="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-blue-600 text-white text-base font-semibold hover:bg-blue-500 transition-all shadow-xl shadow-blue-600/30">
-          <img src="assets/images/apple-logo.svg" alt="" class="w-5 h-5" aria-hidden="true">
-          <span>Start Using Registra Free</span>
+          <img src="../assets/images/apple-logo.svg" alt="" class="w-5 h-5" aria-hidden="true">
+          <span>Registraを無料で始めましょう</span>
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
           </svg>
@@ -953,13 +896,13 @@
     <section id="before-after" class="mx-auto max-w-7xl px-6 py-16 md:py-24 bg-gradient-to-b from-slate-900 to-slate-950">
       <div class="text-center mb-12">
         <span class="inline-block px-4 py-2 bg-gradient-to-r from-red-600/20 to-green-600/20 border border-white/10 rounded-full text-sm font-semibold mb-4">
-          TRANSFORMATION
+          変化
         </span>
         <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-4">
-          Your Life Before and After Registra
+          Registra前後の人生
         </h2>
         <p class="text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
-          See the difference between chaos and control
+          混乱と制御の違いを確認しましょう
         </p>
       </div>
 
@@ -973,18 +916,18 @@
                 <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
                 </svg>
-                BEFORE
+                前
               </span>
             </div>
-            <img 
-              src="assets/images/antes.png" 
-              alt="Disorganized customer service documentation before using Registra" 
+            <img
+              src="../assets/images/antes.png"
+              alt="Registra使用前の無秩序な顧客サービス文書化"
               class="w-full h-auto transition-transform duration-500 group-hover:scale-105"
               loading="lazy"
               style="max-width: 300px; margin: 0 auto; display: block;">
             <div class="p-4 bg-gradient-to-t from-slate-950 via-slate-900/95 to-transparent absolute bottom-0 left-0 right-0">
-              <p class="text-white font-semibold text-base mb-1">Lost & Disorganized</p>
-              <p class="text-slate-300 text-xs">Scattered notes, missed deadlines</p>
+              <p class="text-white font-semibold text-base mb-1">失われ、無秩序</p>
+              <p class="text-slate-300 text-xs">散らばったメモ、逃した期限</p>
             </div>
           </div>
         </div>
@@ -998,18 +941,18 @@
                 <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
                   <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                 </svg>
-                AFTER
+                後
               </span>
             </div>
-            <img 
-              src="assets/images/depois.png" 
-              alt="Organized customer service documentation with Registra app" 
+            <img
+              src="../assets/images/depois.png"
+              alt="Registraアプリで整理された顧客サービス文書化"
               class="w-full h-auto transition-transform duration-500 group-hover:scale-105"
               loading="lazy"
               style="max-width: 300px; margin: 0 auto; display: block;">
             <div class="p-4 bg-gradient-to-t from-slate-950 via-slate-900/95 to-transparent absolute bottom-0 left-0 right-0">
-              <p class="text-white font-semibold text-base mb-1">Organized & In Control</p>
-              <p class="text-slate-300 text-xs">Everything documented, ready to win</p>
+              <p class="text-white font-semibold text-base mb-1">整理され、制御下</p>
+              <p class="text-slate-300 text-xs">すべて文書化され、勝利準備完了</p>
             </div>
           </div>
         </div>
@@ -1017,10 +960,10 @@
 
       <!-- Call to action -->
       <div class="text-center mt-10">
-        <p class="text-xl font-bold text-white mb-4">Which side do you want to be on?</p>
-        <a href="https://apps.apple.com/br/app/registra-app/id6747366907" 
+        <p class="text-xl font-bold text-white mb-4">どちら側に立っていたいですか？</p>
+        <a href="https://apps.apple.com/br/app/registra-app/id6747366907"
            class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-green-600 text-white text-sm font-semibold hover:bg-green-500 transition-all shadow-xl shadow-green-600/30">
-          <span>Get Organized with Registra</span>
+          <span>Registraで整理しましょう</span>
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
           </svg>
@@ -1028,91 +971,90 @@
       </div>
     </section>
 
-
     <!-- PRICING SECTION -->
     <section id="pricing" class="relative overflow-hidden bg-gradient-to-b from-slate-900 to-slate-950">
       <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-900/10 via-slate-950 to-slate-950"></div>
       <div class="relative mx-auto max-w-7xl px-6 py-20 md:py-32">
         <div class="text-center mb-16">
           <span class="inline-block px-4 py-2 bg-blue-600/10 text-blue-400 rounded-full text-sm font-semibold mb-4 border border-blue-500/20">
-            PRICING
+            料金
           </span>
           <h2 class="text-4xl md:text-5xl font-bold tracking-tight mb-6">
-            Start Free. Upgrade When You're Ready.
+            無料で始め、準備ができたらアップグレードしましょう。
           </h2>
           <p class="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
-            Try Registra free. Upgrade when you need more. <strong class="text-white">No credit card required.</strong>
+            Registraを無料でテストし、必要になったらアップグレードしましょう。 <strong class="text-white">クレジットカード不要。</strong>
           </p>
         </div>
-      
+
       <!-- Pricing Comparison Table -->
       <div class="max-w-5xl mx-auto mb-12 overflow-x-auto">
         <table class="w-full border-collapse">
           <thead>
             <tr class="border-b border-white/10">
-              <th class="py-4 px-6 text-left text-slate-400 font-medium">Feature</th>
+              <th class="py-4 px-6 text-left text-slate-400 font-medium">機能</th>
               <th class="py-4 px-6 text-center">
-                <div class="text-lg font-semibold text-white">Registra Free</div>
-                <div class="text-sm text-slate-400 mt-1">No cost</div>
+                <div class="text-lg font-semibold text-white">Registra 無料</div>
+                <div class="text-sm text-slate-400 mt-1">コストなし</div>
               </th>
               <th class="py-4 px-6 text-center bg-blue-600/10 rounded-t-xl">
-                <div class="text-lg font-semibold text-blue-300">Registra Pro</div>
-                <div class="text-sm text-blue-400 mt-1">Subscription</div>
+                <div class="text-lg font-semibold text-blue-300">Registra プロ</div>
+                <div class="text-sm text-blue-400 mt-1">サブスクリプション</div>
               </th>
             </tr>
           </thead>
           <tbody class="text-sm">
             <tr class="border-b border-white/5">
-              <td class="py-4 px-6 text-slate-300">Active Case Records</td>
-              <td class="py-4 px-6 text-center text-slate-400">1 Free Record</td>
+              <td class="py-4 px-6 text-slate-300">アクティブなケース記録</td>
+              <td class="py-4 px-6 text-center text-slate-400">1つの無料記録</td>
               <td class="py-4 px-6 text-center bg-blue-600/5">
                 <span class="inline-flex items-center gap-1 text-green-400 font-medium">
                   <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                   </svg>
-                  Unlimited
+                  無制限
                 </span>
               </td>
             </tr>
             <tr class="border-b border-white/5">
-              <td class="py-4 px-6 text-slate-300">Cloud Storage</td>
-              <td class="py-4 px-6 text-center text-slate-400">50MB</td>
+              <td class="py-4 px-6 text-slate-300">クラウドストレージ</td>
+              <td class="py-4 px-6 text-center text-slate-400">50 MB</td>
               <td class="py-4 px-6 text-center bg-blue-600/5">
-                <span class="text-blue-300 font-medium">500MB (Expandable)</span>
+                <span class="text-blue-300 font-medium">500 MB (拡張可能)</span>
               </td>
             </tr>
             <tr class="border-b border-white/5">
-              <td class="py-4 px-6 text-slate-300">PDF Report Export</td>
+              <td class="py-4 px-6 text-slate-300">PDFレポートエクスポート</td>
               <td class="py-4 px-6 text-center">
                 <span class="text-red-400">❌</span>
               </td>
               <td class="py-4 px-6 text-center bg-blue-600/5">
-                <span class="text-green-400">✅ Included</span>
+                <span class="text-green-400">✅ 含む</span>
               </td>
             </tr>
             <tr class="border-b border-white/5">
-              <td class="py-4 px-6 text-slate-300">Password Vault</td>
+              <td class="py-4 px-6 text-slate-300">パスワードボルト</td>
               <td class="py-4 px-6 text-center">
                 <span class="text-red-400">❌</span>
               </td>
               <td class="py-4 px-6 text-center bg-blue-600/5">
-                <span class="text-green-400">✅ Included</span>
+                <span class="text-green-400">✅ 含む</span>
               </td>
             </tr>
             <tr class="border-b border-white/5">
-              <td class="py-4 px-6 text-slate-300">Call Audio Recording</td>
+              <td class="py-4 px-6 text-slate-300">通話オーディオ録音</td>
               <td class="py-4 px-6 text-center">
                 <span class="text-red-400">❌</span>
               </td>
               <td class="py-4 px-6 text-center bg-blue-600/5">
-                <span class="text-green-400">✅ Full access</span>
+                <span class="text-green-400">✅ 完全アクセス</span>
               </td>
             </tr>
             <tr>
-              <td class="py-4 px-6 text-slate-300">Priority Support</td>
-              <td class="py-4 px-6 text-center text-slate-400">Basic</td>
+              <td class="py-4 px-6 text-slate-300">優先サポート</td>
+              <td class="py-4 px-6 text-center text-slate-400">基本</td>
               <td class="py-4 px-6 text-center bg-blue-600/5 rounded-b-xl">
-                <span class="text-green-400">✅ Priority</span>
+                <span class="text-green-400">✅ 優先</span>
               </td>
             </tr>
           </tbody>
@@ -1122,74 +1064,74 @@
       <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
         <div class="p-8 rounded-2xl bg-white/5 border border-white/10">
           <div class="text-center">
-            <h3 class="text-2xl font-semibold mb-2">Free</h3>
-            <div class="text-sm text-slate-400 mb-6">No upfront cost</div>
+            <h3 class="text-2xl font-semibold mb-2">無料</h3>
+            <div class="text-sm text-slate-400 mb-6">初期費用なし</div>
             <ul class="space-y-3 text-slate-300 mb-8">
               <li class="flex items-center gap-3">
                 <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                 </svg>
-                Try all features
+                すべての機能をテスト
               </li>
               <li class="flex items-center gap-3">
                 <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                 </svg>
-                Basic storage
+                基本ストレージ
               </li>
               <li class="flex items-center gap-3">
                 <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                 </svg>
-                No credit card required
+                クレジットカード不要
               </li>
             </ul>
-            <a href="https://apps.apple.com/br/app/registra-app/id6747366907" class="w-full inline-block px-6 py-3 rounded-lg bg-white/10 text-white hover:bg-white/20 transition-colors text-center" target="_blank" rel="noopener">Get started</a>
+            <a href="https://apps.apple.com/br/app/registra-app/id6747366907" class="w-full inline-block px-6 py-3 rounded-lg bg-white/10 text-white hover:bg-white/20 transition-colors text-center" target="_blank" rel="noopener">始める</a>
           </div>
         </div>
         <div class="p-8 rounded-2xl bg-blue-600/10 border border-blue-500/30 relative">
-          <div class="absolute top-4 right-4 px-3 py-1 bg-blue-600 text-white text-xs rounded-full">Popular</div>
+          <div class="absolute top-4 right-4 px-3 py-1 bg-blue-600 text-white text-xs rounded-full">人気</div>
           <div class="text-center">
-            <h3 class="text-2xl font-semibold mb-2">Pro</h3>
-            <div class="text-sm text-slate-300 mb-6">All Pro features</div>
+            <h3 class="text-2xl font-semibold mb-2">プロ</h3>
+            <div class="text-sm text-slate-300 mb-6">すべてのプロ機能</div>
             <ul class="space-y-3 text-slate-200 mb-8">
               <li class="flex items-center gap-3">
                 <svg class="w-5 h-5 text-green-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                 </svg>
-                Unlimited cases
+                無制限ケース
               </li>
               <li class="flex items-center gap-3">
                 <svg class="w-5 h-5 text-green-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                 </svg>
-                Full attachments
+                完全添付ファイル
               </li>
               <li class="flex items-center gap-3">
                 <svg class="w-5 h-5 text-green-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                 </svg>
-                PDF export
+                PDFエクスポート
               </li>
               <li class="flex items-center gap-3">
                 <svg class="w-5 h-5 text-green-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                 </svg>
-                Priority support
+                優先サポート
               </li>
               <li class="flex items-center gap-3">
                 <svg class="w-5 h-5 text-green-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                 </svg>
-                Expanded storage
+                拡張ストレージ
               </li>
             </ul>
-            <a href="https://apps.apple.com/br/app/registra-app/id6747366907" class="w-full inline-block px-6 py-3 rounded-lg bg-blue-600 text-white hover:bg-blue-500 transition-colors text-center" target="_blank" rel="noopener">Upgrade to Pro</a>
+            <a href="https://apps.apple.com/br/app/registra-app/id6747366907" class="w-full inline-block px-6 py-3 rounded-lg bg-blue-600 text-white hover:bg-blue-500 transition-colors text-center" target="_blank" rel="noopener">プロにアップグレード</a>
           </div>
         </div>
       </div>
         <div class="text-center mt-8">
-          <p class="text-sm text-slate-400">Billing is handled in‑app via the App Store.</p>
+          <p class="text-sm text-slate-400">課金はApp Store内で処理されます。</p>
         </div>
       </div>
     </section>
@@ -1198,10 +1140,10 @@
     <section id="testimonials" class="mx-auto max-w-7xl px-6 py-20 md:py-32">
       <div class="text-center mb-16">
         <span class="inline-block px-4 py-2 bg-purple-600/10 text-purple-400 rounded-full text-sm font-semibold mb-4 border border-purple-500/20">
-          TESTIMONIALS
+          レビュー
         </span>
-        <h2 class="text-4xl md:text-5xl font-bold tracking-tight mb-6">Trusted by consumers and professionals</h2>
-        <p class="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">See what people are saying about Registra</p>
+        <h2 class="text-4xl md:text-5xl font-bold tracking-tight mb-6">消費者和専門家から信頼されています</h2>
+        <p class="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">人々がRegistraについて言っていることを確認しましょう</p>
       </div>
       <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
         <div class="relative p-8 rounded-2xl bg-gradient-to-br from-white/5 to-white/[0.02] border border-white/10 hover:border-blue-500/30 transition-all group">
@@ -1209,7 +1151,7 @@
             <div class="w-14 h-14 bg-gradient-to-br from-blue-600 to-blue-400 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">R</div>
             <div>
               <div class="font-bold text-lg text-white">Roberto S.</div>
-              <div class="text-sm text-slate-400">Brazil</div>
+              <div class="text-sm text-slate-400">ブラジル</div>
             </div>
           </div>
           <div class="flex mb-4">
@@ -1219,15 +1161,15 @@
             <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
             <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
           </div>
-          <p class="text-slate-200 leading-relaxed">"I never lose a case number again. Everything in one place."</p>
+          <p class="text-slate-200 leading-relaxed">"ケース番号を二度と失いません。すべて一箇所に。"</p>
         </div>
-        
+
         <div class="relative p-8 rounded-2xl bg-gradient-to-br from-white/5 to-white/[0.02] border border-white/10 hover:border-purple-500/30 transition-all group">
           <div class="flex items-center gap-4 mb-6">
             <div class="w-14 h-14 bg-gradient-to-br from-purple-600 to-purple-400 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">J</div>
             <div>
               <div class="font-bold text-lg text-white">James W.</div>
-              <div class="text-sm text-slate-400">United Kingdom</div>
+              <div class="text-sm text-slate-400">イギリス</div>
             </div>
           </div>
           <div class="flex mb-4">
@@ -1237,15 +1179,15 @@
             <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
             <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
           </div>
-          <p class="text-slate-200 leading-relaxed">"When a deadline is coming, I get reminded and can act fast. It just works."</p>
+          <p class="text-slate-200 leading-relaxed">"期限が来るとリマインダーが届き、素早く行動できます。機能します。"</p>
         </div>
-        
+
         <div class="relative p-8 rounded-2xl bg-gradient-to-br from-white/5 to-white/[0.02] border border-white/10 hover:border-green-500/30 transition-all group">
           <div class="flex items-center gap-4 mb-6">
             <div class="w-14 h-14 bg-gradient-to-br from-green-600 to-green-400 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">L</div>
             <div>
               <div class="font-bold text-lg text-white">Louis D.</div>
-              <div class="text-sm text-slate-400">France</div>
+              <div class="text-sm text-slate-400">フランス</div>
             </div>
           </div>
           <div class="flex mb-4">
@@ -1255,7 +1197,7 @@
             <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
             <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
           </div>
-          <p class="text-slate-200 leading-relaxed">"PDF reports are a lifesaver for formal complaints. Clean and professional."</p>
+          <p class="text-slate-200 leading-relaxed">"PDFレポートは公的苦情に最適です。きれいでプロフェッショナルです。"</p>
         </div>
       </div>
     </section>
@@ -1263,36 +1205,36 @@
     <!-- FAQ SECTION -->
     <section id="faq" class="mx-auto max-w-5xl px-6 py-16 md:py-24">
       <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-4xl font-semibold tracking-tight">Frequently asked questions</h2>
+        <h2 class="text-3xl md:text-4xl font-semibold tracking-tight">よくある質問</h2>
       </div>
       <div class="space-y-4">
         <details class="group rounded-xl bg-white/5 border border-white/10 p-5">
-          <summary class="cursor-pointer font-medium hover:text-white transition-colors">Is my data secure?</summary>
-          <p class="mt-3 text-slate-300 leading-relaxed">Yes. Everything is encrypted with AES-256 (same as banks use). Your data is yours—we can't see it even if we wanted to. Face ID/Touch ID required to open the password vault.</p>
+          <summary class="cursor-pointer font-medium hover:text-white transition-colors">私のデータは安全ですか？</summary>
+          <p class="mt-3 text-slate-300 leading-relaxed">はい。すべてがAES-256で暗号化されます（銀行が使用するもののように）。あなたのデータはあなたのものです—私たちはそれを望んでも見ることができません。Face ID/Touch IDがパスワードボルトへのアクセスに必要です。</p>
         </details>
         <details class="group rounded-xl bg-white/5 border border-white/10 p-5">
-          <summary class="cursor-pointer font-medium hover:text-white transition-colors">What's the difference between Free and Pro?</summary>
-          <p class="mt-3 text-slate-300 leading-relaxed">Free lets you try the app with basic features. Pro unlocks unlimited cases, audio recording, PDF exports, password vault, and 500MB cloud storage. Most people upgrade when they need advanced features for their disputes.</p>
+          <summary class="cursor-pointer font-medium hover:text-white transition-colors">無料とプロの違いは何ですか？</summary>
+          <p class="mt-3 text-slate-300 leading-relaxed">無料は基本機能をテストできます。プロは無制限ケース、オーディオ録音、PDFエクスポート、パスワードボルト、500MBクラウドストレージを解除します。ほとんどの人はケースに必要になったときに高度な機能のためにアップグレードします。</p>
         </details>
         <details class="group rounded-xl bg-white/5 border border-white/10 p-5">
-          <summary class="cursor-pointer font-medium hover:text-white transition-colors">Does it work offline?</summary>
-          <p class="mt-3 text-slate-300 leading-relaxed">Completely. Log a call on a plane, record audio in a basement with no signal—it all saves locally and syncs when you're back online.</p>
+          <summary class="cursor-pointer font-medium hover:text-white transition-colors">アプリはオフラインで動作しますか？</summary>
+          <p class="mt-3 text-slate-300 leading-relaxed">完全に。飛行機で通話を記録し、信号のない地下室でオーディオを録音しましょう—すべてローカルで保存され、再接続時に同期されます。</p>
         </details>
         <details class="group rounded-xl bg-white/5 border border-white/10 p-5">
-          <summary class="cursor-pointer font-medium hover:text-white transition-colors">Can I record phone calls?</summary>
-          <p class="mt-3 text-slate-300 leading-relaxed">Yes (Pro feature). Built-in audio recorder for when they make promises over the phone. Just check your local laws about recording—some places require you to inform the other person first.</p>
+          <summary class="cursor-pointer font-medium hover:text-white transition-colors">電話通話を録音できますか？</summary>
+          <p class="mt-3 text-slate-300 leading-relaxed">はい（プロ機能）。約束をする電話通話の統合オーディオレコーダー。一部の地域では事前に他の人に知らせることが必要なので、現地法を確認してください。</p>
         </details>
         <details class="group rounded-xl bg-white/5 border border-white/10 p-5">
-          <summary class="cursor-pointer font-medium hover:text-white transition-colors">Can I export everything as PDF?</summary>
-          <p class="mt-3 text-slate-300 leading-relaxed">Yes (Pro feature). Export a clean PDF with all your call logs, attachments, and case numbers. Perfect for lawyers or consumer protection agencies.</p>
+          <summary class="cursor-pointer font-medium hover:text-white transition-colors">すべてをPDFとしてエクスポートできますか？</summary>
+          <p class="mt-3 text-slate-300 leading-relaxed">はい（プロ機能）。すべての通話記録、メモ、添付ファイルを含むきれいでプロフェッショナルなレポートをエクスポートしましょう。弁護士や消費者保護機関に完璧です。</p>
         </details>
         <details class="group rounded-xl bg-white/5 border border-white/10 p-5">
-          <summary class="cursor-pointer font-medium hover:text-white transition-colors">What languages does it support?</summary>
-          <p class="mt-3 text-slate-300 leading-relaxed">11 languages including English, Portuguese, Spanish, French, German, Italian, Japanese, Korean, Chinese, Russian, and Arabic.</p>
+          <summary class="cursor-pointer font-medium hover:text-white transition-colors">アプリはいくつの言語をサポートしますか？</summary>
+          <p class="mt-3 text-slate-300 leading-relaxed">11言語：英語、ポルトガル語、スペイン語、フランス語、ドイツ語、イタリア語、日本語、韓国語、中国語、ロシア語、アラビア語。</p>
         </details>
         <details class="group rounded-xl bg-white/5 border border-white/10 p-5">
-          <summary class="cursor-pointer font-medium hover:text-white transition-colors">How do I cancel if I change my mind?</summary>
-          <p class="mt-3 text-slate-300 leading-relaxed">Through your iPhone's App Store settings. Cancel anytime, keep using Pro until your current billing period ends. No penalties, no questions asked.</p>
+          <summary class="cursor-pointer font-medium hover:text-white transition-colors">心変わりしたらどうやってキャンセルしますか？</summary>
+          <p class="mt-3 text-slate-300 leading-relaxed">iPhoneのApp Store設定から。いつでもキャンセルし、現在の課金期間が終了するまでプロを継続使用します。ペナルティなし、質問なし。</p>
         </details>
       </div>
     </section>
@@ -1301,13 +1243,13 @@
     <section id="blog-preview" class="mx-auto max-w-7xl px-6 py-20 md:py-32 bg-gradient-to-b from-slate-950 to-slate-900">
       <div class="text-center mb-16">
         <span class="inline-block px-4 py-2 bg-blue-600/10 text-blue-400 rounded-full text-sm font-semibold mb-4">
-          INSIGHTS & TIPS
+          インサイトとヒント
         </span>
         <h2 class="text-4xl md:text-5xl font-bold tracking-tight mb-6">
-          Learn How to Win Your Cases
+          あなたのケースを勝つ方法を学びましょう
         </h2>
         <p class="text-xl text-slate-300 max-w-3xl mx-auto">
-          Expert advice on customer service, consumer rights, and how to protect yourself
+          消費者権利と自分を保護する方法についての専門家のアドバイス
         </p>
       </div>
 
@@ -1318,8 +1260,8 @@
 
       <!-- View All Blog Posts CTA -->
       <div class="text-center">
-        <a href="blog.html" class="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-blue-600 text-white text-base font-semibold hover:bg-blue-500 transition-all shadow-xl shadow-blue-600/30">
-          View All Articles
+        <a href="../blog.html" class="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-blue-600 text-white text-base font-semibold hover:bg-blue-500 transition-all shadow-xl shadow-blue-600/30">
+          すべての記事を見る
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
           </svg>
@@ -1332,27 +1274,27 @@
       <div class="max-w-3xl mx-auto text-center">
         <div class="mb-8">
           <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-4">
-            Get Expert Customer Service Tips
+            顧客サービス専門家のヒントを受け取りましょう
           </h2>
           <p class="text-lg text-slate-300">
-            Join 5,000+ smart consumers. Get weekly tips on protecting your rights and winning disputes.
+            5,000人以上の賢い消費者と一緒に参加しましょう。あなたの権利を保護し、紛争を解決する毎週のヒントを受け取りましょう。
           </p>
         </div>
 
         <!-- Newsletter Form -->
         <form id="newsletter-form" class="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto mb-6">
-          <input 
-            type="email" 
+          <input
+            type="email"
             id="newsletter-email"
-            placeholder="Enter your email" 
+            placeholder="メールアドレスを入力してください"
             required
             class="flex-1 px-6 py-4 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
           >
-          <button 
+          <button
             type="submit"
             class="px-8 py-4 rounded-xl bg-blue-600 text-white font-semibold hover:bg-blue-500 transition-all shadow-xl shadow-blue-600/30 whitespace-nowrap"
           >
-            Subscribe Free
+            無料で購読
           </button>
         </form>
 
@@ -1360,13 +1302,13 @@
           <svg class="w-4 h-4 inline text-green-400" fill="currentColor" viewBox="0 0 20 20">
             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
           </svg>
-          100% free. Unsubscribe anytime. No spam, ever.
+          100% 無料。いつでも購読解除。スパムなし、決してなし。
         </p>
 
         <!-- Success Message -->
         <div id="newsletter-success" class="hidden mt-6 p-4 rounded-xl bg-green-600/20 border border-green-500/30">
           <p class="text-green-400 font-semibold">
-            🎉 Success! Check your email to confirm your subscription.
+            🎉 成功！購読を確認するにはメールを確認してください。
           </p>
         </div>
       </div>
@@ -1376,69 +1318,70 @@
     <section id="cta" class="mx-auto max-w-7xl px-6 py-20 md:py-32">
       <div class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-blue-600/20 via-purple-600/20 to-blue-600/20 border-2 border-blue-500/30 p-12 md:p-20">
         <div class="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10 blur-3xl"></div>
-        
+
         <div class="relative text-center">
           <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-600/20 border border-green-500/30 mb-6">
             <span class="relative flex h-3 w-3">
               <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
               <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
             </span>
-            <span class="text-green-400 font-semibold text-sm">Take Control of Your Customer Service Cases</span>
+            <span class="text-green-400 font-semibold text-sm">あなたの顧客サービスケースに対するコントロールを確保</span>
           </div>
-          
+
           <h2 class="text-4xl md:text-6xl font-black tracking-tight mb-6 leading-tight">
-            Ready to Stop Losing<br/>
-            <span class="gradient-text">Customer Service Battles?</span>
+            顧客サービス戦争で<br/>
+            <span class="gradient-text">負けない</span><br/>
+            準備はできていますか？
           </h2>
-          
+
           <p class="text-xl md:text-2xl text-slate-300 mb-4 max-w-3xl mx-auto">
-            Download Registra now. <strong class="text-white">Start protecting yourself today.</strong>
+            今すぐRegistraをダウンロードしましょう。<strong class="text-white">今日、自分自身を守ることを始めましょう。</strong>
           </p>
-          
+
           <p class="text-lg text-slate-400 mb-10 max-w-2xl mx-auto">
-            Free to start • Works offline • Available on iOS
+            無料で始める • オフラインで動作 • iOSで使用可能
           </p>
-          
+
           <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-10">
-            <a href="https://apps.apple.com/br/app/registra-app/id6747366907" 
-               class="group px-10 py-5 rounded-xl bg-white text-slate-900 text-lg font-bold hover:bg-gray-100 transition-all shadow-2xl flex items-center gap-3" 
+            <a href="https://apps.apple.com/br/app/registra-app/id6747366907"
+               class="group px-10 py-5 rounded-xl bg-white text-slate-900 text-lg font-bold hover:bg-gray-100 transition-all shadow-2xl flex items-center gap-3"
                target="_blank" rel="noopener">
-              <img src="assets/images/apple-logo.svg" alt="" class="w-6 h-6" aria-hidden="true">
-              <span>Download Free Now</span>
+              <img src="../assets/images/apple-logo.svg" alt="" class="w-6 h-6" aria-hidden="true">
+              <span>今すぐ無料でダウンロード</span>
               <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
               </svg>
             </a>
             <a href="#faq" class="px-10 py-5 rounded-xl bg-white/10 backdrop-blur-sm text-slate-100 text-lg font-semibold hover:bg-white/20 transition-all border border-white/20">
-              Still Have Questions?
+              もっと知りたいですか？
             </a>
           </div>
-          
+
           <!-- Trust Indicators -->
           <div class="flex flex-wrap justify-center items-center gap-8 text-sm text-slate-400">
             <div class="flex items-center gap-2">
               <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
               </svg>
-              <span class="text-slate-300">100% Free to Start</span>
+              <span class="text-slate-300">100% 無料で始める</span>
             </div>
             <div class="flex items-center gap-2">
               <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
               </svg>
-              <span class="text-slate-300">No Credit Card Required</span>
+              <span class="text-slate-300">クレジットカード不要</span>
             </div>
             <div class="flex items-center gap-2">
               <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
               </svg>
-              <span class="text-slate-300">Cancel Anytime</span>
+              <span class="text-slate-300">いつでもキャンセル</span>
             </div>
             <div class="flex items-center gap-2">
               <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
               </svg>
-              <span class="text-slate-300">Available on iOS</span>
+              <span class="text-slate-300">iOSで使用可能</span>
             </div>
           </div>
         </div>
@@ -1453,42 +1396,42 @@
       <div class="grid md:grid-cols-4 gap-8">
         <div class="md:col-span-1">
           <div class="flex items-center gap-3 mb-4">
-            <img src="assets/images/logo-header.png" alt="Registra logo" class="h-[2.4rem] w-[2.4rem]" loading="lazy">
+            <img src="../assets/images/logo-header.png" alt="Registra ロゴ" class="h-[2.4rem] w-[2.4rem]" loading="lazy">
             <span class="font-black tracking-tight text-xl">Registra</span>
           </div>
-          <p class="text-sm text-slate-400">Customer service, finally under control.</p>
+          <p class="text-sm text-slate-400">顧客サービス、最終的に制御されました。</p>
         </div>
         <div class="md:col-span-3">
           <nav class="grid md:grid-cols-3 gap-8">
             <div>
-              <h4 class="font-medium mb-4">Product</h4>
+              <h4 class="font-medium mb-4">製品</h4>
               <ul class="space-y-2 text-sm text-slate-300">
-                <li><a href="#features" class="hover:text-white transition-colors">Features</a></li>
-                <li><a href="#how-it-works" class="hover:text-white transition-colors">How it Works</a></li>
-                <li><a href="#pricing" class="hover:text-white transition-colors">Pricing</a></li>
-                <li><a href="blog.html" class="hover:text-white transition-colors">Blog</a></li>
+                <li><a href="#features" class="hover:text-white transition-colors">機能</a></li>
+                <li><a href="#how-it-works" class="hover:text-white transition-colors">使い方</a></li>
+                <li><a href="#pricing" class="hover:text-white transition-colors">料金</a></li>
+                <li><a href="../blog.html" class="hover:text-white transition-colors">ブログ</a></li>
               </ul>
             </div>
             <div>
-              <h4 class="font-medium mb-4">Support</h4>
+              <h4 class="font-medium mb-4">サポート</h4>
               <ul class="space-y-2 text-sm text-slate-300">
                 <li><a href="#faq" class="hover:text-white transition-colors">FAQ</a></li>
-                <li><a href="contact.html" class="hover:text-white transition-colors">Support</a></li>
+                <li><a href="../contact.html" class="hover:text-white transition-colors">サポート</a></li>
               </ul>
             </div>
             <div>
-              <h4 class="font-medium mb-4">Legal</h4>
+              <h4 class="font-medium mb-4">法的</h4>
               <ul class="space-y-2 text-sm text-slate-300">
-                <li><a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a></li>
-                <li><a href="terms.html" class="hover:text-white transition-colors">Terms of Service</a></li>
+                <li><a href="../privacy.html" class="hover:text-white transition-colors">プライバシーポリシー</a></li>
+                <li><a href="../terms.html" class="hover:text-white transition-colors">利用規約</a></li>
               </ul>
             </div>
           </nav>
         </div>
       </div>
       <div class="border-t border-white/5 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-        <div class="text-sm text-slate-400">© 2025 Registra. All rights reserved.</div>
-        
+        <div class="text-sm text-slate-400">© 2025 Registra. すべての権利を保有。</div>
+
       </div>
     </div>
   </footer>
@@ -1513,7 +1456,7 @@
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
+        const target = document.querySelector(this.getAttribute(href));
         if (target) {
           target.scrollIntoView({
             behavior: 'smooth',
@@ -1610,59 +1553,59 @@
 
       // Get posts from localStorage (managed by admin panel)
       let posts = JSON.parse(localStorage.getItem('blogPosts') || '[]');
-      
+
       // Check if old posts are using logo2.png and reset them
       if (posts.length > 0 && posts[0].image && posts[0].image.includes('logo2.png')) {
         posts = []; // Force reset to use new images
       }
-      
+
       // If no posts, create sample posts
       if (posts.length === 0) {
         posts = [
           {
             id: '1',
-            title: 'How to Document Customer Service Calls: A Complete Guide',
-            slug: 'how-to-document-customer-service-calls',
-            excerpt: 'Learn the essential strategies to properly document every customer service interaction. This comprehensive guide will help you keep records that actually win disputes.',
+            title: '顧客サービス通話を文書化する方法: 完全なガイド',
+            slug: '고객-서비스-통화를-문서화하는-방법',
+            excerpt: '各顧客サービス相互作用を正しく文書化する本質的な戦略を学びましょう。この完全なガイドは、真実の紛争を勝つ記録を維持するのに役立ちます。',
             content: '',
-            author: 'Registra Team',
+            author: 'Registra チーム',
             date: new Date().toISOString(),
-            category: 'Guides',
+            category: 'ガイド',
             image: 'assets/blog/organization.png',
             featured: true,
-            seoTitle: 'How to Document Customer Service Calls - Complete Guide 2025',
-            seoDescription: 'Master the art of documenting customer service calls. Learn what to record, how to organize it, and how to use it to win disputes.',
-            keywords: 'customer service documentation, call logging, case management, consumer rights'
+            seoTitle: '顧客サービス通話を文書化する方法 - 2025年完全ガイド',
+            seoDescription: '顧客サービス通話文書化の技術をマスターしましょう。何を記録すべきか、どう整理するか、紛争解決にどう使用するか学びましょう。',
+            keywords: '顧客サービス文書化、通話記録、ケース管理、消費者権利'
           },
           {
             id: '2',
-            title: '10 Consumer Rights You Need to Know in 2025',
-            slug: '10-consumer-rights-you-need-to-know-2025',
-            excerpt: 'Your rights as a consumer are powerful—but only if you know them. Discover the top 10 consumer protection laws that companies don\'t want you to understand.',
+            title: '2025年知っておくべき10の消費者権利',
+            slug: '2025년-알아야-할-10가지-소비자-권리',
+            excerpt: 'あなたの消費者権利は強力です—しかし、それを認識する必要があります。企業があなたに知らせたくない10の消費者保護法を発見しましょう。',
             content: '',
-            author: 'Legal Team',
+            author: '法務チーム',
             date: new Date(Date.now() - 86400000).toISOString(),
-            category: 'Consumer Rights',
+            category: '消費者権利',
             image: 'assets/blog/10things.png',
             featured: false,
-            seoTitle: '10 Essential Consumer Rights Every Customer Should Know in 2025',
-            seoDescription: 'Protect yourself with these 10 critical consumer rights. Learn what companies must do and how to enforce your rights.',
-            keywords: 'consumer rights, customer protection, legal rights, consumer law'
+            seoTitle: 'すべての消費者が2025年知っておくべき10の必須消費者権利',
+            seoDescription: 'この10の重要な消費者権利で自分自身を保護しましょう。企業がしなければならないこととあなたの権利をどう主張するかを学びましょう。',
+            keywords: '消費者権利、消費者保護、法的な権利、消費者法'
           },
           {
             id: '3',
-            title: 'What to Do When Companies Lose Your Case Number',
-            slug: 'what-to-do-when-companies-lose-case-number',
-            excerpt: 'They claim they have "no record" of your call? Here\'s your step-by-step action plan to fight back and win your case.',
+            title: '企業があなたのケース番号を失ったときどうするか',
+            slug: '기업들이-귀하의-케이스-번호를-잃었을-때-해야-할-일',
+            excerpt: '"あなたの通話の記録がありません"と言います。それらを反撃し、あなたのケースを勝つためのステップバイステップの行動計画です。',
             content: '',
-            author: 'Registra Team',
+            author: 'Registra チーム',
             date: new Date(Date.now() - 172800000).toISOString(),
-            category: 'Problem Solving',
+            category: '問題解決',
             image: 'assets/blog/companies lose.png',
             featured: false,
-            seoTitle: 'What to Do When Companies Lose Your Case Number - Action Plan',
-            seoDescription: 'Step-by-step guide to handle situations when companies claim they have no record of your case. Win your disputes with proper documentation.',
-            keywords: 'lost case number, customer service dispute, case documentation, consumer protection'
+            seoTitle: '企業があなたのケース番号を失ったときどうするか - 行動計画',
+            seoDescription: '企業があなたのケースに記録がないと主張する状況を処理するステップバイステップのガイド。適切な文書化であなたの紛争を勝ちましょう。',
+            keywords: '失われたケース番号、顧客サービス紛争、ケース文書化、消費者保護'
           }
         ];
         localStorage.setItem('blogPosts', JSON.stringify(posts));
@@ -1674,7 +1617,7 @@
       // Render posts
       blogContainer.innerHTML = latestPosts.map(post => `
         <article class="group rounded-2xl bg-white/5 border border-white/10 hover:border-blue-500/30 transition-all overflow-hidden">
-          <a href="blog-post.html?slug=${post.slug}" class="block">
+          <a href="../blog-post.html?slug=${post.slug}" class="block">
             <div class="aspect-video bg-gradient-to-br from-blue-600/20 to-purple-600/20 relative overflow-hidden">
               <img src="${post.image}" alt="${post.title}" class="w-full h-full object-cover opacity-50 group-hover:opacity-70 group-hover:scale-105 transition-all duration-500">
               <div class="absolute top-4 left-4">
@@ -1685,11 +1628,11 @@
             </div>
             <div class="p-6">
               <div class="flex items-center gap-4 text-xs text-slate-400 mb-3">
-                <span>${new Date(post.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
+                <span>${new Date(post.date).toLocaleDateString('ja-JP', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
                 <span>•</span>
                 <span>${post.author}</span>
                 <span>•</span>
-                <span>5 min read</span>
+                <span>読む時間 5分</span>
               </div>
               <h3 class="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors line-clamp-2">
                 ${post.title}
@@ -1698,7 +1641,7 @@
                 ${post.excerpt}
               </p>
               <div class="flex items-center gap-2 text-blue-400 text-sm font-semibold">
-                Read More
+                もっと読む
                 <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
                 </svg>
@@ -1713,12 +1656,12 @@
     function setupNewsletterForm() {
       const form = document.getElementById('newsletter-form');
       const successMsg = document.getElementById('newsletter-success');
-      
+
       if (form) {
         form.addEventListener('submit', function(e) {
           e.preventDefault();
           const email = document.getElementById('newsletter-email').value;
-          
+
           // Store subscriber (in real app, this would go to a backend)
           let subscribers = JSON.parse(localStorage.getItem('newsletterSubscribers') || '[]');
           subscribers.push({
@@ -1727,11 +1670,11 @@
             source: 'homepage'
           });
           localStorage.setItem('newsletterSubscribers', JSON.stringify(subscribers));
-          
+
           // Show success message
           form.classList.add('hidden');
           successMsg.classList.remove('hidden');
-          
+
           // Track conversion (Google Analytics)
           if (typeof gtag !== 'undefined') {
             gtag('event', 'newsletter_signup', {
@@ -1743,6 +1686,10 @@
       }
     }
 
+    // Initialize blog features
+    // Mark user as having chosen a language
+    localStorage.setItem('userLanguageSet', 'true');
+    
     // Initialize blog features
     document.addEventListener('DOMContentLoaded', function() {
       loadBlogPreview();

@@ -1,18 +1,21 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="utf-8">
-  <title>Registra — Never lose a case number again | iOS App</title>
+  <title>Registra — Nunca pierdas otro número de caso | App para iOS</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Keep all your customer service calls organized in one place. Case numbers, call recordings, receipts—everything you need when you need to follow up. Free iOS app.">
-  <meta name="keywords" content="customer service app, call logging app, case number tracker, reference number tracker, customer service documentation, service call organizer, PDF report generator, password vault, AES-256 encryption, consumer rights app, iOS productivity, customer service CRM, call recording app, contract tracking, service dispute app">
+  <meta name="description" content="Mantén organizadas todas tus llamadas de servicio al cliente en un solo lugar. Números de caso, grabaciones de llamadas, recibos—todo lo que necesitas cuando necesitas seguir adelante. App gratuita para iOS.">
+  <meta name="keywords" content="aplicación de servicio al cliente, registro de llamadas, rastreador de números de caso, rastreador de números de referencia, documentación de servicio al cliente, organizador de llamadas de servicio, generador de informes PDF, bóveda de contraseñas, cifrado AES-256, derechos del consumidor, productividad iOS, CRM de servicio al cliente, aplicación de grabación de llamadas, seguimiento de contratos, aplicación de disputas de servicio">
   <meta name="author" content="AMC Marketing LTDA">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-  <meta name="language" content="en-US">
+  <meta name="language" content="es-ES">
   <meta name="revisit-after" content="7 days">
 
   <!-- Canonical URL -->
-  <link rel="canonical" href="https://registraa.com/">
+  <link rel="canonical" href="https://registraa.com/es/">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://registraa.com/es/">
 
   <!-- Hreflang attributes for SEO -->
   <link rel="alternate" hreflang="x-default" href="https://registraa.com/">
@@ -31,35 +34,35 @@
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Registra">
-  <meta property="og:title" content="Registra — Never lose a case number again">
-  <meta property="og:description" content="Keep all your customer service calls organized in one place. Case numbers, call recordings, receipts—everything you need when you need to follow up. Free iOS app.">
+  <meta property="og:title" content="Registra — Nunca pierdas otro número de caso">
+  <meta property="og:description" content="Mantén organizadas todas tus llamadas de servicio al cliente en un solo lugar. Números de caso, grabaciones de llamadas, recibos—todo lo que necesitas cuando necesitas seguir adelante. App gratuita para iOS.">
   <meta property="og:image" content="https://registraa.com/assets/images/logo2.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Registra iOS App - Customer Service Organization Tool">
-  <meta property="og:url" content="https://registraa.com/">
-  <meta property="og:locale" content="en_US">
+  <meta property="og:image:alt" content="Aplicación Registra iOS - Herramienta de organización de servicio al cliente">
+  <meta property="og:url" content="https://registraa.com/es/">
+  <meta property="og:locale" content="es_ES">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@registraapp">
   <meta name="twitter:creator" content="@registraapp">
-  <meta name="twitter:title" content="Registra — Never lose a case number again">
-  <meta name="twitter:description" content="Keep customer service calls organized. Case numbers, recordings, receipts—all in one place. Free iOS app.">
+  <meta name="twitter:title" content="Registra — Nunca pierdas otro número de caso">
+  <meta name="twitter:description" content="Mantén organizadas las llamadas de servicio al cliente. Números de caso, grabaciones, recibos—todo en un solo lugar. App gratuita para iOS.">
   <meta name="twitter:image" content="https://registraa.com/assets/images/logo2.png">
-  <meta name="twitter:image:alt" content="Registra iOS App - Customer Service Organization Tool">
+  <meta name="twitter:image:alt" content="Aplicación Registra iOS - Herramienta de organización de servicio al cliente">
 
   <!-- Favicons -->
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/logo2.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/logo2.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/logo2.png">
-  <link rel="manifest" href="site.webmanifest">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/logo2.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/logo2.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/logo2.png">
+  <link rel="manifest" href="../site.webmanifest">
   <meta name="theme-color" content="#0f172a">
   <meta name="msapplication-TileColor" content="#0f172a">
 
+
   <!-- Smart App Banner (iOS) -->
   <meta name="apple-itunes-app" content="app-id=6747366907">
-
   <!-- Google Search Console Verification -->
   <meta name="google-site-verification" content="YOUR_GOOGLE_SITE_VERIFICATION_CODE">
 
@@ -70,65 +73,6 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'GA_TRACKING_ID');
-
-    // Geolocation-based language redirect
-    (function() {
-      // Only redirect if user hasn't chosen a language before
-      if (localStorage.getItem('userLanguageSet')) return;
-
-      // Check if we should skip geolocation (e.g., for development)
-      const urlParams = new URLSearchParams(window.location.search);
-      if (urlParams.has('skipGeo')) return;
-
-      // Get user's IP-based location
-      fetch('https://ipapi.co/json/')
-        .then(response => response.json())
-        .then(data => {
-          const country = data.country_code;
-          let targetLang = null;
-
-          // Map countries to languages
-          const countryLangMap = {
-            'BR': 'pt-br/',     // Brazil -> Portuguese
-            'PT': 'pt-br/',     // Portugal -> Portuguese
-            'ES': 'es/',     // Spain -> Spanish
-            'MX': 'es/',     // Mexico -> Spanish
-            'AR': 'es/',     // Argentina -> Spanish
-            'CO': 'es/',     // Colombia -> Spanish
-            'FR': 'fr/',     // France -> French
-            'CA': 'fr/',     // Canada -> French (Quebec)
-            'BE': 'fr/',     // Belgium -> French
-            'DE': 'de/',     // Germany -> German
-            'AT': 'de/',     // Austria -> German
-            'CH': 'de/',     // Switzerland -> German
-            'IT': 'it/',     // Italy -> Italian
-            'JP': 'ja/',     // Japan -> Japanese
-            'KR': 'ko/',     // South Korea -> Korean
-            'CN': 'zh-cn/',     // China -> Chinese Simplified
-            'TW': 'zh-cn/',     // Taiwan -> Chinese Simplified
-            'RU': 'ru/',     // Russia -> Russian
-            'SA': 'ar/',     // Saudi Arabia -> Arabic
-            'AE': 'ar/',     // UAE -> Arabic
-            'EG': 'ar/',     // Egypt -> Arabic
-          };
-
-          if (countryLangMap[country]) {
-            targetLang = countryLangMap[country];
-          }
-
-          // Only redirect if target language is different from current (English)
-          if (targetLang && targetLang && targetLang !== '') {
-            // Add a small delay to ensure page loads first
-            setTimeout(() => {
-              window.location.href = targetLang + '?geo=1';
-            }, 100);
-          }
-        })
-        .catch(() => {
-          // If geolocation fails, do nothing - user stays on English
-          console.log('Geolocation not available, staying on English');
-        });
-    })();
   </script>
 
   <!-- Preconnect to external domains for performance -->
@@ -136,7 +80,7 @@
   <link rel="preconnect" href="https://cdn.tailwindcss.com">
   <link rel="preconnect" href="https://www.googletagmanager.com">
   <link rel="dns-prefetch" href="//fonts.gstatic.com">
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
   <script src="https://cdn.tailwindcss.com"></script>
 
   <!-- Structured Data -->
@@ -146,17 +90,17 @@
     "@graph": [
       {
         "@type": "SoftwareApplication",
-        "@id": "https://registraa.com/#softwareapplication",
+        "@id": "https://registraa.com/es.html#softwareapplication",
         "name": "Registra",
-        "description": "Transform messy customer service experiences into organized clarity. Registra helps you track calls, case numbers, notes, and attachments.",
-        "url": "https://registraa.com/",
+        "description": "Transforma experiencias caóticas de servicio al cliente en claridad organizada. Registra te ayuda a rastrear llamadas, números de caso, notas y archivos adjuntos.",
+        "url": "https://registraa.com/es.html",
         "applicationCategory": "BusinessApplication",
         "operatingSystem": "iOS",
         "inLanguage": ["en", "pt-BR", "es", "fr", "de", "it", "ja", "ko", "zh-CN", "ru", "ar"],
         "offers": {
           "@type": "Offer",
           "price": "0",
-          "priceCurrency": "USD",
+          "priceCurrency": "EUR",
           "priceValidUntil": "2025-12-31",
           "availability": "https://schema.org/InStock",
           "url": "https://apps.apple.com/br/app/registra-app/id6747366907",
@@ -166,12 +110,12 @@
           }
         },
         "featureList": [
-          "Detailed Call Logs",
-          "Attachments Made Easy",
-          "Smart Reminders",
-          "Contract Tracking",
-          "Instant PDF Reports",
-          "Cloud Backup & Offline Access"
+          "Registros de llamadas detallados",
+          "Archivos adjuntos facilitados",
+          "Recordatorios inteligentes",
+          "Seguimiento de contratos",
+          "Informes PDF instantáneos",
+          "Copia de seguridad en la nube y acceso sin conexión"
         ],
         "screenshot": "https://registraa.com/assets/images/logo2.png",
         "downloadUrl": "https://apps.apple.com/br/app/registra-app/id6747366907",
@@ -186,16 +130,16 @@
           "@type": "Organization",
           "name": "AMC Marketing LTDA",
           "url": "https://registraa.com/"
-        }
+        },
       },
       {
         "@type": "WebSite",
-        "@id": "https://registraa.com/#website",
-        "url": "https://registraa.com/",
+        "@id": "https://registraa.com/es.html#website",
+        "url": "https://registraa.com/es.html",
         "name": "Registra",
-        "description": "Customer service organization made simple",
+        "description": "Organización de servicio al cliente simplificada",
         "publisher": {
-          "@id": "https://registraa.com/#organization"
+          "@id": "https://registraa.com/es.html#organization"
         },
         "potentialAction": {
           "@type": "SearchAction",
@@ -205,13 +149,13 @@
           },
           "query-input": "required name=search_term_string"
         },
-        "inLanguage": "en-US"
+        "inLanguage": "es"
       },
       {
         "@type": "Organization",
-        "@id": "https://registraa.com/#organization",
+        "@id": "https://registraa.com/es.html#organization",
         "name": "AMC Marketing LTDA",
-        "url": "https://registraa.com/",
+        "url": "https://registraa.com/es.html",
         "logo": {
           "@type": "ImageObject",
           "url": "https://registraa.com/assets/images/logo2.png",
@@ -223,9 +167,8 @@
           "telephone": "+55-31-99999-9999",
           "contactType": "customer service",
           "email": "support@registraa.com",
-          "availableLanguage": "en"
-        },
-        "foundingDate": "2024",
+          "availableLanguage": "es"
+        },        "foundingDate": "2024",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Av Uruguai 1076",
@@ -239,7 +182,7 @@
   }
   </script>
   <style>
-    .glow { 
+    .glow {
       background: radial-gradient(900px 500px at 50% 20%, rgba(59,130,246,.15), rgba(139,92,246,.1), rgba(255,255,255,0));
       animation: glow-pulse 8s ease-in-out infinite;
     }
@@ -295,15 +238,15 @@
   <header class="sticky top-0 z-50 backdrop-blur bg-slate-900/70 border-b border-white/5" role="banner">
     <div class="mx-auto max-w-7xl px-6">
       <div class="flex h-16 items-center justify-between">
-        <a href="/" class="flex items-center gap-3" aria-label="Registra homepage">
-          <img src="assets/images/logo-header.png" alt="Registra logo" class="h-[2.4rem] w-[2.4rem]" loading="eager">
+        <a href="/" class="flex items-center gap-3" aria-label="Inicio de Registra">
+          <img src="../assets/images/logo-header.png" alt="Logo de Registra" class="h-[2.4rem] w-[2.4rem]" loading="eager">
           <span class="font-black tracking-tight text-xl">Registra</span>
         </a>
-          <nav class="hidden md:flex items-center gap-8 text-sm text-slate-300" role="navigation" aria-label="Main navigation">
-          <a href="#features" class="hover:text-white transition-colors">Features</a>
-          <a href="#how-it-works" class="hover:text-white transition-colors">How it Works</a>
-          <a href="#pricing" class="hover:text-white transition-colors">Pricing</a>
-          <a href="blog.html" class="hover:text-white transition-colors">Blog</a>
+          <nav class="hidden md:flex items-center gap-8 text-sm text-slate-300" role="navigation" aria-label="Navegación principal">
+          <a href="#features" class="hover:text-white transition-colors">Características</a>
+          <a href="#how-it-works" class="hover:text-white transition-colors">Cómo funciona</a>
+          <a href="#pricing" class="hover:text-white transition-colors">Precios</a>
+          <a href="../blog.html" class="hover:text-white transition-colors">Blog</a>
           <a href="#faq" class="hover:text-white transition-colors">FAQ</a>
         </nav>
         <div class="flex items-center gap-3">
@@ -313,7 +256,7 @@
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
               </svg>
-              EN
+              ES
               <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
               </svg>
@@ -328,11 +271,11 @@
                   <span class="text-lg">🇩🇪</span>
                   <span>Deutsch (Deutschland)</span>
                 </a>
-                <a href="/" class="flex items-center gap-3 px-4 py-2 text-sm text-slate-300 hover:bg-white/10 hover:text-white transition-colors bg-white/5">
+                <a href="/" class="flex items-center gap-3 px-4 py-2 text-sm text-slate-300 hover:bg-white/10 hover:text-white transition-colors">
                   <span class="text-lg">🇺🇸</span>
                   <span>English (US)</span>
                 </a>
-                <a href="/es/" class="flex items-center gap-3 px-4 py-2 text-sm text-slate-300 hover:bg-white/10 hover:text-white transition-colors">
+                <a href="/es/" class="flex items-center gap-3 px-4 py-2 text-sm text-slate-300 hover:bg-white/10 hover:text-white transition-colors bg-white/5">
                   <span class="text-lg">🇪🇸</span>
                   <span>Español (España)</span>
                 </a>
@@ -368,9 +311,9 @@
             </div>
           </div>
 
-          <a href="https://apps.apple.com/br/app/registra-app/id6747366907" class="hidden sm:inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-white text-slate-900 text-sm font-medium hover:bg-gray-100 transition-colors" aria-label="Download Registra on the App Store">
-            <img src="assets/images/apple-logo.svg" alt="" class="w-4 h-4" aria-hidden="true">
-            Download on the App Store
+          <a href="https://apps.apple.com/br/app/registra-app/id6747366907" class="hidden sm:inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-white text-slate-900 text-sm font-medium hover:bg-gray-100 transition-colors" aria-label="Descargar Registra en la App Store">
+            <img src="../assets/images/apple-logo.svg" alt="" class="w-4 h-4" aria-hidden="true">
+            Descargar en la App Store
           </a>
         </div>
       </div>
@@ -388,66 +331,66 @@
             <svg class="w-4 h-4 text-green-400" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
             </svg>
-            <span class="text-sm text-green-400 font-semibold">Free Download • iOS App</span>
+            <span class="text-sm text-green-400 font-semibold">Descarga gratuita • App para iOS</span>
           </div>
-          
+
           <h1 id="hero-heading" class="text-4xl md:text-6xl font-black leading-tight tracking-tight mb-6">
-            Stop Losing<br/>
-            <span class="gradient-text">Customer Service</span><br/>
-            Battles
+            Deja de Perder<br/>
+            <span class="gradient-text">Batallas de</span><br/>
+            Servicio al Cliente
           </h1>
-          
+
           <p class="text-lg md:text-xl text-slate-300 leading-relaxed mb-4">
-            <strong class="text-white">Never lose a case number again.</strong> Keep every call, document, and deadline organized in one secure place.
+            <strong class="text-white">Nunca pierdas otro número de caso.</strong> Mantén organizadas todas las llamadas, documentos y fechas límite en un lugar seguro.
           </p>
-          
+
           <p class="text-base md:text-lg text-slate-400 mb-6 leading-relaxed">
-            Tired of companies saying "we have no record of your call"? Registra gives you the proof you need.
+            ¿Cansado de que las empresas digan "no tenemos registro de tu llamada"? Registra te da la prueba que necesitas.
           </p>
-          
+
           <!-- CTA Buttons -->
           <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-6">
-            <a href="https://apps.apple.com/br/app/registra-app/id6747366907" 
-               class="group relative px-8 py-4 rounded-xl bg-blue-600 text-white text-base font-bold hover:bg-blue-500 transition-all cta-pulse flex items-center gap-3 shadow-2xl shadow-blue-600/50" 
-               aria-label="Download Registra on the App Store">
-              <img src="assets/images/apple-logo.svg" alt="" class="w-5 h-5" aria-hidden="true">
-              <span>Download Free Now</span>
+            <a href="https://apps.apple.com/br/app/registra-app/id6747366907"
+               class="group relative px-8 py-4 rounded-xl bg-blue-600 text-white text-base font-bold hover:bg-blue-500 transition-all cta-pulse flex items-center gap-3 shadow-2xl shadow-blue-600/50"
+               aria-label="Descargar Registra en la App Store">
+              <img src="../assets/images/apple-logo.svg" alt="" class="w-5 h-5" aria-hidden="true">
+              <span>Descargar gratis ahora</span>
               <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
               </svg>
             </a>
-            <a href="#how-it-works" 
-               class="px-8 py-4 rounded-xl bg-white/10 text-slate-100 text-base font-semibold hover:bg-white/20 transition-all backdrop-blur-sm border border-white/20" 
-               aria-label="Learn how Registra works">
-              Watch 2-min demo
+            <a href="#how-it-works"
+               class="px-8 py-4 rounded-xl bg-white/10 text-slate-100 text-base font-semibold hover:bg-white/20 transition-all backdrop-blur-sm border border-white/20"
+               aria-label="Aprende cómo funciona Registra">
+              Ver demo de 2 min
             </a>
           </div>
-          
+
           <!-- App Features Highlights -->
           <div class="grid grid-cols-3 gap-6 p-6 rounded-2xl stats-highlight border border-white/10">
             <div>
               <div class="text-3xl font-bold text-white mb-1">100%</div>
-              <div class="text-xs text-slate-400 uppercase tracking-wide">Free Start</div>
+              <div class="text-xs text-slate-400 uppercase tracking-wide">Gratis</div>
             </div>
             <div>
-              <div class="text-3xl font-bold text-white mb-1">Offline</div>
-              <div class="text-xs text-slate-400 uppercase tracking-wide">Works Fully</div>
+              <div class="text-3xl font-bold text-white mb-1">Sin conexión</div>
+              <div class="text-xs text-slate-400 uppercase tracking-wide">Funciona</div>
             </div>
             <div>
               <div class="text-3xl font-bold text-white mb-1">11</div>
-              <div class="text-xs text-slate-400 uppercase tracking-wide">Languages</div>
+              <div class="text-xs text-slate-400 uppercase tracking-wide">Idiomas</div>
             </div>
           </div>
         </div>
-        
+
         <!-- Hero Demo GIF -->
         <div class="relative flex items-center justify-center md:justify-end">
           <div class="absolute -inset-16 blur-3xl bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-blue-600/20 rounded-full animate-pulse" aria-hidden="true"></div>
           <div class="relative">
             <div class="hero-image-wrapper">
-              <img 
-                src="assets/videos/Demo usage Registragif.gif" 
-                alt="Registra App Demo - See the app in action" 
+              <img
+                src="../assets/videos/Demo usage Registragif.gif"
+                alt="Demo de la app Registra - Ve la app en acción"
                 class="w-full h-auto object-cover rounded-[2.5rem] shadow-2xl transition-all duration-500"
                 loading="eager">
             </div>
@@ -458,7 +401,7 @@
                     <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                     <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
                   </span>
-                  Live demo • See the app in action
+                  Demo en vivo • Ve la app en acción
                 </span>
               </p>
             </div>
@@ -473,13 +416,13 @@
       <div class="relative mx-auto max-w-7xl px-6 py-20 md:py-32">
         <div class="text-center mb-16">
           <span class="inline-block px-4 py-2 bg-red-600/10 text-red-400 rounded-full text-sm font-semibold mb-4 border border-red-500/20">
-            THE PROBLEM
+            EL PROBLEMA
           </span>
           <h2 class="text-4xl md:text-5xl font-bold tracking-tight mb-6">
-            Sound Familiar?
+            ¿Te suena familiar?
           </h2>
           <p class="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
-            40 minutes on hold. They give you a case number. You write it somewhere. Three days later... <strong class="text-white">it's gone.</strong>
+            40 minutos en espera. Te dan un número de caso. Lo anotas en algún lugar. Tres días después... <strong class="text-white">se ha ido.</strong>
           </p>
         </div>
 
@@ -493,8 +436,8 @@
                 </svg>
               </div>
               <div>
-                <h3 class="text-lg font-semibold text-white mb-2">Lost Case Numbers</h3>
-                <p class="text-slate-400">Sticky notes disappear. Phone memos get deleted. When companies ask for proof, you have nothing.</p>
+                <h3 class="text-lg font-semibold text-white mb-2">Números de caso perdidos</h3>
+                <p class="text-slate-400">Las notas adhesivas desaparecen. Los memos del teléfono se borran. Cuando las empresas piden pruebas, no tienes nada.</p>
               </div>
             </div>
           </div>
@@ -507,8 +450,8 @@
                 </svg>
               </div>
               <div>
-                <h3 class="text-lg font-semibold text-white mb-2">Missed Follow-Ups</h3>
-                <p class="text-slate-400">"Call back in 48 hours" they said. But you forgot. Now your case is closed and you start from zero.</p>
+                <h3 class="text-lg font-semibold text-white mb-2">Seguimientos olvidados</h3>
+                <p class="text-slate-400">"Llama de vuelta en 48 horas" dijeron. Pero lo olvidaste. Ahora tu caso está cerrado y empiezas desde cero.</p>
               </div>
             </div>
           </div>
@@ -521,8 +464,8 @@
                 </svg>
               </div>
               <div>
-                <h3 class="text-lg font-semibold text-white mb-2">Explaining Everything. Again.</h3>
-                <p class="text-slate-400">"I already told someone last week!" No documentation means repeating your story to every new agent.</p>
+                <h3 class="text-lg font-semibold text-white mb-2">Explicar todo. De nuevo.</h3>
+                <p class="text-slate-400">"Ya se lo conté a alguien la semana pasada". Sin documentación significa repetir tu historia a cada nuevo agente.</p>
               </div>
             </div>
           </div>
@@ -535,8 +478,8 @@
                 </svg>
               </div>
               <div>
-                <h3 class="text-lg font-semibold text-white mb-2">Zero Proof of Anything</h3>
-                <p class="text-slate-400">They promised a refund? Prove it. They said it would be fixed? Show me where. You can't win without evidence.</p>
+                <h3 class="text-lg font-semibold text-white mb-2">Cero pruebas de nada</h3>
+                <p class="text-slate-400">¿Prometieron un reembolso? Prueba. ¿Dijeron que se arreglaría? Muéstrame dónde. No puedes ganar sin evidencia.</p>
               </div>
             </div>
           </div>
@@ -547,11 +490,11 @@
           <div class="relative p-8 md:p-12 rounded-3xl bg-gradient-to-br from-green-600/10 to-emerald-600/10 border-2 border-green-500/30 backdrop-blur-sm">
             <div class="mb-8">
               <span class="inline-block px-4 py-2 bg-green-600/20 text-green-300 rounded-full text-sm font-bold mb-6 border border-green-500/30">
-                ✓ THE SOLUTION
+                ✓ LA SOLUCIÓN
               </span>
-              <h3 class="text-3xl md:text-4xl font-bold text-white mb-4 leading-tight">Here's What Changes</h3>
+              <h3 class="text-3xl md:text-4xl font-bold text-white mb-4 leading-tight">Así es como cambia todo</h3>
               <p class="text-lg text-slate-200 leading-relaxed">
-                Everything you need to win your case—organized, accessible, and <strong class="text-white">impossible to lose.</strong>
+                Todo lo que necesitas para ganar tu caso—organizado, accesible y <strong class="text-white">imposible de perder.</strong>
               </p>
             </div>
 
@@ -563,8 +506,8 @@
                   </svg>
                 </div>
                 <div>
-                  <p class="text-white font-bold text-lg mb-1">Every case number saved automatically</p>
-                  <p class="text-sm text-slate-300">Never scramble looking for that number again</p>
+                  <p class="text-white font-bold text-lg mb-1">Cada número de caso guardado automáticamente</p>
+                  <p class="text-sm text-slate-300">Nunca más busques frenéticamente ese número</p>
                 </div>
               </div>
 
@@ -575,8 +518,8 @@
                   </svg>
                 </div>
                 <div>
-                  <p class="text-white font-bold text-lg mb-1">Smart reminders for follow-ups</p>
-                  <p class="text-sm text-slate-300">Your phone tells you when to call back</p>
+                  <p class="text-white font-bold text-lg mb-1">Recordatorios inteligentes para seguimientos</p>
+                  <p class="text-sm text-slate-300">Tu teléfono te avisa cuándo llamar de vuelta</p>
                 </div>
               </div>
 
@@ -587,8 +530,8 @@
                   </svg>
                 </div>
                 <div>
-                  <p class="text-white font-bold text-lg mb-1">Record calls & attach documents</p>
-                  <p class="text-sm text-slate-300">Keep proof of every promise</p>
+                  <p class="text-white font-bold text-lg mb-1">Grabar llamadas y adjuntar documentos</p>
+                  <p class="text-sm text-slate-300">Mantén pruebas de cada promesa</p>
                 </div>
               </div>
 
@@ -599,19 +542,19 @@
                   </svg>
                 </div>
                 <div>
-                  <p class="text-white font-bold text-lg mb-1">Export professional PDFs</p>
-                  <p class="text-sm text-slate-300">Ready for lawyers or consumer protection agencies</p>
+                  <p class="text-white font-bold text-lg mb-1">Exportar PDFs profesionales</p>
+                  <p class="text-sm text-slate-300">Listos para abogados o agencias de protección al consumidor</p>
                 </div>
               </div>
             </div>
 
             <div class="mt-8 pt-6 border-t border-white/10">
               <p class="text-center text-lg text-white font-semibold mb-4">
-                Stop fighting blind. Start winning cases.
+                Deja de luchar a ciegas. Empieza a ganar casos.
               </p>
-              <a href="https://apps.apple.com/br/app/registra-app/id6747366907" 
+              <a href="https://apps.apple.com/br/app/registra-app/id6747366907"
                  class="block w-full px-6 py-4 rounded-xl bg-blue-600 text-white text-center font-bold hover:bg-blue-500 transition-all shadow-xl shadow-blue-600/30">
-                Get Registra Free Today
+                Obtener Registra gratis hoy
               </a>
             </div>
           </div>
@@ -623,12 +566,12 @@
     <section id="features" class="mx-auto max-w-7xl px-6 py-20 md:py-32">
       <div class="text-center mb-20">
         <span class="inline-block px-4 py-2 bg-blue-600/10 text-blue-400 rounded-full text-sm font-semibold mb-4 border border-blue-500/20">
-          CORE FEATURES
+          CARACTERÍSTICAS PRINCIPALES
         </span>
-        <h2 class="text-4xl md:text-5xl font-bold tracking-tight mb-6">Three things Registra does really well</h2>
-        <p class="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">We focused on solving the actual problems people have with customer service</p>
+        <h2 class="text-4xl md:text-5xl font-bold tracking-tight mb-6">Tres cosas que Registra hace muy bien</h2>
+        <p class="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">Nos enfocamos en resolver los problemas reales que tienen las personas con el servicio al cliente</p>
       </div>
-      
+
       <!-- PILLAR 1: Documentation & Evidence -->
       <div class="mb-24">
         <div class="grid md:grid-cols-2 gap-20 items-center">
@@ -636,9 +579,9 @@
             <div class="inline-block px-4 py-2 bg-blue-600/10 text-blue-400 rounded text-lg font-medium mb-6">
               1
             </div>
-            <h3 class="text-2xl md:text-3xl font-semibold mb-6 leading-tight">Keep everything documented</h3>
-            <p class="text-slate-300 leading-relaxed text-lg mb-8">Log calls with case numbers, agent names, and promises made. Attach receipts, record audio, store everything. When things go wrong months later, you'll have all the proof.</p>
-            
+            <h3 class="text-2xl md:text-3xl font-semibold mb-6 leading-tight">Mantén todo documentado</h3>
+            <p class="text-slate-300 leading-relaxed text-lg mb-8">Registra llamadas con números de caso, nombres de agentes y promesas hechas. Adjunta recibos, graba audio, guarda todo. Cuando las cosas van mal meses después, tendrás todas las pruebas.</p>
+
             <!-- Features inline -->
             <div class="space-y-4">
               <div class="flex items-start gap-3">
@@ -646,8 +589,8 @@
                   <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                 </svg>
                 <div>
-                  <p class="text-white font-semibold">Call logs & case numbers</p>
-                  <p class="text-sm text-slate-400">All saved automatically</p>
+                  <p class="text-white font-semibold">Registros de llamadas y números de caso</p>
+                  <p class="text-sm text-slate-400">Todos guardados automáticamente</p>
                 </div>
               </div>
               <div class="flex items-start gap-3">
@@ -655,8 +598,8 @@
                   <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                 </svg>
                 <div>
-                  <p class="text-white font-semibold">Audio recordings</p>
-                  <p class="text-sm text-slate-400">Record calls when they make promises</p>
+                  <p class="text-white font-semibold">Grabaciones de audio</p>
+                  <p class="text-sm text-slate-400">Graba llamadas cuando hacen promesas</p>
                 </div>
               </div>
               <div class="flex items-start gap-3">
@@ -664,25 +607,25 @@
                   <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                 </svg>
                 <div>
-                  <p class="text-white font-semibold">File attachments</p>
-                  <p class="text-sm text-slate-400">Receipts, contracts, screenshots</p>
+                  <p class="text-white font-semibold">Archivos adjuntos</p>
+                  <p class="text-sm text-slate-400">Recibos, contratos, capturas de pantalla</p>
                 </div>
               </div>
             </div>
           </div>
-          
+
           <!-- Registro View Image -->
           <div class="flex items-center justify-center md:justify-end">
             <div class="relative app-screenshot-container">
               <div class="absolute -inset-4 bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-2xl blur-2xl"></div>
               <div class="relative rounded-[1.75rem] overflow-hidden shadow-2xl ring-2 ring-white/10 hover:ring-blue-500/30 transition-all duration-500">
-                <img 
-                  src="assets/images/registro view.jpg" 
-                  alt="Registro view with call summary in Registra app" 
+                <img
+                  src="../assets/images/registro view.jpg"
+                  alt="Vista de registro con resumen de llamada en la app Registra"
                   class="w-full h-auto"
                   loading="lazy">
               </div>
-              <p class="text-xs text-slate-400 text-center mt-4">See all your call details and history in one place</p>
+              <p class="text-xs text-slate-400 text-center mt-4">Ve todos los detalles de tus llamadas e historial en un solo lugar</p>
             </div>
           </div>
         </div>
@@ -695,9 +638,9 @@
             <div class="inline-block px-4 py-2 bg-purple-600/10 text-purple-400 rounded text-lg font-medium mb-6">
               2
             </div>
-            <h3 class="text-2xl md:text-3xl font-semibold mb-6 leading-tight">Never forget to follow up</h3>
-            <p class="text-slate-300 leading-relaxed text-lg mb-8">They said they'd call back in 48 hours. They won't. But you'll get a reminder. Set it once, and your phone will nudge you at the right time.</p>
-            
+            <h3 class="text-2xl md:text-3xl font-semibold mb-6 leading-tight">Nunca olvides hacer seguimiento</h3>
+            <p class="text-slate-300 leading-relaxed text-lg mb-8">Dijeron que llamarían de vuelta en 48 horas. No lo harán. Pero tú recibirás un recordatorio. Configúralo una vez y tu teléfono te recordará en el momento correcto.</p>
+
             <!-- Features inline -->
             <div class="space-y-4">
               <div class="flex items-start gap-3">
@@ -705,8 +648,8 @@
                   <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                 </svg>
                 <div>
-                  <p class="text-white font-semibold">Smart reminders</p>
-                  <p class="text-sm text-slate-400">Set it once, get notified at the right time</p>
+                  <p class="text-white font-semibold">Recordatorios inteligentes</p>
+                  <p class="text-sm text-slate-400">Configúralo una vez, recibe notificación en el momento correcto</p>
                 </div>
               </div>
               <div class="flex items-start gap-3">
@@ -714,8 +657,8 @@
                   <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                 </svg>
                 <div>
-                  <p class="text-white font-semibold">Calendar sync</p>
-                  <p class="text-sm text-slate-400">Deadlines appear in your iPhone calendar</p>
+                  <p class="text-white font-semibold">Sincronización con calendario</p>
+                  <p class="text-sm text-slate-400">Las fechas límite aparecen en tu calendario de iPhone</p>
                 </div>
               </div>
               <div class="flex items-start gap-3">
@@ -723,25 +666,25 @@
                   <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                 </svg>
                 <div>
-                  <p class="text-white font-semibold">Contract alerts</p>
-                  <p class="text-sm text-slate-400">Notification before subscriptions auto-renew</p>
+                  <p class="text-white font-semibold">Alertas de contrato</p>
+                  <p class="text-sm text-slate-400">Notificación antes de que las suscripciones se renueven automáticamente</p>
                 </div>
               </div>
             </div>
           </div>
-          
+
           <!-- Attachments Image -->
           <div class="flex items-center justify-center md:justify-end">
             <div class="relative app-screenshot-container">
               <div class="absolute -inset-4 bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-2xl blur-2xl"></div>
               <div class="relative rounded-[1.75rem] overflow-hidden shadow-2xl ring-2 ring-white/10 hover:ring-purple-500/30 transition-all duration-500">
-                <img 
-                  src="assets/images/attachments.jpg" 
-                  alt="Attachments and files organization in Registra app" 
+                <img
+                  src="../assets/images/attachments.jpg"
+                  alt="Adjuntos y organización de archivos en la app Registra"
                   class="w-full h-auto"
                   loading="lazy">
               </div>
-              <p class="text-xs text-slate-400 text-center mt-4">Keep all your documents, receipts and recordings organized</p>
+              <p class="text-xs text-slate-400 text-center mt-4">Mantén todos tus documentos, recibos y grabaciones organizados</p>
             </div>
           </div>
         </div>
@@ -754,9 +697,9 @@
             <div class="inline-block px-4 py-2 bg-green-600/10 text-green-400 rounded text-lg font-medium mb-6">
               3
             </div>
-            <h3 class="text-2xl md:text-3xl font-semibold mb-6 leading-tight">Bonus: Secure password vault</h3>
-            <p class="text-slate-300 leading-relaxed text-lg mb-8">Store service account passwords securely. Face ID protection, military-grade encryption, and sync across devices.</p>
-            
+            <h3 class="text-2xl md:text-3xl font-semibold mb-6 leading-tight">Bonificación: bóveda segura de contraseñas</h3>
+            <p class="text-slate-300 leading-relaxed text-lg mb-8">Almacena contraseñas de cuentas de servicio de forma segura. Protección Face ID, cifrado de nivel bancario y sincronización entre dispositivos.</p>
+
             <!-- Features inline -->
             <div class="space-y-4">
               <div class="flex items-start gap-3">
@@ -764,8 +707,8 @@
                   <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                 </svg>
                 <div>
-                  <p class="text-white font-semibold">Biometric lock</p>
-                  <p class="text-sm text-slate-400">Face ID or Touch ID required to access</p>
+                  <p class="text-white font-semibold">Bloqueo biométrico</p>
+                  <p class="text-sm text-slate-400">Face ID o Touch ID requerido para acceder</p>
                 </div>
               </div>
               <div class="flex items-start gap-3">
@@ -773,8 +716,8 @@
                   <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                 </svg>
                 <div>
-                  <p class="text-white font-semibold">Bank-grade encryption</p>
-                  <p class="text-sm text-slate-400">AES-256 encryption—we can't see your passwords</p>
+                  <p class="text-white font-semibold">Cifrado de nivel bancario</p>
+                  <p class="text-sm text-slate-400">AES-256—we can't see your passwords</p>
                 </div>
               </div>
               <div class="flex items-start gap-3">
@@ -782,21 +725,21 @@
                   <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                 </svg>
                 <div>
-                  <p class="text-white font-semibold">Password generator & Cloud sync</p>
-                  <p class="text-sm text-slate-400">Create strong passwords, access on all Apple devices</p>
+                  <p class="text-white font-semibold">Generador de contraseñas y sincronización en la nube</p>
+                  <p class="text-sm text-slate-400">Crea contraseñas fuertes, accede en todos los dispositivos Apple</p>
                 </div>
               </div>
             </div>
           </div>
-          
+
           <!-- Password Vault Image -->
           <div class="flex items-center justify-center md:justify-end">
             <div class="relative app-screenshot-container">
               <div class="absolute -inset-4 bg-gradient-to-r from-green-600/20 to-emerald-600/20 rounded-2xl blur-2xl"></div>
               <div class="relative rounded-[1.75rem] overflow-hidden shadow-2xl ring-2 ring-white/10 hover:ring-green-500/30 transition-all duration-500">
-                <img 
-                  src="assets/images/password vault.jpg" 
-                  alt="Password vault with 4 password records in Registra app" 
+                <img
+                  src="../assets/images/password vault.jpg"
+                  alt="Bóveda de contraseñas con 4 registros de contraseña en la app Registra"
                   class="w-full h-auto"
                   loading="lazy">
               </div>
@@ -804,7 +747,7 @@
                 <svg class="w-3 h-3 inline text-green-400 mr-1" fill="currentColor" viewBox="0 0 20 20">
                   <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/>
                 </svg>
-                All your service passwords protected with AES-256 encryption
+                Todas tus contraseñas de servicio protegidas con cifrado AES-256
               </p>
             </div>
           </div>
@@ -818,13 +761,13 @@
       <div class="grid md:grid-cols-2 gap-20 items-center">
         <div class="flex flex-col justify-center md:pr-12">
           <span class="inline-block px-4 py-2 bg-blue-600/10 text-blue-400 rounded-full text-sm font-semibold mb-6 border border-blue-500/20 w-fit">
-            PRO FEATURE
+            CARACTERÍSTICA PRO
           </span>
           <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-6 leading-tight">
-            Professional PDF Reports
+            Informes PDF profesionales
           </h2>
           <p class="text-xl text-slate-300 leading-relaxed mb-8">
-            Export everything as a polished, professional report. Perfect for lawyers, consumer protection agencies, or formal complaints.
+            Exporta todo como un informe pulido y profesional. Perfecto para abogados, agencias de protección al consumidor o quejas formales.
           </p>
           <div class="space-y-4">
             <div class="flex items-start gap-3">
@@ -832,8 +775,8 @@
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
               </svg>
               <div>
-                <p class="text-white font-semibold">Complete documentation</p>
-                <p class="text-sm text-slate-400">All calls, notes, and attachments in one file</p>
+                <p class="text-white font-semibold">Documentación completa</p>
+                <p class="text-sm text-slate-400">Todas las llamadas, notas y archivos adjuntos en un archivo</p>
               </div>
             </div>
             <div class="flex items-start gap-3">
@@ -841,8 +784,8 @@
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
               </svg>
               <div>
-                <p class="text-white font-semibold">Professional formatting</p>
-                <p class="text-sm text-slate-400">Clean, organized, ready to share</p>
+                <p class="text-white font-semibold">Formato profesional</p>
+                <p class="text-sm text-slate-400">Limpio, organizado, listo para compartir</p>
               </div>
             </div>
             <div class="flex items-start gap-3">
@@ -850,25 +793,25 @@
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
               </svg>
               <div>
-                <p class="text-white font-semibold">One-tap export</p>
-                <p class="text-sm text-slate-400">Share via email, print, or save to files</p>
+                <p class="text-white font-semibold">Exportación de un toque</p>
+                <p class="text-sm text-slate-400">Comparte por email, imprime o guarda en archivos</p>
               </div>
             </div>
           </div>
         </div>
-        
+
         <!-- Export Image -->
         <div class="flex items-center justify-center md:justify-end">
           <div class="relative app-screenshot-container">
             <div class="absolute -inset-4 bg-gradient-to-r from-green-600/20 to-blue-600/20 rounded-2xl blur-2xl"></div>
             <div class="relative rounded-[1.75rem] overflow-hidden shadow-2xl ring-2 ring-white/10 hover:ring-green-500/30 transition-all duration-500">
-              <img 
-                src="assets/images/Image generated exported app Jpeg.JPG" 
-                alt="Exported PDF file created by Registra app" 
+              <img
+                src="../assets/images/Image generated exported app Jpeg.JPG"
+                alt="Archivo PDF exportado creado por la app Registra"
                 class="w-full h-auto"
                 loading="lazy">
             </div>
-            <p class="text-xs text-slate-400 text-center mt-4">Professional exports ready to share with authorities</p>
+            <p class="text-xs text-slate-400 text-center mt-4">Exportaciones profesionales listas para compartir con autoridades</p>
           </div>
         </div>
       </div>
@@ -878,70 +821,70 @@
     <section id="how-it-works" class="mx-auto max-w-7xl px-6 py-16 md:py-24">
       <div class="text-center mb-16">
         <span class="inline-block px-4 py-2 bg-blue-600/10 text-blue-400 rounded-full text-sm font-semibold mb-4">
-          SIMPLE & EFFECTIVE
+          SENCILLO Y EFECTIVO
         </span>
-        <h2 class="text-4xl md:text-5xl font-bold tracking-tight mb-6">How it works</h2>
+        <h2 class="text-4xl md:text-5xl font-bold tracking-tight mb-6">Cómo funciona</h2>
         <p class="text-xl text-slate-300 max-w-3xl mx-auto">
-          Three simple steps to never lose a customer service battle again
+          Tres pasos simples para nunca perder otra batalla de servicio al cliente
         </p>
       </div>
-      
+
       <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
         <div class="relative p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-blue-500/30 transition-all group">
           <div class="absolute -top-4 left-8">
             <div class="w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-400 rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-xl group-hover:scale-110 transition-transform">1</div>
           </div>
           <div class="mt-6">
-            <h3 class="text-xl font-bold mb-3 text-white">Log the case</h3>
-            <p class="text-slate-300 leading-relaxed">Record company name, case number, agent name, and what was promised. Everything in one place.</p>
+            <h3 class="text-xl font-bold mb-3 text-white">Registra el caso</h3>
+            <p class="text-slate-300 leading-relaxed">Registra el nombre de la empresa, número de caso, nombre del agente y lo que se prometió. Todo en un solo lugar.</p>
           </div>
           <div class="mt-6 flex items-center gap-2 text-sm text-blue-400">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
             </svg>
-            <span>Takes 30 seconds</span>
+            <span>Toma 30 segundos</span>
           </div>
         </div>
-        
+
         <div class="relative p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-purple-500/30 transition-all group">
           <div class="absolute -top-4 left-8">
             <div class="w-12 h-12 bg-gradient-to-br from-purple-600 to-purple-400 rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-xl group-hover:scale-110 transition-transform">2</div>
           </div>
           <div class="mt-6">
-            <h3 class="text-xl font-bold mb-3 text-white">Add proof</h3>
-            <p class="text-slate-300 leading-relaxed">Attach receipts, contracts, screenshots. Record call audio. Everything stays organized and searchable.</p>
+            <h3 class="text-xl font-bold mb-3 text-white">Añade pruebas</h3>
+            <p class="text-slate-300 leading-relaxed">Adjunta recibos, contratos, capturas de pantalla. Graba audio de llamadas. Todo queda organizado y accesible.</p>
           </div>
           <div class="mt-6 flex items-center gap-2 text-sm text-purple-400">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13"/>
             </svg>
-            <span>Unlimited attachments (Pro)</span>
+            <span>Archivos ilimitados (Pro)</span>
           </div>
         </div>
-        
+
         <div class="relative p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-green-500/30 transition-all group">
           <div class="absolute -top-4 left-8">
             <div class="w-12 h-12 bg-gradient-to-br from-green-600 to-green-400 rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-xl group-hover:scale-110 transition-transform">3</div>
           </div>
           <div class="mt-6">
-            <h3 class="text-xl font-bold mb-3 text-white">Export when needed</h3>
-            <p class="text-slate-300 leading-relaxed">Generate professional PDF reports with all evidence. Perfect for lawyers or consumer protection agencies.</p>
+            <h3 class="text-xl font-bold mb-3 text-white">Exporta cuando lo necesites</h3>
+            <p class="text-slate-300 leading-relaxed">Genera informes PDF profesionales con toda la evidencia. Perfectos para abogados o agencias de protección al consumidor.</p>
           </div>
           <div class="mt-6 flex items-center gap-2 text-sm text-green-400">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
             </svg>
-            <span>One-tap PDF export</span>
+            <span>Exportación PDF de un toque</span>
           </div>
         </div>
       </div>
-      
+
       <!-- CTA -->
       <div class="text-center mt-12">
-        <a href="https://apps.apple.com/br/app/registra-app/id6747366907" 
+        <a href="https://apps.apple.com/br/app/registra-app/id6747366907"
            class="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-blue-600 text-white text-base font-semibold hover:bg-blue-500 transition-all shadow-xl shadow-blue-600/30">
-          <img src="assets/images/apple-logo.svg" alt="" class="w-5 h-5" aria-hidden="true">
-          <span>Start Using Registra Free</span>
+          <img src="../assets/images/apple-logo.svg" alt="" class="w-5 h-5" aria-hidden="true">
+          <span>Empieza a usar Registra gratis</span>
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
           </svg>
@@ -953,13 +896,13 @@
     <section id="before-after" class="mx-auto max-w-7xl px-6 py-16 md:py-24 bg-gradient-to-b from-slate-900 to-slate-950">
       <div class="text-center mb-12">
         <span class="inline-block px-4 py-2 bg-gradient-to-r from-red-600/20 to-green-600/20 border border-white/10 rounded-full text-sm font-semibold mb-4">
-          TRANSFORMATION
+          TRANSFORMACIÓN
         </span>
         <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-4">
-          Your Life Before and After Registra
+          Tu vida antes y después de Registra
         </h2>
         <p class="text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
-          See the difference between chaos and control
+          Ve la diferencia entre caos y control
         </p>
       </div>
 
@@ -973,18 +916,18 @@
                 <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
                 </svg>
-                BEFORE
+                ANTES
               </span>
             </div>
-            <img 
-              src="assets/images/antes.png" 
-              alt="Disorganized customer service documentation before using Registra" 
+            <img
+              src="../assets/images/antes.png"
+              alt="Documentación desorganizada de servicio al cliente antes de usar Registra"
               class="w-full h-auto transition-transform duration-500 group-hover:scale-105"
               loading="lazy"
               style="max-width: 300px; margin: 0 auto; display: block;">
             <div class="p-4 bg-gradient-to-t from-slate-950 via-slate-900/95 to-transparent absolute bottom-0 left-0 right-0">
-              <p class="text-white font-semibold text-base mb-1">Lost & Disorganized</p>
-              <p class="text-slate-300 text-xs">Scattered notes, missed deadlines</p>
+              <p class="text-white font-semibold text-base mb-1">Perdido y desorganizado</p>
+              <p class="text-slate-300 text-xs">Notas dispersas, fechas límite perdidas</p>
             </div>
           </div>
         </div>
@@ -998,18 +941,18 @@
                 <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
                   <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                 </svg>
-                AFTER
+                DESPUÉS
               </span>
             </div>
-            <img 
-              src="assets/images/depois.png" 
-              alt="Organized customer service documentation with Registra app" 
+            <img
+              src="../assets/images/depois.png"
+              alt="Documentación organizada de servicio al cliente con la app Registra"
               class="w-full h-auto transition-transform duration-500 group-hover:scale-105"
               loading="lazy"
               style="max-width: 300px; margin: 0 auto; display: block;">
             <div class="p-4 bg-gradient-to-t from-slate-950 via-slate-900/95 to-transparent absolute bottom-0 left-0 right-0">
-              <p class="text-white font-semibold text-base mb-1">Organized & In Control</p>
-              <p class="text-slate-300 text-xs">Everything documented, ready to win</p>
+              <p class="text-white font-semibold text-base mb-1">Organizado y en control</p>
+              <p class="text-slate-300 text-xs">Todo documentado, listo para ganar</p>
             </div>
           </div>
         </div>
@@ -1017,10 +960,10 @@
 
       <!-- Call to action -->
       <div class="text-center mt-10">
-        <p class="text-xl font-bold text-white mb-4">Which side do you want to be on?</p>
-        <a href="https://apps.apple.com/br/app/registra-app/id6747366907" 
+        <p class="text-xl font-bold text-white mb-4">¿De qué lado quieres estar?</p>
+        <a href="https://apps.apple.com/br/app/registra-app/id6747366907"
            class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-green-600 text-white text-sm font-semibold hover:bg-green-500 transition-all shadow-xl shadow-green-600/30">
-          <span>Get Organized with Registra</span>
+          <span>Organízate con Registra</span>
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
           </svg>
@@ -1035,84 +978,84 @@
       <div class="relative mx-auto max-w-7xl px-6 py-20 md:py-32">
         <div class="text-center mb-16">
           <span class="inline-block px-4 py-2 bg-blue-600/10 text-blue-400 rounded-full text-sm font-semibold mb-4 border border-blue-500/20">
-            PRICING
+            PRECIOS
           </span>
           <h2 class="text-4xl md:text-5xl font-bold tracking-tight mb-6">
-            Start Free. Upgrade When You're Ready.
+            Empieza gratis. Actualiza cuando estés listo.
           </h2>
           <p class="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
-            Try Registra free. Upgrade when you need more. <strong class="text-white">No credit card required.</strong>
+            Prueba Registra gratis. Actualiza cuando necesites más. <strong class="text-white">No se requiere tarjeta de crédito.</strong>
           </p>
         </div>
-      
+
       <!-- Pricing Comparison Table -->
       <div class="max-w-5xl mx-auto mb-12 overflow-x-auto">
         <table class="w-full border-collapse">
           <thead>
             <tr class="border-b border-white/10">
-              <th class="py-4 px-6 text-left text-slate-400 font-medium">Feature</th>
+              <th class="py-4 px-6 text-left text-slate-400 font-medium">Característica</th>
               <th class="py-4 px-6 text-center">
-                <div class="text-lg font-semibold text-white">Registra Free</div>
-                <div class="text-sm text-slate-400 mt-1">No cost</div>
+                <div class="text-lg font-semibold text-white">Registra Gratis</div>
+                <div class="text-sm text-slate-400 mt-1">Sin costo</div>
               </th>
               <th class="py-4 px-6 text-center bg-blue-600/10 rounded-t-xl">
                 <div class="text-lg font-semibold text-blue-300">Registra Pro</div>
-                <div class="text-sm text-blue-400 mt-1">Subscription</div>
+                <div class="text-sm text-blue-400 mt-1">Suscripción</div>
               </th>
             </tr>
           </thead>
           <tbody class="text-sm">
             <tr class="border-b border-white/5">
-              <td class="py-4 px-6 text-slate-300">Active Case Records</td>
-              <td class="py-4 px-6 text-center text-slate-400">1 Free Record</td>
+              <td class="py-4 px-6 text-slate-300">Registros de caso activos</td>
+              <td class="py-4 px-6 text-center text-slate-400">1 registro gratis</td>
               <td class="py-4 px-6 text-center bg-blue-600/5">
                 <span class="inline-flex items-center gap-1 text-green-400 font-medium">
                   <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                   </svg>
-                  Unlimited
+                  Ilimitado
                 </span>
               </td>
             </tr>
             <tr class="border-b border-white/5">
-              <td class="py-4 px-6 text-slate-300">Cloud Storage</td>
+              <td class="py-4 px-6 text-slate-300">Almacenamiento en la nube</td>
               <td class="py-4 px-6 text-center text-slate-400">50MB</td>
               <td class="py-4 px-6 text-center bg-blue-600/5">
-                <span class="text-blue-300 font-medium">500MB (Expandable)</span>
+                <span class="text-blue-300 font-medium">500MB (Ampliable)</span>
               </td>
             </tr>
             <tr class="border-b border-white/5">
-              <td class="py-4 px-6 text-slate-300">PDF Report Export</td>
+              <td class="py-4 px-6 text-slate-300">Exportación de informe PDF</td>
               <td class="py-4 px-6 text-center">
                 <span class="text-red-400">❌</span>
               </td>
               <td class="py-4 px-6 text-center bg-blue-600/5">
-                <span class="text-green-400">✅ Included</span>
+                <span class="text-green-400">✅ Incluido</span>
               </td>
             </tr>
             <tr class="border-b border-white/5">
-              <td class="py-4 px-6 text-slate-300">Password Vault</td>
+              <td class="py-4 px-6 text-slate-300">Bóveda de contraseñas</td>
               <td class="py-4 px-6 text-center">
                 <span class="text-red-400">❌</span>
               </td>
               <td class="py-4 px-6 text-center bg-blue-600/5">
-                <span class="text-green-400">✅ Included</span>
+                <span class="text-green-400">✅ Incluido</span>
               </td>
             </tr>
             <tr class="border-b border-white/5">
-              <td class="py-4 px-6 text-slate-300">Call Audio Recording</td>
+              <td class="py-4 px-6 text-slate-300">Grabación de audio de llamadas</td>
               <td class="py-4 px-6 text-center">
                 <span class="text-red-400">❌</span>
               </td>
               <td class="py-4 px-6 text-center bg-blue-600/5">
-                <span class="text-green-400">✅ Full access</span>
+                <span class="text-green-400">✅ Acceso completo</span>
               </td>
             </tr>
             <tr>
-              <td class="py-4 px-6 text-slate-300">Priority Support</td>
-              <td class="py-4 px-6 text-center text-slate-400">Basic</td>
+              <td class="py-4 px-6 text-slate-300">Soporte prioritario</td>
+              <td class="py-4 px-6 text-center text-slate-400">Básico</td>
               <td class="py-4 px-6 text-center bg-blue-600/5 rounded-b-xl">
-                <span class="text-green-400">✅ Priority</span>
+                <span class="text-green-400">✅ Prioritario</span>
               </td>
             </tr>
           </tbody>
@@ -1122,74 +1065,74 @@
       <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
         <div class="p-8 rounded-2xl bg-white/5 border border-white/10">
           <div class="text-center">
-            <h3 class="text-2xl font-semibold mb-2">Free</h3>
-            <div class="text-sm text-slate-400 mb-6">No upfront cost</div>
+            <h3 class="text-2xl font-semibold mb-2">Gratis</h3>
+            <div class="text-sm text-slate-400 mb-6">Sin costo inicial</div>
             <ul class="space-y-3 text-slate-300 mb-8">
               <li class="flex items-center gap-3">
                 <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                 </svg>
-                Try all features
+                Prueba todas las funciones
               </li>
               <li class="flex items-center gap-3">
                 <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                 </svg>
-                Basic storage
+                Almacenamiento básico
               </li>
               <li class="flex items-center gap-3">
                 <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                 </svg>
-                No credit card required
+                No se requiere tarjeta de crédito
               </li>
             </ul>
-            <a href="https://apps.apple.com/br/app/registra-app/id6747366907" class="w-full inline-block px-6 py-3 rounded-lg bg-white/10 text-white hover:bg-white/20 transition-colors text-center" target="_blank" rel="noopener">Get started</a>
+            <a href="https://apps.apple.com/br/app/registra-app/id6747366907" class="w-full inline-block px-6 py-3 rounded-lg bg-white/10 text-white hover:bg-white/20 transition-colors text-center" target="_blank" rel="noopener">Empieza</a>
           </div>
         </div>
         <div class="p-8 rounded-2xl bg-blue-600/10 border border-blue-500/30 relative">
           <div class="absolute top-4 right-4 px-3 py-1 bg-blue-600 text-white text-xs rounded-full">Popular</div>
           <div class="text-center">
             <h3 class="text-2xl font-semibold mb-2">Pro</h3>
-            <div class="text-sm text-slate-300 mb-6">All Pro features</div>
+            <div class="text-sm text-slate-300 mb-6">Todas las funciones Pro</div>
             <ul class="space-y-3 text-slate-200 mb-8">
               <li class="flex items-center gap-3">
                 <svg class="w-5 h-5 text-green-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                 </svg>
-                Unlimited cases
+                Casos ilimitados
               </li>
               <li class="flex items-center gap-3">
                 <svg class="w-5 h-5 text-green-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                 </svg>
-                Full attachments
+                Archivos adjuntos completos
               </li>
               <li class="flex items-center gap-3">
                 <svg class="w-5 h-5 text-green-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                 </svg>
-                PDF export
+                Exportación PDF
               </li>
               <li class="flex items-center gap-3">
                 <svg class="w-5 h-5 text-green-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                 </svg>
-                Priority support
+                Soporte prioritario
               </li>
               <li class="flex items-center gap-3">
                 <svg class="w-5 h-5 text-green-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                 </svg>
-                Expanded storage
+                Almacenamiento ampliado
               </li>
             </ul>
-            <a href="https://apps.apple.com/br/app/registra-app/id6747366907" class="w-full inline-block px-6 py-3 rounded-lg bg-blue-600 text-white hover:bg-blue-500 transition-colors text-center" target="_blank" rel="noopener">Upgrade to Pro</a>
+            <a href="https://apps.apple.com/br/app/registra-app/id6747366907" class="w-full inline-block px-6 py-3 rounded-lg bg-blue-600 text-white hover:bg-blue-500 transition-colors text-center" target="_blank" rel="noopener">Actualizar a Pro</a>
           </div>
         </div>
       </div>
         <div class="text-center mt-8">
-          <p class="text-sm text-slate-400">Billing is handled in‑app via the App Store.</p>
+          <p class="text-sm text-slate-400">La facturación se maneja in‑app a través de la App Store.</p>
         </div>
       </div>
     </section>
@@ -1198,10 +1141,10 @@
     <section id="testimonials" class="mx-auto max-w-7xl px-6 py-20 md:py-32">
       <div class="text-center mb-16">
         <span class="inline-block px-4 py-2 bg-purple-600/10 text-purple-400 rounded-full text-sm font-semibold mb-4 border border-purple-500/20">
-          TESTIMONIALS
+          TESTIMONIOS
         </span>
-        <h2 class="text-4xl md:text-5xl font-bold tracking-tight mb-6">Trusted by consumers and professionals</h2>
-        <p class="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">See what people are saying about Registra</p>
+        <h2 class="text-4xl md:text-5xl font-bold tracking-tight mb-6">Confiado por consumidores y profesionales</h2>
+        <p class="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">Ve lo que la gente dice sobre Registra</p>
       </div>
       <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
         <div class="relative p-8 rounded-2xl bg-gradient-to-br from-white/5 to-white/[0.02] border border-white/10 hover:border-blue-500/30 transition-all group">
@@ -1209,7 +1152,7 @@
             <div class="w-14 h-14 bg-gradient-to-br from-blue-600 to-blue-400 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">R</div>
             <div>
               <div class="font-bold text-lg text-white">Roberto S.</div>
-              <div class="text-sm text-slate-400">Brazil</div>
+              <div class="text-sm text-slate-400">Brasil</div>
             </div>
           </div>
           <div class="flex mb-4">
@@ -1219,15 +1162,15 @@
             <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
             <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
           </div>
-          <p class="text-slate-200 leading-relaxed">"I never lose a case number again. Everything in one place."</p>
+          <p class="text-slate-200 leading-relaxed">"Nunca pierdo otro número de caso. Todo en un solo lugar."</p>
         </div>
-        
+
         <div class="relative p-8 rounded-2xl bg-gradient-to-br from-white/5 to-white/[0.02] border border-white/10 hover:border-purple-500/30 transition-all group">
           <div class="flex items-center gap-4 mb-6">
             <div class="w-14 h-14 bg-gradient-to-br from-purple-600 to-purple-400 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">J</div>
             <div>
               <div class="font-bold text-lg text-white">James W.</div>
-              <div class="text-sm text-slate-400">United Kingdom</div>
+              <div class="text-sm text-slate-400">Reino Unido</div>
             </div>
           </div>
           <div class="flex mb-4">
@@ -1237,15 +1180,15 @@
             <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
             <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
           </div>
-          <p class="text-slate-200 leading-relaxed">"When a deadline is coming, I get reminded and can act fast. It just works."</p>
+          <p class="text-slate-200 leading-relaxed">"Cuando se acerca una fecha límite, recibo un recordatorio y puedo actuar rápido. Simplemente funciona."</p>
         </div>
-        
+
         <div class="relative p-8 rounded-2xl bg-gradient-to-br from-white/5 to-white/[0.02] border border-white/10 hover:border-green-500/30 transition-all group">
           <div class="flex items-center gap-4 mb-6">
             <div class="w-14 h-14 bg-gradient-to-br from-green-600 to-green-400 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">L</div>
             <div>
               <div class="font-bold text-lg text-white">Louis D.</div>
-              <div class="text-sm text-slate-400">France</div>
+              <div class="text-sm text-slate-400">Francia</div>
             </div>
           </div>
           <div class="flex mb-4">
@@ -1255,7 +1198,7 @@
             <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
             <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
           </div>
-          <p class="text-slate-200 leading-relaxed">"PDF reports are a lifesaver for formal complaints. Clean and professional."</p>
+          <p class="text-slate-200 leading-relaxed">"Los informes PDF son un salvavidas para quejas formales. Limpios y profesionales."</p>
         </div>
       </div>
     </section>
@@ -1263,36 +1206,36 @@
     <!-- FAQ SECTION -->
     <section id="faq" class="mx-auto max-w-5xl px-6 py-16 md:py-24">
       <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-4xl font-semibold tracking-tight">Frequently asked questions</h2>
+        <h2 class="text-3xl md:text-4xl font-semibold tracking-tight">Preguntas frecuentes</h2>
       </div>
       <div class="space-y-4">
         <details class="group rounded-xl bg-white/5 border border-white/10 p-5">
-          <summary class="cursor-pointer font-medium hover:text-white transition-colors">Is my data secure?</summary>
-          <p class="mt-3 text-slate-300 leading-relaxed">Yes. Everything is encrypted with AES-256 (same as banks use). Your data is yours—we can't see it even if we wanted to. Face ID/Touch ID required to open the password vault.</p>
+          <summary class="cursor-pointer font-medium hover:text-white transition-colors">¿Mis datos están seguros?</summary>
+          <p class="mt-3 text-slate-300 leading-relaxed">Sí. Todo está cifrado con AES-256 (igual que usan los bancos). Tus datos son tuyos—nosotros no podemos verlos ni siquiera si quisiéramos. Se requiere Face ID/Touch ID para abrir la bóveda de contraseñas.</p>
         </details>
         <details class="group rounded-xl bg-white/5 border border-white/10 p-5">
-          <summary class="cursor-pointer font-medium hover:text-white transition-colors">What's the difference between Free and Pro?</summary>
-          <p class="mt-3 text-slate-300 leading-relaxed">Free lets you try the app with basic features. Pro unlocks unlimited cases, audio recording, PDF exports, password vault, and 500MB cloud storage. Most people upgrade when they need advanced features for their disputes.</p>
+          <summary class="cursor-pointer font-medium hover:text-white transition-colors">¿Cuál es la diferencia entre Gratis y Pro?</summary>
+          <p class="mt-3 text-slate-300 leading-relaxed">Gratis te permite probar la app con funciones básicas. Pro desbloquea casos ilimitados, grabación de audio, exportaciones PDF, bóveda de contraseñas y 500MB de almacenamiento en la nube. La mayoría de la gente actualiza cuando necesita funciones avanzadas para sus disputas.</p>
         </details>
         <details class="group rounded-xl bg-white/5 border border-white/10 p-5">
-          <summary class="cursor-pointer font-medium hover:text-white transition-colors">Does it work offline?</summary>
-          <p class="mt-3 text-slate-300 leading-relaxed">Completely. Log a call on a plane, record audio in a basement with no signal—it all saves locally and syncs when you're back online.</p>
+          <summary class="cursor-pointer font-medium hover:text-white transition-colors">¿Funciona sin conexión?</summary>
+          <p class="mt-3 text-slate-300 leading-relaxed">Completamente. Registra una llamada en un avión, graba audio en un sótano sin señal—todo se guarda localmente y se sincroniza cuando estás de vuelta en línea.</p>
         </details>
         <details class="group rounded-xl bg-white/5 border border-white/10 p-5">
-          <summary class="cursor-pointer font-medium hover:text-white transition-colors">Can I record phone calls?</summary>
-          <p class="mt-3 text-slate-300 leading-relaxed">Yes (Pro feature). Built-in audio recorder for when they make promises over the phone. Just check your local laws about recording—some places require you to inform the other person first.</p>
+          <summary class="cursor-pointer font-medium hover:text-white transition-colors">¿Puedo grabar llamadas telefónicas?</summary>
+          <p class="mt-3 text-slate-300 leading-relaxed">Sí (función Pro). Grabador de audio incorporado para cuando hacen promesas por teléfono. Solo verifica las leyes locales sobre grabación—algunos lugares requieren informar a la otra persona primero.</p>
         </details>
         <details class="group rounded-xl bg-white/5 border border-white/10 p-5">
-          <summary class="cursor-pointer font-medium hover:text-white transition-colors">Can I export everything as PDF?</summary>
-          <p class="mt-3 text-slate-300 leading-relaxed">Yes (Pro feature). Export a clean PDF with all your call logs, attachments, and case numbers. Perfect for lawyers or consumer protection agencies.</p>
+          <summary class="cursor-pointer font-medium hover:text-white transition-colors">¿Puedo exportar todo como PDF?</summary>
+          <p class="mt-3 text-slate-300 leading-relaxed">Sí (función Pro). Exporta un informe PDF limpio con todas las pruebas. Perfecto para abogados o agencias de protección al consumidor.</p>
         </details>
         <details class="group rounded-xl bg-white/5 border border-white/10 p-5">
-          <summary class="cursor-pointer font-medium hover:text-white transition-colors">What languages does it support?</summary>
-          <p class="mt-3 text-slate-300 leading-relaxed">11 languages including English, Portuguese, Spanish, French, German, Italian, Japanese, Korean, Chinese, Russian, and Arabic.</p>
+          <summary class="cursor-pointer font-medium hover:text-white transition-colors">¿Cuántos idiomas soporta?</summary>
+          <p class="mt-3 text-slate-300 leading-relaxed">11 idiomas incluyendo Inglés, Portugués, Español, Francés, Alemán, Italiano, Japonés, Coreano, Chino, Ruso y Árabe.</p>
         </details>
         <details class="group rounded-xl bg-white/5 border border-white/10 p-5">
-          <summary class="cursor-pointer font-medium hover:text-white transition-colors">How do I cancel if I change my mind?</summary>
-          <p class="mt-3 text-slate-300 leading-relaxed">Through your iPhone's App Store settings. Cancel anytime, keep using Pro until your current billing period ends. No penalties, no questions asked.</p>
+          <summary class="cursor-pointer font-medium hover:text-white transition-colors">¿Cómo cancelo si cambio de opinión?</summary>
+          <p class="mt-3 text-slate-300 leading-relaxed">A través de la configuración de la App Store en tu iPhone. Cancela en cualquier momento, sigue usando Pro hasta que termine tu período de facturación actual. Sin penalizaciones, sin preguntas.</p>
         </details>
       </div>
     </section>
@@ -1301,13 +1244,13 @@
     <section id="blog-preview" class="mx-auto max-w-7xl px-6 py-20 md:py-32 bg-gradient-to-b from-slate-950 to-slate-900">
       <div class="text-center mb-16">
         <span class="inline-block px-4 py-2 bg-blue-600/10 text-blue-400 rounded-full text-sm font-semibold mb-4">
-          INSIGHTS & TIPS
+          INSIGHTS Y CONSEJOS
         </span>
         <h2 class="text-4xl md:text-5xl font-bold tracking-tight mb-6">
-          Learn How to Win Your Cases
+          Aprende a Ganar Tus Casos
         </h2>
         <p class="text-xl text-slate-300 max-w-3xl mx-auto">
-          Expert advice on customer service, consumer rights, and how to protect yourself
+          Consejos expertos sobre derechos del consumidor y cómo protegerte
         </p>
       </div>
 
@@ -1318,8 +1261,8 @@
 
       <!-- View All Blog Posts CTA -->
       <div class="text-center">
-        <a href="blog.html" class="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-blue-600 text-white text-base font-semibold hover:bg-blue-500 transition-all shadow-xl shadow-blue-600/30">
-          View All Articles
+        <a href="../blog.html" class="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-blue-600 text-white text-base font-semibold hover:bg-blue-500 transition-all shadow-xl shadow-blue-600/30">
+          Ver Todos los Artículos
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
           </svg>
@@ -1332,27 +1275,27 @@
       <div class="max-w-3xl mx-auto text-center">
         <div class="mb-8">
           <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-4">
-            Get Expert Customer Service Tips
+            Obtén Consejos Expertos de Servicio al Cliente
           </h2>
           <p class="text-lg text-slate-300">
-            Join 5,000+ smart consumers. Get weekly tips on protecting your rights and winning disputes.
+            Únete a 5,000+ consumidores inteligentes. Recibe consejos semanales sobre proteger tus derechos y ganar disputas.
           </p>
         </div>
 
         <!-- Newsletter Form -->
         <form id="newsletter-form" class="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto mb-6">
-          <input 
-            type="email" 
+          <input
+            type="email"
             id="newsletter-email"
-            placeholder="Enter your email" 
+            placeholder="Ingresa tu email"
             required
             class="flex-1 px-6 py-4 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
           >
-          <button 
+          <button
             type="submit"
             class="px-8 py-4 rounded-xl bg-blue-600 text-white font-semibold hover:bg-blue-500 transition-all shadow-xl shadow-blue-600/30 whitespace-nowrap"
           >
-            Subscribe Free
+            Suscribirse Gratis
           </button>
         </form>
 
@@ -1360,13 +1303,13 @@
           <svg class="w-4 h-4 inline text-green-400" fill="currentColor" viewBox="0 0 20 20">
             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
           </svg>
-          100% free. Unsubscribe anytime. No spam, ever.
+          100% gratis. Cancela la suscripción en cualquier momento. Sin spam, nunca.
         </p>
 
         <!-- Success Message -->
         <div id="newsletter-success" class="hidden mt-6 p-4 rounded-xl bg-green-600/20 border border-green-500/30">
           <p class="text-green-400 font-semibold">
-            🎉 Success! Check your email to confirm your subscription.
+            🎉 ¡Éxito! Revisa tu email para confirmar tu suscripción.
           </p>
         </div>
       </div>
@@ -1376,69 +1319,69 @@
     <section id="cta" class="mx-auto max-w-7xl px-6 py-20 md:py-32">
       <div class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-blue-600/20 via-purple-600/20 to-blue-600/20 border-2 border-blue-500/30 p-12 md:p-20">
         <div class="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10 blur-3xl"></div>
-        
+
         <div class="relative text-center">
           <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-600/20 border border-green-500/30 mb-6">
             <span class="relative flex h-3 w-3">
               <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
               <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
             </span>
-            <span class="text-green-400 font-semibold text-sm">Take Control of Your Customer Service Cases</span>
+            <span class="text-green-400 font-semibold text-sm">Toma Control de Tus Casos de Servicio al Cliente</span>
           </div>
-          
+
           <h2 class="text-4xl md:text-6xl font-black tracking-tight mb-6 leading-tight">
-            Ready to Stop Losing<br/>
-            <span class="gradient-text">Customer Service Battles?</span>
+            ¿Listo para Dejar de Perder<br/>
+            <span class="gradient-text">Batallas de Servicio al Cliente?</span>
           </h2>
-          
+
           <p class="text-xl md:text-2xl text-slate-300 mb-4 max-w-3xl mx-auto">
-            Download Registra now. <strong class="text-white">Start protecting yourself today.</strong>
+            Descarga Registra ahora. <strong class="text-white">Empieza a protegerte hoy.</strong>
           </p>
-          
+
           <p class="text-lg text-slate-400 mb-10 max-w-2xl mx-auto">
-            Free to start • Works offline • Available on iOS
+            Gratis para empezar • Funciona sin conexión • Disponible en iOS
           </p>
-          
+
           <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-10">
-            <a href="https://apps.apple.com/br/app/registra-app/id6747366907" 
-               class="group px-10 py-5 rounded-xl bg-white text-slate-900 text-lg font-bold hover:bg-gray-100 transition-all shadow-2xl flex items-center gap-3" 
+            <a href="https://apps.apple.com/br/app/registra-app/id6747366907"
+               class="group px-10 py-5 rounded-xl bg-white text-slate-900 text-lg font-bold hover:bg-gray-100 transition-all shadow-2xl flex items-center gap-3"
                target="_blank" rel="noopener">
-              <img src="assets/images/apple-logo.svg" alt="" class="w-6 h-6" aria-hidden="true">
-              <span>Download Free Now</span>
+              <img src="../assets/images/apple-logo.svg" alt="" class="w-6 h-6" aria-hidden="true">
+              <span>Descargar Gratis Ahora</span>
               <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
               </svg>
             </a>
             <a href="#faq" class="px-10 py-5 rounded-xl bg-white/10 backdrop-blur-sm text-slate-100 text-lg font-semibold hover:bg-white/20 transition-all border border-white/20">
-              Still Have Questions?
+              ¿Aún Tienes Preguntas?
             </a>
           </div>
-          
+
           <!-- Trust Indicators -->
           <div class="flex flex-wrap justify-center items-center gap-8 text-sm text-slate-400">
             <div class="flex items-center gap-2">
               <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
               </svg>
-              <span class="text-slate-300">100% Free to Start</span>
+              <span class="text-slate-300">100% Gratis para Empezar</span>
             </div>
             <div class="flex items-center gap-2">
               <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
               </svg>
-              <span class="text-slate-300">No Credit Card Required</span>
+              <span class="text-slate-300">No Se Requiere Tarjeta de Crédito</span>
             </div>
             <div class="flex items-center gap-2">
               <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
               </svg>
-              <span class="text-slate-300">Cancel Anytime</span>
+              <span class="text-slate-300">Cancela en Cualquier Momento</span>
             </div>
             <div class="flex items-center gap-2">
               <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
               </svg>
-              <span class="text-slate-300">Available on iOS</span>
+              <span class="text-slate-300">Disponible en iOS</span>
             </div>
           </div>
         </div>
@@ -1453,42 +1396,42 @@
       <div class="grid md:grid-cols-4 gap-8">
         <div class="md:col-span-1">
           <div class="flex items-center gap-3 mb-4">
-            <img src="assets/images/logo-header.png" alt="Registra logo" class="h-[2.4rem] w-[2.4rem]" loading="lazy">
+            <img src="../assets/images/logo-header.png" alt="Logo de Registra" class="h-[2.4rem] w-[2.4rem]" loading="lazy">
             <span class="font-black tracking-tight text-xl">Registra</span>
           </div>
-          <p class="text-sm text-slate-400">Customer service, finally under control.</p>
+          <p class="text-sm text-slate-400">Servicio al cliente, finalmente bajo control.</p>
         </div>
         <div class="md:col-span-3">
           <nav class="grid md:grid-cols-3 gap-8">
             <div>
-              <h4 class="font-medium mb-4">Product</h4>
+              <h4 class="font-medium mb-4">Producto</h4>
               <ul class="space-y-2 text-sm text-slate-300">
-                <li><a href="#features" class="hover:text-white transition-colors">Features</a></li>
-                <li><a href="#how-it-works" class="hover:text-white transition-colors">How it Works</a></li>
-                <li><a href="#pricing" class="hover:text-white transition-colors">Pricing</a></li>
-                <li><a href="blog.html" class="hover:text-white transition-colors">Blog</a></li>
+                <li><a href="#features" class="hover:text-white transition-colors">Características</a></li>
+                <li><a href="#how-it-works" class="hover:text-white transition-colors">Cómo funciona</a></li>
+                <li><a href="#pricing" class="hover:text-white transition-colors">Precios</a></li>
+                <li><a href="../blog.html" class="hover:text-white transition-colors">Blog</a></li>
               </ul>
             </div>
             <div>
-              <h4 class="font-medium mb-4">Support</h4>
+              <h4 class="font-medium mb-4">Soporte</h4>
               <ul class="space-y-2 text-sm text-slate-300">
                 <li><a href="#faq" class="hover:text-white transition-colors">FAQ</a></li>
-                <li><a href="contact.html" class="hover:text-white transition-colors">Support</a></li>
+                <li><a href="../contact.html" class="hover:text-white transition-colors">Soporte</a></li>
               </ul>
             </div>
             <div>
               <h4 class="font-medium mb-4">Legal</h4>
               <ul class="space-y-2 text-sm text-slate-300">
-                <li><a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a></li>
-                <li><a href="terms.html" class="hover:text-white transition-colors">Terms of Service</a></li>
+                <li><a href="../privacy.html" class="hover:text-white transition-colors">Política de Privacidad</a></li>
+                <li><a href="../terms.html" class="hover:text-white transition-colors">Términos de Servicio</a></li>
               </ul>
             </div>
           </nav>
         </div>
       </div>
       <div class="border-t border-white/5 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-        <div class="text-sm text-slate-400">© 2025 Registra. All rights reserved.</div>
-        
+        <div class="text-sm text-slate-400">© 2025 Registra. Todos los derechos reservados.</div>
+
       </div>
     </div>
   </footer>
@@ -1610,59 +1553,59 @@
 
       // Get posts from localStorage (managed by admin panel)
       let posts = JSON.parse(localStorage.getItem('blogPosts') || '[]');
-      
+
       // Check if old posts are using logo2.png and reset them
       if (posts.length > 0 && posts[0].image && posts[0].image.includes('logo2.png')) {
         posts = []; // Force reset to use new images
       }
-      
+
       // If no posts, create sample posts
       if (posts.length === 0) {
         posts = [
           {
             id: '1',
-            title: 'How to Document Customer Service Calls: A Complete Guide',
-            slug: 'how-to-document-customer-service-calls',
-            excerpt: 'Learn the essential strategies to properly document every customer service interaction. This comprehensive guide will help you keep records that actually win disputes.',
+            title: 'Cómo Documentar Llamadas de Servicio al Cliente: Una Guía Completa',
+            slug: 'como-documentar-llamadas-servicio-al-cliente',
+            excerpt: 'Aprende las estrategias esenciales para documentar correctamente cada interacción de servicio al cliente. Esta guía completa te ayudará a mantener registros que realmente ganen disputas.',
             content: '',
-            author: 'Registra Team',
+            author: 'Equipo Registra',
             date: new Date().toISOString(),
-            category: 'Guides',
+            category: 'Guías',
             image: 'assets/blog/organization.png',
             featured: true,
-            seoTitle: 'How to Document Customer Service Calls - Complete Guide 2025',
-            seoDescription: 'Master the art of documenting customer service calls. Learn what to record, how to organize it, and how to use it to win disputes.',
-            keywords: 'customer service documentation, call logging, case management, consumer rights'
+            seoTitle: 'Cómo Documentar Llamadas de Servicio al Cliente - Guía Completa 2025',
+            seoDescription: 'Domina el arte de documentar llamadas de servicio al cliente. Aprende qué registrar, cómo organizar y cómo usar para ganar disputas.',
+            keywords: 'documentación servicio al cliente, registro de llamadas, gestión de casos, derechos del consumidor'
           },
           {
             id: '2',
-            title: '10 Consumer Rights You Need to Know in 2025',
-            slug: '10-consumer-rights-you-need-to-know-2025',
-            excerpt: 'Your rights as a consumer are powerful—but only if you know them. Discover the top 10 consumer protection laws that companies don\'t want you to understand.',
+            title: '10 Derechos del Consumidor que Debes Conocer en 2025',
+            slug: '10-derechos-consumidor-debes-conocer-2025',
+            excerpt: 'Tus derechos como consumidor son poderosos—pero solo si los conoces. Descubre los 10 derechos de protección al consumidor que las empresas no quieren que entiendas.',
             content: '',
-            author: 'Legal Team',
+            author: 'Equipo Legal',
             date: new Date(Date.now() - 86400000).toISOString(),
-            category: 'Consumer Rights',
+            category: 'Derechos del Consumidor',
             image: 'assets/blog/10things.png',
             featured: false,
-            seoTitle: '10 Essential Consumer Rights Every Customer Should Know in 2025',
-            seoDescription: 'Protect yourself with these 10 critical consumer rights. Learn what companies must do and how to enforce your rights.',
-            keywords: 'consumer rights, customer protection, legal rights, consumer law'
+            seoTitle: '10 Derechos Esenciales del Consumidor que Debes Conocer en 2025',
+            seoDescription: 'Protégete con estos 10 derechos críticos del consumidor. Aprende qué deben hacer las empresas y cómo hacer valer tus derechos.',
+            keywords: 'derechos del consumidor, protección del consumidor, derechos legales, ley del consumidor'
           },
           {
             id: '3',
-            title: 'What to Do When Companies Lose Your Case Number',
-            slug: 'what-to-do-when-companies-lose-case-number',
-            excerpt: 'They claim they have "no record" of your call? Here\'s your step-by-step action plan to fight back and win your case.',
+            title: 'Qué Hacer Cuando las Empresas Pierden Tu Número de Caso',
+            slug: 'que-hacer-cuando-empresas-pierden-numero-caso',
+            excerpt: 'Dicen que "no tienen registro" de tu llamada. Aquí tienes tu plan de acción paso a paso para luchar y ganar tu caso.',
             content: '',
-            author: 'Registra Team',
+            author: 'Equipo Registra',
             date: new Date(Date.now() - 172800000).toISOString(),
-            category: 'Problem Solving',
+            category: 'Resolución de Problemas',
             image: 'assets/blog/companies lose.png',
             featured: false,
-            seoTitle: 'What to Do When Companies Lose Your Case Number - Action Plan',
-            seoDescription: 'Step-by-step guide to handle situations when companies claim they have no record of your case. Win your disputes with proper documentation.',
-            keywords: 'lost case number, customer service dispute, case documentation, consumer protection'
+            seoTitle: 'Qué Hacer Cuando las Empresas Pierden Tu Número de Caso - Plan de Acción',
+            seoDescription: 'Guía paso a paso para manejar situaciones cuando las empresas dicen que no tienen registro de tu caso. Gana tus disputas con documentación adecuada.',
+            keywords: 'número de caso perdido, disputa servicio al cliente, documentación de casos, protección del consumidor'
           }
         ];
         localStorage.setItem('blogPosts', JSON.stringify(posts));
@@ -1674,7 +1617,7 @@
       // Render posts
       blogContainer.innerHTML = latestPosts.map(post => `
         <article class="group rounded-2xl bg-white/5 border border-white/10 hover:border-blue-500/30 transition-all overflow-hidden">
-          <a href="blog-post.html?slug=${post.slug}" class="block">
+          <a href="../blog-post.html?slug=${post.slug}" class="block">
             <div class="aspect-video bg-gradient-to-br from-blue-600/20 to-purple-600/20 relative overflow-hidden">
               <img src="${post.image}" alt="${post.title}" class="w-full h-full object-cover opacity-50 group-hover:opacity-70 group-hover:scale-105 transition-all duration-500">
               <div class="absolute top-4 left-4">
@@ -1685,11 +1628,11 @@
             </div>
             <div class="p-6">
               <div class="flex items-center gap-4 text-xs text-slate-400 mb-3">
-                <span>${new Date(post.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
+                <span>${new Date(post.date).toLocaleDateString('es-ES', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
                 <span>•</span>
                 <span>${post.author}</span>
                 <span>•</span>
-                <span>5 min read</span>
+                <span>5 min de lectura</span>
               </div>
               <h3 class="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors line-clamp-2">
                 ${post.title}
@@ -1698,7 +1641,7 @@
                 ${post.excerpt}
               </p>
               <div class="flex items-center gap-2 text-blue-400 text-sm font-semibold">
-                Read More
+                Leer Más
                 <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
                 </svg>
@@ -1713,12 +1656,12 @@
     function setupNewsletterForm() {
       const form = document.getElementById('newsletter-form');
       const successMsg = document.getElementById('newsletter-success');
-      
+
       if (form) {
         form.addEventListener('submit', function(e) {
           e.preventDefault();
           const email = document.getElementById('newsletter-email').value;
-          
+
           // Store subscriber (in real app, this would go to a backend)
           let subscribers = JSON.parse(localStorage.getItem('newsletterSubscribers') || '[]');
           subscribers.push({
@@ -1727,11 +1670,11 @@
             source: 'homepage'
           });
           localStorage.setItem('newsletterSubscribers', JSON.stringify(subscribers));
-          
+
           // Show success message
           form.classList.add('hidden');
           successMsg.classList.remove('hidden');
-          
+
           // Track conversion (Google Analytics)
           if (typeof gtag !== 'undefined') {
             gtag('event', 'newsletter_signup', {
@@ -1743,6 +1686,10 @@
       }
     }
 
+    // Initialize blog features
+    // Mark user as having chosen a language
+    localStorage.setItem('userLanguageSet', 'true');
+    
     // Initialize blog features
     document.addEventListener('DOMContentLoaded', function() {
       loadBlogPreview();
