@@ -1,6 +1,13 @@
 User-agent: *
 Allow: /
 
+# Allow crawlers for AI search engines (ChatGPT Search & Perplexity)
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
 # Block access to certain directories and files
 Disallow: /node_modules/
 Disallow: /.git/
@@ -18,7 +25,7 @@ Allow: /blog-post.html
 Allow: /contact.html
 
 # Sitemap
-Sitemap: https://registra.app/sitemap.xml
+Sitemap: https://registraa.com/sitemap.xml
 
 # Crawl delay for all bots
 Crawl-delay: 1
